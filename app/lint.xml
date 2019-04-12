@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="DefaultLocale">
+        <ignore path="src\com\looigi\spiatore\GestioneWEBServiceSOAP.java" />
+    </issue>
+    <issue id="InlinedApi">
+        <ignore path="src\com\looigi\spiatore\Video.java" />
+    </issue>
+    <issue id="NewApi">
+        <ignore path="src\com\looigi\spiatore\GBTakePictureNoPreview.java" />
+    </issue>
+</lint>

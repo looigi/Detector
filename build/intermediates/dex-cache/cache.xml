@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="D:\Looigi\Android\Sviluppo\Spiatore\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c8644e30605318fe4043ff8220a0bd4446dcc6b8">
+        <dex dex="D:\Looigi\Android\Sviluppo\Spiatore\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_9374559ac74ad46a9e249da76ee0b855a78d48ce\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Looigi\Android\Sviluppo\Spiatore\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="D:\Looigi\Android\Sviluppo\Spiatore\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_d88a536323b2f6eaf2d8981e48318ed2d7750a6c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Looigi\Android\Sviluppo\Spiatore\app\libs\ksoap2-android-assembly-3.2.0-jar-with-dependencies.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="28d8f13fdec2fe5de24af98b7131c858c266bbea">
+        <dex dex="D:\Looigi\Android\Sviluppo\Spiatore\app\build\intermediates\transforms\dex\debug\folders\1000\2\ksoap2-android-assembly-3.2.0-jar-with-dependencies_6d3ecc388eaa6d13dba678a4ad27a0f9fef12c1d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Looigi\Android\Sviluppo\Spiatore\app\libs\AdSdk_6.0.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bfb7e58a8a1f414dfc147c5ddd2542db5aada40f">
+        <dex dex="D:\Looigi\Android\Sviluppo\Spiatore\app\build\intermediates\transforms\dex\debug\folders\1000\2\AdSdk_6.0.7_1d152252f4f03566a78f38c87b7a31247e6cc1a5\classes.dex" />
+    </item>
+
+</items>
