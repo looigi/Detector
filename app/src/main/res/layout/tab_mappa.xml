@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -54,7 +55,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:weightSum="7"
+            android:weightSum="8"
             android:gravity="center_vertical|center_horizontal"
             android:layout_height="wrap_content">
 
@@ -109,6 +110,20 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/imgInviaMappa"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/upload" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_height="wrap_content">
+
+                <ImageView
                     android:id="@+id/imgEliminaMappa"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
@@ -150,11 +165,11 @@
                 android:gravity="center_horizontal|center_vertical"
                 android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/imgAvantiMappa"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                app:srcCompat="@drawable/avanti" />
+                <ImageView
+                    android:id="@+id/imgAvantiMappa"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:srcCompat="@drawable/avanti" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -173,4 +188,52 @@
         android:layout_height="40dp"
         android:layout_marginEnd="8dp"
         app:srcCompat="@drawable/chiude" />
+
+    <LinearLayout
+        android:id="@+id/rltUpload"
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:background="@drawable/stiletextview"
+        android:layout_centerInParent="true"
+        android:layout_width="250dp"
+        android:layout_height="400dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_width="match_parent"
+            android:textColor="@color/verde_scuro"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Lista files da inviare" />
+
+        <ListView
+            android:layout_margin="2dp"
+            android:id="@+id/lstUpload"
+            android:layout_width="match_parent"
+            android:layout_weight="8"
+            android:layout_height="0dp" >
+        </ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="right|center_vertical"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+            <ImageView
+                android:id="@+id/imgChiudeUpload"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/chiude" />
+
+            <ImageView
+                android:id="@+id/imgEffettuaUpload"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/icona_salva" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 </RelativeLayout>

@@ -23,6 +23,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.Switch;
@@ -45,7 +46,9 @@ import com.looigi.detector.Utilities.DownloadImmagine;
 import com.looigi.detector.Utilities.GestioneImmagini;
 import com.looigi.detector.Utilities.Permessi;
 import com.looigi.detector.Utilities.PrendeModelloTelefono;
+import com.looigi.detector.Utilities.UploadFiles;
 import com.looigi.detector.Utilities.Utility;
+import com.looigi.detector.Utilities.ZipUnzip;
 import com.looigi.detector.Variabili.VariabiliImpostazioni;
 import com.looigi.detector.Variabili.VariabiliStatiche;
 import com.looigi.detector.gps.LocationService;
@@ -54,8 +57,10 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 // import com.looigi.detector.gps.PrendeCoordinateGPS;
 
@@ -76,6 +81,7 @@ public class MainActivity extends FragmentActivity  implements OnMapReadyCallbac
 
 		context = this;
 
+		VariabiliStatiche.getInstance().setFragmentActivityPrincipale(this);
 		VariabiliStatiche.getInstance().setContext(this);
 		VariabiliImpostazioni.getInstance().setAct(this);
 
@@ -645,6 +651,14 @@ public class MainActivity extends FragmentActivity  implements OnMapReadyCallbac
 		ImageView btnAvanti = (ImageView) findViewById(R.id.imgAvanti);
 		ImageView btnElimina = (ImageView) findViewById(R.id.imgElimina);
 		ImageView btnRefresh = (ImageView) findViewById(R.id.imgRefresh);
+		ImageView btnUpload = (ImageView) findViewById(R.id.imgInviaMappa);
+		ImageView btnChiudeUpload = (ImageView) findViewById(R.id.imgChiudeUpload);
+		ImageView btnEsegueUpload = (ImageView) findViewById(R.id.imgEffettuaUpload);
+		ListView lstUpload = (ListView) findViewById(R.id.lstUpload);
+
+		VariabiliStatiche.getInstance().setLstUpload(lstUpload);
+		VariabiliStatiche.getInstance().setRltUpload((LinearLayout) findViewById(R.id.rltUpload));
+		VariabiliStatiche.getInstance().getRltUpload().setVisibility(LinearLayout.GONE);
 
 		VariabiliStatiche.getInstance().setBtnFlipX((ImageView) findViewById(R.id.imgFlipX));
 		VariabiliStatiche.getInstance().setBtnFlipY((ImageView) findViewById(R.id.imgFlipY));
@@ -656,6 +670,25 @@ public class MainActivity extends FragmentActivity  implements OnMapReadyCallbac
 				Utility uu = new Utility();
 				uu.CaricaMultimedia();
 				uu.VisualizzaMultimedia();
+			}
+		});
+
+		btnChiudeUpload.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				VariabiliStatiche.getInstance().getRltUpload().setVisibility(LinearLayout.GONE);
+			}
+		});
+
+		btnEsegueUpload.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+                new UploadFiles(context);
+			}
+		});
+
+		btnUpload.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Utility uu = new Utility();
+				uu.InviaFilesGPS();
 			}
 		});
 

@@ -618,7 +618,9 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable completed
 drawable elimina
+drawable error
 drawable export
 drawable flip_x
 drawable flip_y
@@ -654,6 +656,7 @@ drawable stiletextview
 drawable stiletextview2
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable upload
 drawable video
 drawable visualizzato
 id ALT
@@ -732,6 +735,7 @@ id customPanel
 id dark
 id decor_content_parent
 id default_activity_button
+id dialog_tp_log
 id disableHome
 id edit_query
 id edtAccuracy
@@ -761,6 +765,8 @@ id imgAvanti
 id imgAvantiMappa
 id imgCentraMappa
 id imgChiudeImmagine
+id imgChiudeUpload
+id imgEffettuaUpload
 id imgElimina
 id imgEliminaMappa
 id imgExportMappa
@@ -770,6 +776,7 @@ id imgGPS
 id imgIndietro
 id imgIndietroMappa
 id imgInglese
+id imgInviaMappa
 id imgItaliano
 id imgMappa
 id imgPlayAudio
@@ -804,6 +811,7 @@ id listMode
 id list_item
 id lstImporta
 id lstRisoluzioni
+id lstUpload
 id map
 id media_actions
 id message
@@ -828,6 +836,7 @@ id radio
 id right_icon
 id right_side
 id rltContenitore
+id rltUpload
 id sAccuracy
 id sGPSBetter
 id sLog
@@ -880,6 +889,7 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id textView
 id textView22
 id textView3
 id time
@@ -892,6 +902,7 @@ id txtAvvisoImp
 id txtCoords
 id txtDataMappa
 id txtDescTestoM
+id txtDimensioni
 id txtImmagine
 id txtImmagini
 id txtInfo
@@ -901,6 +912,7 @@ id txtKM
 id txtMemoriaLibera
 id txtMemoriaTotale
 id txtMemoriaUsata
+id txtNomeFile
 id txtNomeImm
 id txtPassword
 id txtRisoluzione
@@ -955,8 +967,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout activity_main
+layout dialog_messaggio
 layout listview_immagini
 layout listview_records
+layout listview_upload
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action

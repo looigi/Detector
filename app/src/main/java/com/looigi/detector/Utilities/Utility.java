@@ -11,9 +11,11 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Environment;
 import android.widget.LinearLayout;
+import android.widget.SimpleAdapter;
 
 import com.looigi.detector.R;
 import com.looigi.detector.Variabili.VariabiliStatiche;
+import com.looigi.detector.adapters.adapterListaFiles;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -31,6 +33,8 @@ import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
 
 import uk.co.senab.photoview.PhotoViewAttacher;
 
@@ -802,5 +806,59 @@ public class Utility {
 			s="km";
 		}
 		VariabiliStatiche.getInstance().getTxtKM().setText(Float.toString(km)+" "+s);
+	}
+
+	public boolean ePari(int numero) {
+		if ((numero % 2) == 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public void InviaFilesGPS() {
+		VariabiliStatiche.getInstance().getRltUpload().setVisibility(LinearLayout.VISIBLE);
+
+		String Origine=Environment.getExternalStorageDirectory().getAbsolutePath();
+		String Cartella=VariabiliStatiche.getInstance().PathApplicazioneFuori+"/Paths";
+
+		Utility u=new Utility();
+		u.CreaCartelle(Origine, Cartella+"/");
+
+		List<String> data=new ArrayList<String>();
+
+		File directory = new File(Origine + "/" + Cartella);
+		File[] files = directory.listFiles();
+		for (int i = 0; i < files.length; i++)
+		{
+			String n = files[i].getName();
+			n = n.replace("LL_", "");
+			n = n.replace("MM_", "");
+			n = n.replace(".txt", "");
+
+			Boolean Ok = true;
+			for (int k = 0; k < data.size(); k++) {
+				if (n.equals(data.get(k))) {
+					Ok = false;
+					break;
+				}
+			}
+
+			if (Ok) {
+				data.add(n);
+			}
+		}
+
+		if (data != null) {
+			VariabiliStatiche.getInstance().setFilesToUpload(data);
+			adapterListaFiles adapter = new adapterListaFiles(
+					VariabiliStatiche.getInstance().getContext().getApplicationContext(),
+					android.R.layout.simple_list_item_1,
+					data);
+
+			VariabiliStatiche.getInstance().getLstUpload().setAdapter(adapter);
+		} else {
+			VariabiliStatiche.getInstance().setFilesToUpload(null);
+		}
 	}
 }

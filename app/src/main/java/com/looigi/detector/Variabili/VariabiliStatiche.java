@@ -13,11 +13,14 @@ import android.location.LocationManager;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Environment;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -149,6 +152,10 @@ public class VariabiliStatiche {
     private View fgmMappa;
     private float KmPercorsi;
     private TextView txtKM;
+    private LinearLayout rltUpload;
+    private ListView lstUpload;
+    private List<String> filesToUpload;
+    private FragmentActivity FragmentActivityPrincipale;
 
     public Context getContext() {
         return context;
@@ -156,6 +163,38 @@ public class VariabiliStatiche {
 
     public void setContext(Context context) {
         this.context = context;
+    }
+
+    public FragmentActivity getFragmentActivityPrincipale() {
+        return FragmentActivityPrincipale;
+    }
+
+    public void setFragmentActivityPrincipale(FragmentActivity fragmentActivityPrincipale) {
+        FragmentActivityPrincipale = fragmentActivityPrincipale;
+    }
+
+    public List<String> getFilesToUpload() {
+        return filesToUpload;
+    }
+
+    public void setFilesToUpload(List<String> filesToUpload) {
+        this.filesToUpload = filesToUpload;
+    }
+
+    public ListView getLstUpload() {
+        return lstUpload;
+    }
+
+    public void setLstUpload(ListView lstUpload) {
+        this.lstUpload = lstUpload;
+    }
+
+    public LinearLayout getRltUpload() {
+        return rltUpload;
+    }
+
+    public void setRltUpload(LinearLayout rltUpload) {
+        this.rltUpload = rltUpload;
     }
 
     public TextView getTxtKM() {
