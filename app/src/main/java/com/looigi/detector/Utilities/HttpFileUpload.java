@@ -66,10 +66,10 @@ public class HttpFileUpload implements Runnable {
     			if (Ok) {
                     pd.setMessage("Attendere prego\nEliminazione files");
 
-                    // 	for (String filet: toDo) {
-                    // 		File f1 = new File(filet);
-                    // 		f1.delete();
-                    // 	}
+                    for (String filet: toDo) {
+                    	File f1 = new File(filet);
+                    	f1.delete();
+                    }
 
                     File f = new File(NomeFile);
                     f.delete();

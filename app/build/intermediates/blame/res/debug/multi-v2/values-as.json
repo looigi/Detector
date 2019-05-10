@@ -4,7 +4,7 @@
             "outputFile": "D:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-as\\values-as.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Luigi Pecce\\.gradle\\caches\\transforms-2\\files-2.1\\7e3697b73ddf8b911288d196aa325d1e\\res\\values-as\\values.xml",
+                    "source": "C:\\Users\\Looigi\\.gradle\\caches\\transforms-2\\files-2.1\\e7601ee3e83de9e44c505c5f24f16733\\res\\values-as\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Luigi Pecce\\.gradle\\caches\\transforms-2\\files-2.1\\b9f548045104672b35a9b013d13eaced\\res\\values-as\\values.xml",
+                    "source": "C:\\Users\\Looigi\\.gradle\\caches\\transforms-2\\files-2.1\\48bcb7d6df37ccde7484c82916b5d6d0\\res\\values-as\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

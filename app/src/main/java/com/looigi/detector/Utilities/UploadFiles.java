@@ -71,7 +71,7 @@ public class UploadFiles {
         protected void onPostExecute(String p) {
             super.onPostExecute(p);
 
-            ChiudeDialog();
+            // ChiudeDialog();
         }
 
         @Override
@@ -116,7 +116,7 @@ public class UploadFiles {
                 File f = new File(Destinazione);
                 try {
                     FileInputStream fstrm = new FileInputStream(f);
-                    HttpFileUpload hfu = new HttpFileUpload(progressDialog, Destinazione, toDo);
+                    HttpFileUpload hfu = new HttpFileUpload(progressDialog, "UploadFile.zip", toDo);
                     hfu.Send_Now(VariabiliStatiche.getInstance().getContext(), fstrm);
                 } catch (FileNotFoundException ignored) {
 
