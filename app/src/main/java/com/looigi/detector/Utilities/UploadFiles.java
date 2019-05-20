@@ -84,15 +84,17 @@ public class UploadFiles {
             List<String> filetti = VariabiliStatiche.getInstance().getFilesToUpload();
             List<String> toDo = new ArrayList<>();
             for (String filet: filetti) {
-                String file1 = "LL_" + filet + ".txt";
-                String file2 = "MM_" + filet + ".txt";
-                File f1 = new File(Origine + "/" + Cartella + "/" + file1);
-                if (f1.exists()) {
-                    toDo.add(Origine + "/" + Cartella + "/" + file1);
-                }
-                f1 = new File(Origine + "/" + Cartella + "/" + file2);
-                if (f1.exists()) {
-                    toDo.add(Origine + "/" + Cartella + "/" + file2);
+                if (!filet.toUpperCase().contains(".ZIP")) {
+                    String file1 = "LL_" + filet + ".txt";
+                    String file2 = "MM_" + filet + ".txt";
+                    File f1 = new File(Origine + "/" + Cartella + "/" + file1);
+                    if (f1.exists()) {
+                        toDo.add(Origine + "/" + Cartella + "/" + file1);
+                    }
+                    f1 = new File(Origine + "/" + Cartella + "/" + file2);
+                    if (f1.exists()) {
+                        toDo.add(Origine + "/" + Cartella + "/" + file2);
+                    }
                 }
             }
 
@@ -109,6 +111,9 @@ public class UploadFiles {
             try {
                 zu.zip(toDo, Destinazione);
             } catch (IOException ignored) {
+                Utility u = new Utility();
+                DialogMessaggio.getInstance().show(context, "Errore nel creare lo zip:\n" + u.PrendeErroreDaException(ignored),
+                        false, "Detector");
                 Ok = false;
             }
 

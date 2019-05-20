@@ -1,4 +1,4 @@
-package com.looigi.detector.thread;
+/* package com.looigi.detector.thread;
 
 import com.looigi.detector.Utilities.Log;
 import com.looigi.detector.Variabili.VariabiliImpostazioni;
@@ -55,3 +55,4 @@ public class ImAliveThread {
         }
     }
 }
+*/
