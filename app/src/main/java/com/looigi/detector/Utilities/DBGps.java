@@ -15,8 +15,10 @@ import java.io.StringWriter;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class DBGps {
     private String TAG = "GestioneDBPosizioni";
@@ -213,7 +215,7 @@ public class DBGps {
         return db.delete(DATABASE_TABELLA_GPS, "", null) > 0;
     }
 
-    public boolean cancellaDatiGPSPerData()
+    public boolean cancellaDatiGPSPerDataAttuale()
     {
         Date dataVisua = VariabiliStatiche.getInstance().getDataDiVisualizzazioneMappa();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
@@ -227,14 +229,77 @@ public class DBGps {
         return db.delete(DATABASE_TABELLA_GPS, whereClause, whereArgs) > 0;
     }
 
+    public boolean cancellaDatiGPSPerData(Date dataVisua)
+    {
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        String dataVisuaS = formatter.format(dataVisua);
+
+        String whereClause = "data = ?";
+        String[] whereArgs = new String[] {
+                dataVisuaS
+        };
+
+        return db.delete(DATABASE_TABELLA_GPS, whereClause, whereArgs) > 0;
+    }
+
+    public List<Date> RitornaTutteLeDateInArchivio() {
+        List<Date> lista = new ArrayList<>();
+
+        String[] tableColumns = new String[] {
+                "data",
+                "pro",
+                "lat",
+                "lon",
+                "alt",
+                "dat",
+                "vel"
+        };
+
+        Cursor c =null;
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            c = db.query(DATABASE_TABELLA_GPS, tableColumns, null, null,
+                    "data", null, "data");
+            if (c.moveToFirst()) {
+                do {
+                    String d = c.getString(0);
+                    Date dd = dateFormat.parse(d);
+
+                    lista.add(dd);
+                } while (c.moveToNext());
+            }
+            if (c != null)
+                c.close();
+
+        } catch (Exception ignored) {
+
+        }
+
+        return lista;
+    }
+
     public boolean cancellaDatiMultiMedia()
     {
         return db.delete(DATABASE_TABELLA_MULTIMEDIA, "", null) > 0;
     }
 
-    public boolean cancellaDatiMultiMediaPerData()
+    public boolean cancellaDatiMultiMediaPerDataAttuale()
     {
         Date dataVisua = VariabiliStatiche.getInstance().getDataDiVisualizzazioneMappa();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        String dataVisuaS = formatter.format(dataVisua);
+
+        String whereClause = "data = ?";
+        String[] whereArgs = new String[] {
+                dataVisuaS
+        };
+
+
+        return db.delete(DATABASE_TABELLA_MULTIMEDIA, whereClause, whereArgs) > 0;
+    }
+
+    public boolean cancellaDatiMultiMediaPerData(Date dataVisua)
+    {
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         String dataVisuaS = formatter.format(dataVisua);
 

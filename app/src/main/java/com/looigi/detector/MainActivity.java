@@ -23,7 +23,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
-import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.Switch;
@@ -48,7 +47,6 @@ import com.looigi.detector.Utilities.Permessi;
 import com.looigi.detector.Utilities.PrendeModelloTelefono;
 import com.looigi.detector.Utilities.UploadFiles;
 import com.looigi.detector.Utilities.Utility;
-import com.looigi.detector.Utilities.ZipUnzip;
 import com.looigi.detector.Variabili.VariabiliImpostazioni;
 import com.looigi.detector.Variabili.VariabiliStatiche;
 import com.looigi.detector.gps.LocationService;
@@ -57,10 +55,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 
 // import com.looigi.detector.gps.PrendeCoordinateGPS;
 
@@ -817,8 +813,8 @@ public class MainActivity extends FragmentActivity  implements OnMapReadyCallbac
 		imgEliminaMappa.setBackgroundResource(R.drawable.elimina);
 		imgEliminaMappa.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				VariabiliStatiche.getInstance().getDbGpsPos().cancellaDatiGPSPerData();
-				VariabiliStatiche.getInstance().getDbGpsPos().cancellaDatiMultiMediaPerData();
+				VariabiliStatiche.getInstance().getDbGpsPos().cancellaDatiGPSPerDataAttuale();
+				VariabiliStatiche.getInstance().getDbGpsPos().cancellaDatiMultiMediaPerDataAttuale();
 
 				VariabiliStatiche.getInstance().DisegnaPercorsoVecchioSuMappa();
 
@@ -931,6 +927,8 @@ public class MainActivity extends FragmentActivity  implements OnMapReadyCallbac
 		if (!VariabiliStatiche.getInstance().getGiaEntrato()) {
 			VariabiliStatiche.getInstance().setGiaEntrato(true);
 			moveTaskToBack(true);
+
+			VariabiliStatiche.getInstance().EstraiTuttiIDatiGPS();
 		}
 	}
 

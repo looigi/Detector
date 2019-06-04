@@ -20,7 +20,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -711,8 +710,28 @@ public class VariabiliStatiche {
         DisegnaPercorsoVecchioSuMappa();
     }
 
+    public void EstraiTuttiIDatiGPS() {
+        List<Date> lista = VariabiliStatiche.getInstance().getDbGpsPos().RitornaTutteLeDateInArchivio();
+
+        for (Date d : lista) {
+            EsegueScaricoDati(d, false);
+            VariabiliStatiche.getInstance().getDbGpsPos().cancellaDatiGPSPerData(d);
+            VariabiliStatiche.getInstance().getDbGpsPos().cancellaDatiMultiMediaPerData(d);
+        }
+
+        /* Utility u=new Utility();
+        u.VisualizzaPOPUP(VariabiliStatiche.getInstance().getContext(),
+                "File salvati: " + Integer.toString(lista.size()-1),
+                false, 0); */
+    }
+
     public void EstraiDatiGPS() {
         Date dataVisua = DataDiVisualizzazioneMappa;
+
+        EsegueScaricoDati(dataVisua, true);
+    }
+
+    private void EsegueScaricoDati(Date dataVisua, boolean Visualizza) {
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         String dataVisuaS = formatter.format(dataVisua);
 
@@ -764,7 +783,9 @@ public class VariabiliStatiche {
             c1.close();
         }
 
-        u.VisualizzaPOPUP(VariabiliStatiche.getInstance().getContext(), "File salvati", false,0);
+        if (Visualizza) {
+            u.VisualizzaPOPUP(VariabiliStatiche.getInstance().getContext(), "File salvati", false, 0);
+        }
     }
 
     public void DisegnaPercorsoVecchioSuMappa() {
