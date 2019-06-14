@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-166:12
-INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-166:12
-INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-166:12
-INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-166:12
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-174:12
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-174:12
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-174:12
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-174:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\587aec9c97fe911575dc697e0e21ad95\AndroidManifest.xml:17:1-31:12
 MERGED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\d32ef3b62a82164f214c8ce96e3adf70\AndroidManifest.xml:10:6-44:12
 MERGED from [com.commit451:PhotoView:1.2.5] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1bd38a8f8840e98aac33261172027117\AndroidManifest.xml:2:1-12:12
@@ -20,9 +20,9 @@ MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Luigi Pecce
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\194cd1d32dacb6e9e25f33983cbedd52\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\6b2aeae0e65eb1942b639d655850ae00\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\e84481a755e2ec683a336a045745df6d\AndroidManifest.xml:17:1-30:12
-INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-166:12
-INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-166:12
-INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-166:12
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-174:12
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-174:12
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-174:12
 	package
 		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
@@ -106,7 +106,7 @@ ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManife
 	android:name
 		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:23:22-72
 application
-ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:27:5-164:19
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:27:5-172:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\587aec9c97fe911575dc697e0e21ad95\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\587aec9c97fe911575dc697e0e21ad95\AndroidManifest.xml:25:5-29:19
 MERGED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\d32ef3b62a82164f214c8ce96e3adf70\AndroidManifest.xml:39:5-43:19
@@ -193,68 +193,80 @@ ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManife
 		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:61:13-53
 	android:name
 		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:60:13-63
+activity#com.looigi.detector.Utilities.ExitActivity
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:65:9-69
+	android:name
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:65:19-57
+service#com.looigi.detector.bckService
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:67:9-71:19
+	android:label
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:70:13-45
+	android:icon
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:69:13-49
+	android:name
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:68:13-38
 receiver#com.looigi.detector.Receivers.ProviderPhoto
-ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:82:9-89:20
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:90:9-97:20
 	android:label
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:82:78-108
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:90:78-108
 	android:name
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:82:19-77
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:90:19-77
 intent-filter#action:name:android.appwidget.action.APPWIDGET_UPDATE
-ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:83:13-85:29
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:91:13-93:29
 action#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:84:17-83
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:92:17-83
 	android:name
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:84:25-81
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:92:25-81
 meta-data#android.appwidget.provider
-ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:87:13-88:59
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:95:13-96:59
 	android:resource
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:88:17-56
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:96:17-56
 	android:name
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:87:24-65
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:95:24-65
 receiver#com.looigi.detector.Receivers.ProviderVideo
-ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:91:9-99:20
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:99:9-107:20
 	android:label
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:91:78-108
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:99:78-108
 	android:name
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:91:19-77
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:99:19-77
 receiver#com.looigi.detector.Receivers.ProviderAudio
-ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:101:9-109:20
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:109:9-117:20
 	android:label
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:101:78-108
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:109:78-108
 	android:name
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:101:19-77
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:109:19-77
 service#com.looigi.detector.DetectPowerClick.LockService
-ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:130:9-131:19
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:138:9-139:19
 	android:name
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:130:18-81
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:138:18-81
 receiver#com.looigi.detector.AutoStart.yourActivityRunOnStartup
-ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:142:10-153:20
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:150:10-161:20
 	android:enabled
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:143:13-35
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:151:13-35
 	android:exported
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:144:13-36
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:152:13-36
 	android:permission
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:146:13-75
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:154:13-75
 	android:name
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:145:13-82
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:153:13-82
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.QUICKBOOT_POWERON+category:name:android.intent.category.DEFAULT
-ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:148:13-152:29
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:156:13-160:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:149:17-79
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:157:17-79
 	android:name
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:149:25-76
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:157:25-76
 action#android.intent.action.QUICKBOOT_POWERON
-ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:150:17-82
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:158:17-82
 	android:name
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:150:25-79
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:158:25-79
 category#android.intent.category.DEFAULT
-ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:151:17-76
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:159:17-76
 	android:name
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:151:27-73
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:159:27-73
 service#com.looigi.detector.gps.LocationService
-ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:162:9-56
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:170:9-56
 	android:name
-		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:162:18-53
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:170:18-53
 uses-sdk
 INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml

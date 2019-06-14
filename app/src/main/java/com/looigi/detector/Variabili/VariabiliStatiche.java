@@ -155,6 +155,7 @@ public class VariabiliStatiche {
     private ListView lstUpload;
     private List<String> filesToUpload;
     private FragmentActivity FragmentActivityPrincipale;
+    private Intent iServizio;
 
     public Context getContext() {
         return context;
@@ -170,6 +171,14 @@ public class VariabiliStatiche {
 
     public void setFragmentActivityPrincipale(FragmentActivity fragmentActivityPrincipale) {
         FragmentActivityPrincipale = fragmentActivityPrincipale;
+    }
+
+    public Intent getiServizio() {
+        return iServizio;
+    }
+
+    public void setiServizio(Intent iServizio) {
+        this.iServizio = iServizio;
     }
 
     public List<String> getFilesToUpload() {
