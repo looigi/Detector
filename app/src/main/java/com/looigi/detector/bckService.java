@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.location.Location;
 import android.media.AudioManager;
+import android.os.Binder;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
@@ -60,6 +61,26 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class bckService extends Service  implements OnMapReadyCallback {
+    public interface ServiceCallbacks {
+        void doSomething();
+    }
+
+    private final IBinder binder = new LocalBinder();
+    // Registered callbacks
+    private ServiceCallbacks serviceCallbacks;
+
+    public void setCallbacks(ServiceCallbacks callbacks) {
+        serviceCallbacks = callbacks;
+    }
+
+    // Class used for the client Binder.
+    public class LocalBinder extends Binder {
+        bckService getService() {
+            // Return this instance of MyService so clients can call public methods
+            return bckService.this;
+        }
+    }
+
     private Long datella1 = null;
     private FragmentActivity v;
     private TabHost tabHost;
@@ -70,6 +91,10 @@ public class bckService extends Service  implements OnMapReadyCallback {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        if (serviceCallbacks != null) {
+            serviceCallbacks.doSomething();
+        }
+
         final Context context = this;
         Activity act = VariabiliStatiche.getInstance().getFragmentActivityPrincipale();
         v = VariabiliStatiche.getInstance().getFragmentActivityPrincipale();
@@ -237,7 +262,7 @@ public class bckService extends Service  implements OnMapReadyCallback {
             @Override
             public void onClick(View v) {
                 Intent Folder = new Intent(VariabiliStatiche.getInstance().getFragmentActivityPrincipale(), Video.class);
-                startActivity(Folder);
+                VariabiliStatiche.getInstance().getFragmentActivityPrincipale().startActivity(Folder);
 
                 // finish();
             }

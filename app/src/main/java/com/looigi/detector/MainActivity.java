@@ -1,13 +1,16 @@
 package com.looigi.detector;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.database.Cursor;
 import android.location.Location;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.IBinder;
 import android.os.Vibrator;
 import android.support.v4.app.FragmentActivity;
 import android.util.DisplayMetrics;
@@ -61,7 +64,55 @@ import java.util.Date;
 
 // import com.looigi.detector.gps.PrendeCoordinateGPS;
 
-public class MainActivity extends FragmentActivity  {
+public class MainActivity extends FragmentActivity implements bckService.ServiceCallbacks  {
+	private bckService myService;
+	private boolean bound = false;
+
+	/** Callbacks for service binding, passed to bindService() */
+	private ServiceConnection serviceConnection = new ServiceConnection() {
+
+		@Override
+		public void onServiceConnected(ComponentName className, IBinder service) {
+			// cast the IBinder and get MyService instance
+			bckService.LocalBinder binder = (bckService.LocalBinder) service;
+			myService = binder.getService();
+			bound = true;
+			myService.setCallbacks(MainActivity.this); // register
+		}
+
+		@Override
+		public void onServiceDisconnected(ComponentName arg0) {
+			bound = false;
+		}
+	};
+
+	/* Defined by ServiceCallbacks interface */
+	@Override
+	public void doSomething() {
+		VariabiliStatiche.getInstance().setFragmentActivityPrincipale(MainActivity.this);
+		VariabiliStatiche.getInstance().setContext(MainActivity.this);
+		VariabiliImpostazioni.getInstance().setAct(MainActivity.this);
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		// bind to Service
+		Intent intent = new Intent(this, bckService.class);
+		bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
+	}
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+		// Unbind from service
+		if (bound) {
+			myService.setCallbacks(null); // unregister
+			unbindService(serviceConnection);
+			bound = false;
+		}
+	}
+
 	@Override
 	public void onBackPressed() {
 		ExitActivity.exitApplicationAndRemoveFromRecent(MainActivity.this);
