@@ -63,8 +63,11 @@ public class RefreshActivity {
 
     public void RilanciaActivity() {
         conta=0;
-        hSelezionaRiga.removeCallbacks(runRiga);
-        runRiga = null;
+
+        if (runRiga!=null && hSelezionaRiga!=null) {
+            hSelezionaRiga.removeCallbacks(runRiga);
+            runRiga = null;
+        }
 
         if (VariabiliStatiche.getInstance().getContext()==null ||
                 VariabiliStatiche.getInstance().getFragmentActivityPrincipale()==null) {
