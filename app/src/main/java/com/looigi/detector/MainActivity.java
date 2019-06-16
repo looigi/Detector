@@ -64,53 +64,10 @@ import java.util.Date;
 
 // import com.looigi.detector.gps.PrendeCoordinateGPS;
 
-public class MainActivity extends FragmentActivity implements bckService.ServiceCallbacks  {
-	private bckService myService;
-	private boolean bound = false;
-
-	/** Callbacks for service binding, passed to bindService() */
-	private ServiceConnection serviceConnection = new ServiceConnection() {
-
-		@Override
-		public void onServiceConnected(ComponentName className, IBinder service) {
-			// cast the IBinder and get MyService instance
-			bckService.LocalBinder binder = (bckService.LocalBinder) service;
-			myService = binder.getService();
-			bound = true;
-			myService.setCallbacks(MainActivity.this); // register
-		}
-
-		@Override
-		public void onServiceDisconnected(ComponentName arg0) {
-			bound = false;
-		}
-	};
-
-	/* Defined by ServiceCallbacks interface */
-	@Override
-	public void doSomething() {
-		VariabiliStatiche.getInstance().setFragmentActivityPrincipale(MainActivity.this);
-		VariabiliStatiche.getInstance().setContext(MainActivity.this);
-		VariabiliImpostazioni.getInstance().setAct(MainActivity.this);
-	}
-
-	@Override
-	protected void onStart() {
-		super.onStart();
-		// bind to Service
-		Intent intent = new Intent(this, bckService.class);
-		bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
-	}
-
+public class MainActivity extends FragmentActivity {
 	@Override
 	protected void onStop() {
 		super.onStop();
-		// Unbind from service
-		if (bound) {
-			myService.setCallbacks(null); // unregister
-			unbindService(serviceConnection);
-			bound = false;
-		}
 	}
 
 	@Override
@@ -136,5 +93,9 @@ public class MainActivity extends FragmentActivity implements bckService.Service
 		VariabiliStatiche.getInstance().getFragmentActivityPrincipale().startService(
 				VariabiliStatiche.getInstance().getiServizio());
 
+        String AutomaticReload = getIntent().getStringExtra("AUTOMATIC RELOAD");
+        if (AutomaticReload !=null && AutomaticReload.equals("YES")) {
+            moveTaskToBack(true);
+        }
 	}
 }

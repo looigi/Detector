@@ -72,7 +72,7 @@ public class VariabiliStatiche {
     private ListView Lista;
 
     public String NomeFileSelezionato="";
-    private Context context;
+    protected static Context context;
     public AudioManager manager ;
     // public int Fotocamera=2;
     // public int Estensione=1;
@@ -154,7 +154,7 @@ public class VariabiliStatiche {
     private LinearLayout rltUpload;
     private ListView lstUpload;
     private List<String> filesToUpload;
-    private FragmentActivity FragmentActivityPrincipale;
+    protected static FragmentActivity FragmentActivityPrincipale;
     private Intent iServizio;
 
     public Context getContext() {

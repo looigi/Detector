@@ -45,8 +45,10 @@ import com.looigi.detector.Utilities.CheckURLFile;
 import com.looigi.detector.Utilities.DBGps;
 import com.looigi.detector.Utilities.DownloadImmagine;
 import com.looigi.detector.Utilities.GestioneImmagini;
+import com.looigi.detector.Utilities.Log;
 import com.looigi.detector.Utilities.Permessi;
 import com.looigi.detector.Utilities.PrendeModelloTelefono;
+import com.looigi.detector.Utilities.RefreshActivity;
 import com.looigi.detector.Utilities.UploadFiles;
 import com.looigi.detector.Utilities.Utility;
 import com.looigi.detector.Variabili.VariabiliImpostazioni;
@@ -61,43 +63,27 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class bckService extends Service  implements OnMapReadyCallback {
-    public interface ServiceCallbacks {
-        void doSomething();
-    }
-
-    private final IBinder binder = new LocalBinder();
-    // Registered callbacks
-    private ServiceCallbacks serviceCallbacks;
-
-    public void setCallbacks(ServiceCallbacks callbacks) {
-        serviceCallbacks = callbacks;
-    }
-
-    // Class used for the client Binder.
-    public class LocalBinder extends Binder {
-        bckService getService() {
-            // Return this instance of MyService so clients can call public methods
-            return bckService.this;
-        }
-    }
-
     private Long datella1 = null;
-    private FragmentActivity v;
+    protected static FragmentActivity v;
     private TabHost tabHost;
     private Runnable rAttendeRispostaCheckURL1;
     private Handler hAttendeRispostaCheckURL1;
     private Runnable rAttendeRispostaCheckURL2;
     private Handler hAttendeRispostaCheckURL2;
+    protected static Context context;
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (serviceCallbacks != null) {
-            serviceCallbacks.doSomething();
-        }
-
-        final Context context = this;
         Activity act = VariabiliStatiche.getInstance().getFragmentActivityPrincipale();
         v = VariabiliStatiche.getInstance().getFragmentActivityPrincipale();
+        context = this;
+
+        if (v == null || VariabiliStatiche.getInstance().getContext()==null || context == null) {
+            RefreshActivity.getInstance().RilanciaActivity();
+            v = RefreshActivity.getAct();
+            context = RefreshActivity.getContext();
+            VariabiliStatiche.getInstance().setContext(context);
+        }
 
         Location loc = new Location("dummyprovider");
         loc.setLatitude(41.8648184);
@@ -950,6 +936,8 @@ public class bckService extends Service  implements OnMapReadyCallback {
             VariabiliStatiche.getInstance().EstraiTuttiIDatiGPS();
         }
 
+        RefreshActivity.getInstance().RilanciaServizio(context, v);
+
         return Service.START_STICKY;
     }
 
@@ -1277,6 +1265,15 @@ public class bckService extends Service  implements OnMapReadyCallback {
         VariabiliStatiche.getInstance().setmMap(googleMap);
 
         VariabiliStatiche.getInstance().DisegnaPercorsoAttualeSuMappa();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        // Intent dialogIntent = new Intent(this, MainActivity.class);
+        // dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        // startActivity(dialogIntent);
     }
 
     @Override
