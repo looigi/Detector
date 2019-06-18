@@ -69,7 +69,7 @@ public class RefreshActivity {
             runRiga = null;
         }
 
-        if (context == null && VariabiliStatiche.getInstance().getContext()==null ||
+        if (VariabiliStatiche.getInstance().getContext()==null ||
                 VariabiliStatiche.getInstance().getFragmentActivityPrincipale()==null) {
             if (context!=null) {
                 VariabiliStatiche.getInstance().setContext(context);
@@ -77,12 +77,16 @@ public class RefreshActivity {
             if (act!=null) {
                 VariabiliStatiche.getInstance().setFragmentActivityPrincipale(act);
             }
-            if (context==null || VariabiliStatiche.getInstance().getContext()==null ||
+            if (VariabiliStatiche.getInstance().getContext()==null ||
                     VariabiliStatiche.getInstance().getFragmentActivityPrincipale()==null) {
-                Intent dialogIntent = new Intent(context, MainActivity.class);
-                dialogIntent.putExtra("AUTOMATIC RELOAD", "YES");
-                dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                act.startActivity(dialogIntent);
+                if (context != null) {
+                    Intent dialogIntent = new Intent(context, MainActivity.class);
+                    dialogIntent.putExtra("AUTOMATIC RELOAD", "YES");
+                    dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    act.startActivity(dialogIntent);
+                } else {
+                    hSelezionaRiga.postDelayed(runRiga, 60000);
+                }
             } else {
                 hSelezionaRiga.postDelayed(runRiga, 60000);
             }
