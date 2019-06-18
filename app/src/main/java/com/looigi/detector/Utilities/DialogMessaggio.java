@@ -8,6 +8,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.looigi.detector.R;
 import com.looigi.detector.Variabili.VariabiliStatiche;
@@ -66,12 +67,30 @@ public class DialogMessaggio
         }
         builder.setPositiveButton("Ok", onClickOK);
 
-        VariabiliStatiche.getInstance().getFragmentActivityPrincipale().runOnUiThread(new Runnable() {
-            public void run() {
-                AlertDialog alert = builder.create();
-                alert.show();
+        if (VariabiliStatiche.getInstance().getFragmentActivityPrincipale()==null) {
+            RefreshActivity.getInstance().RilanciaActivity();
+        }
+
+        if (VariabiliStatiche.getInstance().getFragmentActivityPrincipale()==null) {
+            if (VariabiliStatiche.getInstance().getContext()!=null) {
+                Toast.makeText(VariabiliStatiche.getInstance().getContext(),
+                        Message,
+                        Toast.LENGTH_SHORT).show();
             }
-        });
+        } else {
+            VariabiliStatiche.getInstance().getFragmentActivityPrincipale().runOnUiThread(new Runnable() {
+                public void run() {
+                    try {
+                        AlertDialog alert = builder.create();
+                        alert.show();
+                    } catch (Exception ignored) {
+                        Toast.makeText(VariabiliStatiche.getInstance().getContext(),
+                                Message,
+                                Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
     }
 
     private OnClickListener onClickAnnulla = new OnClickListener()

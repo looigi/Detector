@@ -69,15 +69,15 @@ public class RefreshActivity {
             runRiga = null;
         }
 
-        if (VariabiliStatiche.getInstance().getContext()==null ||
+        if (context == null && VariabiliStatiche.getInstance().getContext()==null ||
                 VariabiliStatiche.getInstance().getFragmentActivityPrincipale()==null) {
-            if (this.context!=null) {
-                VariabiliStatiche.getInstance().setContext(this.context);
+            if (context!=null) {
+                VariabiliStatiche.getInstance().setContext(context);
             }
-            if (this.act!=null) {
-                VariabiliStatiche.getInstance().setFragmentActivityPrincipale(this.act);
+            if (act!=null) {
+                VariabiliStatiche.getInstance().setFragmentActivityPrincipale(act);
             }
-            if (VariabiliStatiche.getInstance().getContext()==null ||
+            if (context==null || VariabiliStatiche.getInstance().getContext()==null ||
                     VariabiliStatiche.getInstance().getFragmentActivityPrincipale()==null) {
                 Intent dialogIntent = new Intent(context, MainActivity.class);
                 dialogIntent.putExtra("AUTOMATIC RELOAD", "YES");
