@@ -48,7 +48,6 @@ import com.looigi.detector.Utilities.GestioneImmagini;
 import com.looigi.detector.Utilities.Log;
 import com.looigi.detector.Utilities.Permessi;
 import com.looigi.detector.Utilities.PrendeModelloTelefono;
-import com.looigi.detector.Utilities.RefreshActivity;
 import com.looigi.detector.Utilities.UploadFiles;
 import com.looigi.detector.Utilities.Utility;
 import com.looigi.detector.Variabili.VariabiliImpostazioni;
@@ -70,7 +69,7 @@ public class bckService extends Service  implements OnMapReadyCallback {
     private Handler hAttendeRispostaCheckURL1;
     private Runnable rAttendeRispostaCheckURL2;
     private Handler hAttendeRispostaCheckURL2;
-    protected static Context context;
+    protected Context context;
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -78,12 +77,12 @@ public class bckService extends Service  implements OnMapReadyCallback {
         v = VariabiliStatiche.getInstance().getFragmentActivityPrincipale();
         context = this;
 
-        if (v == null || VariabiliStatiche.getInstance().getContext()==null || context == null) {
-            RefreshActivity.getInstance().RilanciaActivity();
-            v = RefreshActivity.getAct();
-            context = RefreshActivity.getContext();
-            VariabiliStatiche.getInstance().setContext(context);
-        }
+        // if (v == null || VariabiliStatiche.getInstance().getContext()==null || context == null) {
+        //     RefreshActivity.getInstance().RilanciaActivity();
+        //     v = RefreshActivity.getAct();
+        //     context = RefreshActivity.getContext();
+        //     VariabiliStatiche.getInstance().setContext(context);
+        // }
 
         Location loc = new Location("dummyprovider");
         loc.setLatitude(41.8648184);
@@ -306,7 +305,7 @@ public class bckService extends Service  implements OnMapReadyCallback {
                 i.ImpostaAutoScatto(context, et);
 
                 Utility u = new Utility();
-                u.VisualizzaPOPUP(context, "Saved", false, 0);
+                u.VisualizzaPOPUP("Saved", false, 0);
             }
         });
 
@@ -448,7 +447,7 @@ public class bckService extends Service  implements OnMapReadyCallback {
                 i.ImpostaNumScatti(context, t);
 
                 Utility u = new Utility();
-                u.VisualizzaPOPUP(context, "Saved", false, 0);
+                u.VisualizzaPOPUP("Saved", false, 0);
             }
         });
 
@@ -786,7 +785,7 @@ public class bckService extends Service  implements OnMapReadyCallback {
                 if (appo < 0) appo = 0;
                 VariabiliStatiche.getInstance().numMultimedia = appo;
                 uu.VisualizzaMultimedia();
-                uu.VisualizzaPOPUP(context, "File multimediale eliminato", false, 0);
+                uu.VisualizzaPOPUP("File multimediale eliminato", false, 0);
             }
         });
 
@@ -824,7 +823,7 @@ public class bckService extends Service  implements OnMapReadyCallback {
                 VariabiliStatiche.getInstance().DisegnaPercorsoVecchioSuMappa();
 
                 Utility u = new Utility();
-                u.VisualizzaPOPUP(VariabiliStatiche.getInstance().getContext(), "Dati eliminati", false,0);
+                u.VisualizzaPOPUP("Dati eliminati", false,0);
             }
         });
 
@@ -936,7 +935,7 @@ public class bckService extends Service  implements OnMapReadyCallback {
             VariabiliStatiche.getInstance().EstraiTuttiIDatiGPS();
         }
 
-        RefreshActivity.getInstance().RilanciaServizio(context, v);
+        // RefreshActivity.getInstance().RilanciaServizio(context, v);
 
         return Service.START_STICKY;
     }
@@ -1245,7 +1244,7 @@ public class bckService extends Service  implements OnMapReadyCallback {
                                                             d.startDownload(link2);
                                                         } else {
                                                             Utility u = new Utility();
-                                                            u.VisualizzaPOPUP(VariabiliStatiche.getInstance().getContext(), "Nessuna immagine rilevata",false,-1);
+                                                            u.VisualizzaPOPUP("Nessuna immagine rilevata",false,-1);
                                                         }
                                                     }
                                                 }

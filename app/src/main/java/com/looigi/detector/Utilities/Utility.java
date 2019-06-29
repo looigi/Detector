@@ -13,6 +13,7 @@ import android.os.Environment;
 import android.widget.LinearLayout;
 import android.widget.SimpleAdapter;
 
+import com.looigi.detector.MainActivity;
 import com.looigi.detector.R;
 import com.looigi.detector.Variabili.VariabiliStatiche;
 import com.looigi.detector.adapters.adapterListaFiles;
@@ -221,7 +222,7 @@ public class Utility {
 		CaricaMultimedia();
 		VisualizzaMultimedia();
 
-		VisualizzaPOPUP(context, "Fatto. Immagini decriptate: "+cambiate, false, 0);
+		VisualizzaPOPUP("Fatto. Immagini decriptate: "+cambiate, false, 0);
 	}
 
 	public void CriptaFiles(Context context) {
@@ -269,7 +270,7 @@ public class Utility {
 		CaricaMultimedia();
 		VisualizzaMultimedia();
 
-		VisualizzaPOPUP(context, "Fatto. Immagini criptate: "+cambiate, false, 0);
+		VisualizzaPOPUP("Fatto. Immagini criptate: "+cambiate, false, 0);
 	}
 
     private void removeKeyFromFile(String Path, String Filetto, String FilettoNuovo) {
@@ -507,10 +508,9 @@ public class Utility {
         
         return Ritorno;
 	}
-	
 
-	public void VisualizzaPOPUP(final Context context, String Messaggio, final Boolean Tasti, final int QualeOperazione) {
-		AlertDialog.Builder builder = new AlertDialog.Builder(context);
+	public void VisualizzaPOPUP(String Messaggio, final Boolean Tasti, final int QualeOperazione) {
+		AlertDialog.Builder builder = new AlertDialog.Builder(VariabiliStatiche.getInstance().getContext());
 		builder.setTitle("");
 		builder.setMessage(Messaggio);
 		builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
