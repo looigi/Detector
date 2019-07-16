@@ -34,8 +34,8 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.looigi.detector.R;
-import com.looigi.detector.Utilities.DBGps;
 import com.looigi.detector.Utilities.Utility;
+import com.looigi.detector.Utilities.db_dati;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -121,7 +121,7 @@ public class VariabiliStatiche {
     private TextView txtCoords;
     private int ProgressivoDBGPS;
     private int ProgressivoDBMM;
-    private DBGps dbGpsPos;
+    private db_dati dbGpsPos;
     private LocationManager locationManager;
     private LocationListener locationListener;
     private Boolean GiaEntrato=false;
@@ -433,11 +433,11 @@ public class VariabiliStatiche {
         this.locationListener = locationListener;
     }
 
-    public DBGps getDbGpsPos() {
+    public db_dati getDbGpsPos() {
         return dbGpsPos;
     }
 
-    public void setDbGpsPos(DBGps dbGpsPos) {
+    public void setDbGpsPos(db_dati dbGpsPos) {
         this.dbGpsPos = dbGpsPos;
     }
 

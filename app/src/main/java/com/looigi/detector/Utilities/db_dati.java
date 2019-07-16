@@ -1,15 +1,15 @@
-/* package com.looigi.detector.Utilities;
+package com.looigi.detector.Utilities;
 
 import android.content.ContentValues;
-import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Environment;
 
 import com.looigi.detector.Variabili.VariabiliImpostazioni;
 import com.looigi.detector.Variabili.VariabiliStatiche;
 
+import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.text.DecimalFormat;
@@ -20,13 +20,16 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class DBGps {
-    private String TAG = "GestioneDBPosizioni";
-    private String DATABASE_NOME = "Posizioni";
+import static android.content.Context.MODE_PRIVATE;
+
+public class db_dati {
+    private String Origine = Environment.getExternalStorageDirectory().getAbsolutePath();
+    private String PathDB = Origine + VariabiliStatiche.getInstance().PathApplicazioneFuori+"DB_DATI/";
+    private String NomeDB = "posizioni.db";
+    private SQLiteDatabase myDB;
     private String DATABASE_TABELLA_GPS = "Posizioni";
     private String DATABASE_TABELLA_MULTIMEDIA = "Multimedia";
     private String DATABASE_TABELLA_DISTANZE = "Distanze";
-    private int DATABASE_VERSIONE = 3;
 
     private String DATABASE_CREAZIONE_1 =
             "CREATE TABLE " + DATABASE_TABELLA_GPS + " ("+
@@ -38,6 +41,7 @@ public class DBGps {
                     "dat text not null, "+
                     "vel text not null"+
                     ");";
+
     private String DATABASE_CREAZIONE_2 =
             "CREATE TABLE " + DATABASE_TABELLA_MULTIMEDIA + " ("+
                     "data text not null, " +
@@ -49,81 +53,89 @@ public class DBGps {
                     "nfile text not null, "+
                     "type text not null "+
                     ");";
+
     private String DATABASE_CREAZIONE_3 =
             "CREATE TABLE " + DATABASE_TABELLA_DISTANZE + " ("+
                     "data text not null, " +
                     "distanza text not null "+
                     ");";
 
-    private Context context;
-    private DatabaseHelperGPS DBHelper;
-    private SQLiteDatabase db;
+    public db_dati() {
+        File f = new File(PathDB);
+        try {
+            f.mkdirs();
+        } catch (Exception ignored) {
 
-    public DBGps(Context ctx)
-    {
-        this.context = ctx;
-        DBHelper = new DatabaseHelperGPS(context);
+        }
+        myDB = ApreDB();
     }
 
-    private class DatabaseHelperGPS extends SQLiteOpenHelper
-    {
-        DatabaseHelperGPS(Context context)
-        {
-            super(context, DATABASE_NOME, null, DATABASE_VERSIONE);
+    private SQLiteDatabase ApreDB() {
+        SQLiteDatabase db = null;
+        try {
+            db = VariabiliStatiche.getInstance().getContext().openOrCreateDatabase(
+                    PathDB + NomeDB, MODE_PRIVATE, null);
+        } catch (Exception e) {
+            int a = 0;
         }
 
-        @Override
-        public void onCreate(SQLiteDatabase db)
-        {
+        return  db;
+    }
+
+    public void CreazioneTabelle() {
+        if (myDB != null) {
             try {
-                db.execSQL(DATABASE_CREAZIONE_1);
+            // SQLiteDatabase myDB = ApreDB();
+                myDB.execSQL(DATABASE_CREAZIONE_1);
+            } catch (Exception ignored) {
+                int a = 0;
             }
-            catch (SQLException e) {
-                // e.printStackTrace();
-            }
+
             try {
-                db.execSQL(DATABASE_CREAZIONE_2);
+                myDB.execSQL(DATABASE_CREAZIONE_2);
+            } catch (Exception ignored) {
+                int a = 0;
             }
-            catch (SQLException e) {
-                // e.printStackTrace();
-            }
+
             try {
-                db.execSQL(DATABASE_CREAZIONE_3);
+                myDB.execSQL(DATABASE_CREAZIONE_3);
+            } catch (Exception ignored) {
+                int a = 0;
             }
-            catch (SQLException e) {
-                // e.printStackTrace();
+
+            try {
+                myDB.execSQL("CREATE INDEX IF NOT EXISTS Posizioni_Index ON " + DATABASE_TABELLA_GPS + "(data, pro);");
+            } catch (Exception ignored) {
+                int a = 0;
             }
-        }
 
-        @Override
-        public void onUpgrade(SQLiteDatabase db,int oldVersion, int newVersion) {
-            // db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABELLA_GPS);
-            // db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABELLA_MULTIMEDIA);
+            try {
+                myDB.execSQL("CREATE INDEX IF NOT EXISTS Multimedia_Index ON " + DATABASE_TABELLA_MULTIMEDIA + "(data, pro);");
+            } catch (Exception ignored) {
+                int a = 0;
+            }
 
-            // boolean Ancora=false;
-
-            // if ((oldVersion==1 && newVersion==2) || Ancora) {
-            //     db.execSQL("ALTER TABLE "+DATABASE_TABELLA_GPS+" Add vel text");
-            //     db.execSQL("Update "+DATABASE_TABELLA_GPS+" set vel = '30'");
-            //     Ancora=true;
-            // }
-            // if ((oldVersion==2 && newVersion==3) || Ancora) {
-            //     db.execSQL(DATABASE_CREAZIONE_3);
-            // }
-
-            // onCreate(db);
+            try {
+                myDB.execSQL("CREATE INDEX IF NOT EXISTS Distanze_Index ON " + DATABASE_TABELLA_DISTANZE + "(data);");
+            } catch (Exception ignored) {
+                int a = 0;
+            }
         }
     }
 
-    public DBGps open() throws SQLException
-    {
-        db = DBHelper.getWritableDatabase();
-        return this;
+    public void CompattaDB() {
+        // SQLiteDatabase myDB = ApreDB();
+        if (myDB != null) {
+            myDB.execSQL("VACUUM");
+        }
     }
 
-    public void close()
-    {
-        DBHelper.close();
+    public void PulisceDati() {
+        if (myDB != null) {
+            myDB.execSQL("Delete From " + DATABASE_TABELLA_GPS);
+            myDB.execSQL("Delete From " + DATABASE_TABELLA_DISTANZE );
+            myDB.execSQL("Delete From " + DATABASE_TABELLA_MULTIMEDIA);
+        }
     }
 
     public long aggiungiPosizione(
@@ -145,18 +157,31 @@ public class DBGps {
 
             String dat = hour + minutes + seconds + mseconds;
 
-            ContentValues initialValues = new ContentValues();
-            initialValues.put("data", data);
-            initialValues.put("pro", pro);
-            initialValues.put("lat", lat);
-            initialValues.put("lon", lon);
-            initialValues.put("alt", alt);
-            initialValues.put("dat", dat);
-            initialValues.put("vel", vel);
+            if (myDB != null) {
+                long Progressivo = 0;
 
-            long l = db.insert(DATABASE_TABELLA_GPS, null, initialValues);
+                Cursor c1 = myDB.rawQuery("SELECT Max(pro) FROM " + DATABASE_TABELLA_GPS + " WHERE data = ?",
+                        new String[]{data});
+                c1.moveToFirst();
+                if (c1.getCount() > 0) {
+                    Progressivo = c1.getLong(0);
+                }
+                c1.close();
 
-            return l;
+                Progressivo++;
+                myDB.execSQL("INSERT INTO"
+                        + " " + DATABASE_TABELLA_GPS + " "
+                        + " (data, pro, lat, lon, alt, dat, vel)"
+                        + " VALUES ('" + data + "', " + Progressivo + ", " + lat + ", " + lon + ", "
+                        + alt + ", '" + dat + "', " + vel + ");");
+
+                return 1;
+            } else {
+                Log l1=new Log(VariabiliImpostazioni.getInstance().getNomeLogGPS());
+                l1.ScriveLog("Aggiungi posizione. ERROR: Db chiuso");
+
+                return -1;
+            }
         } catch (Exception e) {
             StringWriter errors = new StringWriter();
             e.printStackTrace(new PrintWriter(errors));
@@ -187,19 +212,31 @@ public class DBGps {
 
             String dat = hour + minutes + seconds + mseconds;
 
-            ContentValues initialValues = new ContentValues();
-            initialValues.put("data", data);
-            initialValues.put("pro", pro);
-            initialValues.put("lat", lat);
-            initialValues.put("lon", lon);
-            initialValues.put("alt", alt);
-            initialValues.put("dat", dat);
-            initialValues.put("nfile", nomeFile);
-            initialValues.put("type", type);
+            if (myDB != null) {
+                long Progressivo = 0;
 
-            long l = db.insert(DATABASE_TABELLA_MULTIMEDIA, null, initialValues);
+                Cursor c1 = myDB.rawQuery("SELECT Max(pro) FROM " + DATABASE_TABELLA_MULTIMEDIA + " WHERE data = ?",
+                        new String[]{data});
+                c1.moveToFirst();
+                if (c1.getCount() > 0) {
+                    Progressivo = c1.getLong(0);
+                }
+                c1.close();
 
-            return l;
+                Progressivo++;
+                myDB.execSQL("INSERT INTO"
+                        + " " + DATABASE_TABELLA_MULTIMEDIA + " "
+                        + " (data, pro, lat, lon, alt, dat, nfile, type)"
+                        + " VALUES ('" + data + "', " + Progressivo + ", " + lat + ", "
+                        + lon + ", " + alt + ", '" + dat + "', '" + nomeFile + "', '"+ type + "');");
+
+                return 1;
+            } else {
+                Log l1=new Log(VariabiliImpostazioni.getInstance().getNomeLogGPS());
+                l1.ScriveLog("Aggiungi multimedia. ERROR: Db chiuso");
+
+                return -1;
+            }
         } catch (Exception e) {
             StringWriter errors = new StringWriter();
             e.printStackTrace(new PrintWriter(errors));
@@ -210,9 +247,59 @@ public class DBGps {
         }
     }
 
-    public boolean cancellaDatiGPS()
+    public long inserisceNuovaDistanza(
+            String data,
+            String distanza)
     {
-        return db.delete(DATABASE_TABELLA_GPS, "", null) > 0;
+        try {
+            if (myDB != null) {
+                myDB.execSQL("INSERT INTO"
+                        + " " + DATABASE_TABELLA_DISTANZE + " "
+                        + " (data, distanza)"
+                        + " VALUES ('" + data + "', " + distanza);
+
+                return 1;
+            } else {
+                Log l1=new Log(VariabiliImpostazioni.getInstance().getNomeLogGPS());
+                l1.ScriveLog("Aggiungi distanze. ERROR: Db chiuso");
+
+                return -1;
+            }
+        } catch (Exception e) {
+            StringWriter errors = new StringWriter();
+            e.printStackTrace(new PrintWriter(errors));
+            Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLogGPS());
+            l.ScriveLog("Aggiungi distanze. ERROR: "+errors.toString());
+
+            return -1;
+        }
+    }
+
+    public long aggiornaDistanza(
+            String data,
+            String distanza)
+    {
+        try {
+            ContentValues initialValues = new ContentValues();
+            initialValues.put("data", data);
+            initialValues.put("distanza", distanza);
+
+            String whereClause = "data = ?";
+            String[] whereArgs = new String[] {
+                    data
+            };
+
+            long l = myDB.update(DATABASE_TABELLA_DISTANZE, initialValues, whereClause, whereArgs);
+
+            return l;
+        } catch (Exception e) {
+            StringWriter errors = new StringWriter();
+            e.printStackTrace(new PrintWriter(errors));
+            Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLogGPS());
+            l.ScriveLog("Aggiorna distanze. ERROR: "+errors.toString());
+
+            return -1;
+        }
     }
 
     public boolean cancellaDatiGPSPerDataAttuale()
@@ -226,7 +313,7 @@ public class DBGps {
                 dataVisuaS
         };
 
-        return db.delete(DATABASE_TABELLA_GPS, whereClause, whereArgs) > 0;
+        return myDB.delete(DATABASE_TABELLA_GPS, whereClause, whereArgs) > 0;
     }
 
     public boolean cancellaDatiGPSPerData(Date dataVisua)
@@ -239,7 +326,7 @@ public class DBGps {
                 dataVisuaS
         };
 
-        return db.delete(DATABASE_TABELLA_GPS, whereClause, whereArgs) > 0;
+        return myDB.delete(DATABASE_TABELLA_GPS, whereClause, whereArgs) > 0;
     }
 
     public List<Date> RitornaTutteLeDateInArchivio() {
@@ -258,7 +345,7 @@ public class DBGps {
         Cursor c =null;
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         try {
-            c = db.query(DATABASE_TABELLA_GPS, tableColumns, null, null,
+            c = myDB.query(DATABASE_TABELLA_GPS, tableColumns, null, null,
                     "data", null, "data");
             if (c.moveToFirst()) {
                 do {
@@ -280,7 +367,7 @@ public class DBGps {
 
     public boolean cancellaDatiMultiMedia()
     {
-        return db.delete(DATABASE_TABELLA_MULTIMEDIA, "", null) > 0;
+        return myDB.delete(DATABASE_TABELLA_MULTIMEDIA, "", null) > 0;
     }
 
     public boolean cancellaDatiMultiMediaPerDataAttuale()
@@ -295,7 +382,7 @@ public class DBGps {
         };
 
 
-        return db.delete(DATABASE_TABELLA_MULTIMEDIA, whereClause, whereArgs) > 0;
+        return myDB.delete(DATABASE_TABELLA_MULTIMEDIA, whereClause, whereArgs) > 0;
     }
 
     public boolean cancellaDatiMultiMediaPerData(Date dataVisua)
@@ -309,12 +396,12 @@ public class DBGps {
         };
 
 
-        return db.delete(DATABASE_TABELLA_MULTIMEDIA, whereClause, whereArgs) > 0;
+        return myDB.delete(DATABASE_TABELLA_MULTIMEDIA, whereClause, whereArgs) > 0;
     }
 
     public Cursor ottieniValoriGPS()
     {
-        return db.query(DATABASE_TABELLA_GPS, new String[] {
+        return myDB.query(DATABASE_TABELLA_GPS, new String[] {
                 "data",
                 "pro",
                 "lat",
@@ -343,62 +430,12 @@ public class DBGps {
 
         Cursor c =null;
         try {
-            c = db.query(DATABASE_TABELLA_GPS, tableColumns, whereClause, whereArgs,
+            c = myDB.query(DATABASE_TABELLA_GPS, tableColumns, whereClause, whereArgs,
                     null, null, null);
         } catch (Exception ignored) {
 
         }
         return c;
-    }
-
-    public long inserisceNuovaDistanza(
-            String data,
-            String distanza)
-    {
-        try {
-            ContentValues initialValues = new ContentValues();
-            initialValues.put("data", data);
-            initialValues.put("distanza", distanza);
-
-            long l = db.insert(DATABASE_TABELLA_DISTANZE, null, initialValues);
-
-            return l;
-        } catch (Exception e) {
-            StringWriter errors = new StringWriter();
-            e.printStackTrace(new PrintWriter(errors));
-            Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLogGPS());
-            l.ScriveLog("Inserisci distanze. ERROR: "+errors.toString());
-
-            return -1;
-        }
-    }
-
-    public long aggiornaDistanza(
-            String data,
-            String distanza)
-    {
-        try {
-            ContentValues initialValues = new ContentValues();
-            initialValues.put("data", data);
-            initialValues.put("distanza", distanza);
-
-            String whereClause = "data = ?";
-            String[] whereArgs = new String[] {
-                    data
-            };
-
-            // long l = db.insert(DATABASE_TABELLA_DISTANZE, null, initialValues);
-            long l = db.update(DATABASE_TABELLA_DISTANZE, initialValues, whereClause, whereArgs);
-
-            return l;
-        } catch (Exception e) {
-            StringWriter errors = new StringWriter();
-            e.printStackTrace(new PrintWriter(errors));
-            Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLogGPS());
-            l.ScriveLog("Aggiorna distanze. ERROR: "+errors.toString());
-
-            return -1;
-        }
     }
 
     public Cursor ottieniDistanzeData(String oggi)
@@ -414,7 +451,7 @@ public class DBGps {
 
         Cursor c = null;
         try {
-            c = db.query(DATABASE_TABELLA_DISTANZE, tableColumns, whereClause, whereArgs,
+            c = myDB.query(DATABASE_TABELLA_DISTANZE, tableColumns, whereClause, whereArgs,
                     null, null, null);
         } catch (Exception ignored) {
 
@@ -442,7 +479,7 @@ public class DBGps {
 
         Cursor c = null;
         try {
-            c = db.query(DATABASE_TABELLA_MULTIMEDIA, tableColumns, whereClause, whereArgs,
+            c = myDB.query(DATABASE_TABELLA_MULTIMEDIA, tableColumns, whereClause, whereArgs,
                     null, null, null);
         } catch (Exception ignored) {
 
@@ -461,7 +498,7 @@ public class DBGps {
                 oggi
         };
         int pro=0;
-        Cursor c = db.query(DATABASE_TABELLA_GPS, tableColumns, whereClause, whereArgs,
+        Cursor c = myDB.query(DATABASE_TABELLA_GPS, tableColumns, whereClause, whereArgs,
                 null, null, null);
         if (c.moveToFirst()) {
             do {
@@ -488,7 +525,7 @@ public class DBGps {
                 oggi
         };
         int pro=0;
-        Cursor c = db.query(DATABASE_TABELLA_MULTIMEDIA, tableColumns, whereClause, whereArgs,
+        Cursor c = myDB.query(DATABASE_TABELLA_MULTIMEDIA, tableColumns, whereClause, whereArgs,
                 null, null, null);
         if (c.moveToFirst()) {
             do {
@@ -503,5 +540,5 @@ public class DBGps {
 
         return pro;
     }
+
 }
-*/

@@ -13,7 +13,7 @@ import android.provider.Settings;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.looigi.detector.Utilities.DBGps;
+import com.looigi.detector.Utilities.db_dati;
 import com.looigi.detector.Utilities.Log;
 import com.looigi.detector.Variabili.VariabiliImpostazioni;
 import com.looigi.detector.Variabili.VariabiliStatiche;
@@ -254,8 +254,8 @@ public class LocationService extends Service {
         String oggi = formatter.format(todayDate);
 
         if (VariabiliStatiche.getInstance().getDbGpsPos()==null) {
-            DBGps dbgps = new DBGps(VariabiliStatiche.getInstance().getContext());
-            dbgps.open();
+            db_dati dbgps = new db_dati();
+            dbgps.CreazioneTabelle();
             VariabiliStatiche.getInstance().setDbGpsPos(dbgps);
         }
 

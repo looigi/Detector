@@ -43,7 +43,7 @@ import com.looigi.detector.Receivers.Video;
 import com.looigi.detector.TestMemory.DatiMemoria;
 import com.looigi.detector.TestMemory.TestMemory;
 import com.looigi.detector.Utilities.CheckURLFile;
-import com.looigi.detector.Utilities.DBGps;
+import com.looigi.detector.Utilities.db_dati;
 import com.looigi.detector.Utilities.DownloadImmagine;
 import com.looigi.detector.Utilities.ExitActivity;
 import com.looigi.detector.Utilities.GestioneImmagini;

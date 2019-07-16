@@ -4,24 +4,7 @@
             "outputFile": "D:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bg\\values-bg.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Looigi\\.gradle\\caches\\transforms-2\\files-2.1\\54941d8238e7993923256d34452f6133\\res\\values-bg\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "196",
-                        "endOffsets": "443"
-                    },
-                    "to": {
-                        "startLines": "29",
-                        "startColumns": "4",
-                        "startOffsets": "3304",
-                        "endColumns": "196",
-                        "endOffsets": "3496"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Looigi\\.gradle\\caches\\transforms-2\\files-2.1\\ab8e411f17df005edce0bcf9b50a2083\\res\\values-bg\\values-bg.xml",
+                    "source": "C:\\Users\\Luigi Pecce\\.gradle\\caches\\transforms-2\\files-2.1\\baee6b6ee97db92bb1b8bcc45e4cfbb3\\res\\values-bg\\values-bg.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Looigi\\.gradle\\caches\\transforms-2\\files-2.1\\7f99c9403dc3d54dc5ce2deafc922323\\res\\values-bg\\values.xml",
+                    "source": "C:\\Users\\Luigi Pecce\\.gradle\\caches\\transforms-2\\files-2.1\\44117572aeb7858e0125ef7734a42cb1\\res\\values-bg\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "196",
+                        "endOffsets": "443"
+                    },
+                    "to": {
+                        "startLines": "29",
+                        "startColumns": "4",
+                        "startOffsets": "3304",
+                        "endColumns": "196",
+                        "endOffsets": "3496"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Luigi Pecce\\.gradle\\caches\\transforms-2\\files-2.1\\ecbac857a305f67b57e2445adbd40501\\res\\values-bg\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",

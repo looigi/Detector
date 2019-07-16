@@ -42,7 +42,7 @@ import com.looigi.detector.Receivers.Video;
 import com.looigi.detector.TestMemory.DatiMemoria;
 import com.looigi.detector.TestMemory.TestMemory;
 import com.looigi.detector.Utilities.CheckURLFile;
-import com.looigi.detector.Utilities.DBGps;
+import com.looigi.detector.Utilities.db_dati;
 import com.looigi.detector.Utilities.DownloadImmagine;
 import com.looigi.detector.Utilities.GestioneImmagini;
 import com.looigi.detector.Utilities.Log;
@@ -884,8 +884,8 @@ public class bckService extends Service  implements OnMapReadyCallback {
         ImageView imgGPS = (ImageView) v.findViewById(R.id.imgGPS);
         VariabiliStatiche.getInstance().setImgGps(imgGPS);
 
-        DBGps dbgps = new DBGps(context);
-        dbgps.open();
+        db_dati dbgps = new db_dati();
+        dbgps.CreazioneTabelle();
         VariabiliStatiche.getInstance().setDbGpsPos(dbgps);
         // dbgps.cancellaDatiGPS();
         // dbgps.cancellaDatiMultiMedia();

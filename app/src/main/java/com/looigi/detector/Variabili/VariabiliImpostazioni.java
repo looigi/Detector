@@ -38,7 +38,7 @@ public class VariabiliImpostazioni {
     private int TEMPO_GPS = 1000;
     private int DISTANZA_GPS = 1;
     private int AccuracyValue=35;
-    private boolean FaiLog=false;
+    private boolean FaiLog=true;
     private boolean GPSBetter=true;
     private boolean Accuracy=true;
     private int DimensioniThumbs=70;

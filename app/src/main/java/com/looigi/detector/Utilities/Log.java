@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.Calendar;
 
 public class Log {
-	private String PercorsoDIR=Environment.getExternalStorageDirectory().getPath()+"/LooigiSoft/Detector";
+	private String PercorsoDIR=Environment.getExternalStorageDirectory().getPath()+"/LooigiSoft/Detector/Log";
 	private String NomeFile;
 	// private boolean ScriveLog=Vari;
 
