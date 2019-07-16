@@ -154,7 +154,7 @@ public class VariabiliStatiche {
     private LinearLayout rltUpload;
     private ListView lstUpload;
     private List<String> filesToUpload;
-    protected static FragmentActivity FragmentActivityPrincipale;
+    private FragmentActivity FragmentActivityPrincipale;
     private Intent iServizio;
 
     public Context getContext() {
@@ -793,7 +793,7 @@ public class VariabiliStatiche {
         }
 
         if (Visualizza) {
-            u.VisualizzaPOPUP(VariabiliStatiche.getInstance().getContext(), "File salvati", false, 0);
+            u.VisualizzaPOPUP( "File salvati", false, 0);
         }
     }
 

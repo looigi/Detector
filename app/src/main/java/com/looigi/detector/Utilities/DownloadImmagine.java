@@ -95,7 +95,7 @@ public class DownloadImmagine {
                 photoAttacher.update();
             } else {
                 Utility u = new Utility();
-                u.VisualizzaPOPUP(VariabiliStatiche.getInstance().getContext(), "Nessuna immagine rilevata",false,-1);
+                u.VisualizzaPOPUP( "Nessuna immagine rilevata",false,-1);
             }
 
             ChiudeDialog();

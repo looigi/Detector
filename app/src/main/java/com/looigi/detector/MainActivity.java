@@ -70,12 +70,12 @@ public class MainActivity extends FragmentActivity {
 		super.onStop();
 	}
 
-	@Override
-	public void onBackPressed() {
-		ExitActivity.exitApplicationAndRemoveFromRecent(MainActivity.this);
-
-		super.onBackPressed();
-	}
+	// @Override
+	// public void onBackPressed() {
+	// 	ExitActivity.exitApplicationAndRemoveFromRecent(MainActivity.this);
+//
+	// 	super.onBackPressed();
+	// }
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -93,9 +93,9 @@ public class MainActivity extends FragmentActivity {
 		VariabiliStatiche.getInstance().getFragmentActivityPrincipale().startService(
 				VariabiliStatiche.getInstance().getiServizio());
 
-        String AutomaticReload = getIntent().getStringExtra("AUTOMATIC RELOAD");
-        if (AutomaticReload !=null && AutomaticReload.equals("YES")) {
-            moveTaskToBack(true);
-        }
+        // String AutomaticReload = getIntent().getStringExtra("AUTOMATIC RELOAD");
+        // if (AutomaticReload !=null && AutomaticReload.equals("YES")) {
+        //     moveTaskToBack(true);
+        // }
 	}
 }

@@ -362,7 +362,7 @@ public class VariabiliImpostazioni {
 
     private void VisualizzaMessaggio() {
         Utility u = new Utility();
-        u.VisualizzaPOPUP(act, "Valore salvato", false, 0);
+        u.VisualizzaPOPUP("Valore salvato", false, 0);
     }
 
     public void LeggeImpostazioni() {
