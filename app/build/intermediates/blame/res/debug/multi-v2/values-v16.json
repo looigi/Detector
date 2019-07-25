@@ -4,17 +4,7 @@
             "outputFile": "D:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Luigi Pecce\\.gradle\\caches\\transforms-2\\files-2.1\\b5e949a53270b588c5a117ff6d0d5c0f\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Luigi Pecce\\.gradle\\caches\\transforms-2\\files-2.1\\baee6b6ee97db92bb1b8bcc45e4cfbb3\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Luigi Pecce\\.gradle\\caches\\transforms-2\\files-2.1\\5e84c4bab46c4c71bb5f5abb0e3a88c7\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Luigi Pecce\\.gradle\\caches\\transforms-2\\files-2.1\\ac09de362ad6d767c6847924cda0b0f3\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

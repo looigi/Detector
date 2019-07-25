@@ -7,7 +7,7 @@ import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 
 public class Permessi {
-    public void ControllaPermessi(Activity context) {
+    public boolean ControllaPermessi(Activity context) {
         int permissionRequestCode1 = 1193;
 
         String[] PERMISSIONS = new String[]{
@@ -16,7 +16,7 @@ public class Permessi {
                 android.Manifest.permission.ACCESS_FINE_LOCATION,
                 android.Manifest.permission.ACCESS_COARSE_LOCATION,
                 android.Manifest.permission.ACCESS_WIFI_STATE,
-                android.Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS,
+                // android.Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS,
                 android.Manifest.permission.INTERNET,
                 Manifest.permission.RECORD_AUDIO,
                 Manifest.permission.VIBRATE,
@@ -28,6 +28,9 @@ public class Permessi {
 
         if(!hasPermissions(context, PERMISSIONS)) {
             ActivityCompat.requestPermissions(context, PERMISSIONS, permissionRequestCode1);
+            return false;
+        } else {
+            return true;
         }
     }
 

@@ -136,9 +136,6 @@ public class bckService extends Service  implements OnMapReadyCallback {
         VariabiliStatiche.getInstance().setLockService(new Intent(getApplicationContext(), LockService.class));
         VariabiliStatiche.getInstance().setLocationService(new Intent(getApplicationContext(), LocationService.class));
 
-        Permessi pp = new Permessi();
-        pp.ControllaPermessi(act);
-
         SupportMapFragment mapFragment = (SupportMapFragment) v.getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);

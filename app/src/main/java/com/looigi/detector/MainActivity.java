@@ -61,10 +61,14 @@ import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 // import com.looigi.detector.gps.PrendeCoordinateGPS;
 
 public class MainActivity extends FragmentActivity {
+	private boolean CiSonoPermessi;
+
 	@Override
 	protected void onStop() {
 		super.onStop();
@@ -82,8 +86,30 @@ public class MainActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// context = this;
+		Permessi pp = new Permessi();
+		CiSonoPermessi = pp.ControllaPermessi(this);
 
+		if (CiSonoPermessi) {
+			EsegueEntrata();
+		}
+	}
+
+	@Override
+	public void onRequestPermissionsResult(int requestCode,
+										   String permissions[], int[] grantResults) {
+		if (!CiSonoPermessi) {
+			int index = 0;
+			Map<String, Integer> PermissionsMap = new HashMap<String, Integer>();
+			for (String permission : permissions) {
+				PermissionsMap.put(permission, grantResults[index]);
+				index++;
+			}
+
+			EsegueEntrata();
+		}
+	}
+
+	private void EsegueEntrata() {
 		VariabiliStatiche.getInstance().setFragmentActivityPrincipale(this);
 		VariabiliStatiche.getInstance().setContext(this);
 		VariabiliImpostazioni.getInstance().setAct(this);
@@ -93,9 +119,9 @@ public class MainActivity extends FragmentActivity {
 		VariabiliStatiche.getInstance().getFragmentActivityPrincipale().startService(
 				VariabiliStatiche.getInstance().getiServizio());
 
-        // String AutomaticReload = getIntent().getStringExtra("AUTOMATIC RELOAD");
-        // if (AutomaticReload !=null && AutomaticReload.equals("YES")) {
-        //     moveTaskToBack(true);
-        // }
+		// String AutomaticReload = getIntent().getStringExtra("AUTOMATIC RELOAD");
+		// if (AutomaticReload !=null && AutomaticReload.equals("YES")) {
+		//     moveTaskToBack(true);
+		// }
 	}
 }
