@@ -274,7 +274,7 @@ public class GBTakePictureNoPreview implements SurfaceHolder.Callback {
 
                         l.ScriveLog("takePicture: Scatto 4");
 
-                        Boolean Errore = false;
+                        boolean Errore = false;
 
                         //try {
                         try {
@@ -405,7 +405,7 @@ public class GBTakePictureNoPreview implements SurfaceHolder.Callback {
                 // Attende(5000);
         		
                  if (data != null) {
-                    Boolean OkFoto=false;
+                    boolean OkFoto=false;
                     FileOutputStream fos;
 
                     try {

@@ -326,7 +326,7 @@ public class Utility {
 					fos.close();
 
 					if (!datiExif.isEmpty()) {
-						String c[] = datiExif.split(";", -1);
+						String[] c = datiExif.split(";", -1);
 						ExifInterface exif = new ExifInterface(Path + FilettoNuovo);
 						exif.setAttribute(ExifInterface.TAG_ARTIST, c[0]);
 						exif.setAttribute(ExifInterface.TAG_MODEL, c[1]);
@@ -353,7 +353,7 @@ public class Utility {
 	public void addKeyToFile(String Path, String Filetto) {
 		byte[] bytes={};
 
-		Boolean OkEXIF=false;
+		boolean OkEXIF=false;
 		String artista = "";
 		String model = "";
 		String lat = "";
@@ -509,7 +509,7 @@ public class Utility {
         return Ritorno;
 	}
 
-	public void VisualizzaPOPUP(String Messaggio, final Boolean Tasti, final int QualeOperazione) {
+	public void VisualizzaPOPUP(String Messaggio, final boolean Tasti, final int QualeOperazione) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(VariabiliStatiche.getInstance().getContext());
 		builder.setTitle("");
 		builder.setMessage(Messaggio);
@@ -836,7 +836,7 @@ public class Utility {
 			n = n.replace("MM_", "");
 			n = n.replace(".txt", "");
 
-			Boolean Ok = true;
+			boolean Ok = true;
 			for (int k = 0; k < data.size(); k++) {
 				if (n.equals(data.get(k))) {
 					Ok = false;

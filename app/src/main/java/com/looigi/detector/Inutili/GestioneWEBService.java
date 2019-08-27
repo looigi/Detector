@@ -20,12 +20,12 @@ import java.util.Calendar;
 public class GestioneWEBService extends ListActivity {
 	static ProgressDialog progressDialog;
 	String tOperazione;
-	Boolean Errore;
+	boolean Errore;
   	Context conx;
   	String Urletto;
-  	Boolean TimerActivityFermato;
+  	boolean TimerActivityFermato;
   	int SecondiPassati;
-  	static Boolean DeveContinuare;
+  	static boolean DeveContinuare;
   	static String Continua;
   	String NomeFileDest;
 	String visErrore;
@@ -217,7 +217,7 @@ public class GestioneWEBService extends ListActivity {
 			if (Errore==false) {
 				RitornoDaGestioneWS r=new RitornoDaGestioneWS();
 				
-				Boolean Ancora=true;
+				boolean Ancora=true;
 				while (Ancora==true) {
 					if (tOperazione.equals("DownloadImmagine")==true) {
 						r.RitornoDownloadImmagine(context, Ritorno);

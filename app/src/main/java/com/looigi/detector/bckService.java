@@ -892,7 +892,7 @@ public class bckService extends Service  implements OnMapReadyCallback {
         VariabiliStatiche.getInstance().setProgressivoDBMM(proMM);
 
         Cursor c1 = VariabiliStatiche.getInstance().getDbGpsPos().ottieniDistanzeData(oggi);
-        Boolean ciSonoDistanze=false;
+        boolean ciSonoDistanze=false;
         if (c1!=null && c1.moveToFirst()) {
             do{
                 ciSonoDistanze=true;

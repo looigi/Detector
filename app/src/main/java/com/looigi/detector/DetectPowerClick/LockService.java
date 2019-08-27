@@ -15,7 +15,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 
 public class LockService extends Service {
-    // private Boolean GiaRegistrato=false;
+    // private boolean GiaRegistrato=false;
     private BroadcastReceiver mReceiver;
     private Log l;
 

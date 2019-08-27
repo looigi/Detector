@@ -46,7 +46,7 @@ public class adapterListaFiles extends ArrayAdapter
             convertView.setBackgroundColor(Color.argb(255,230,230,230));
         }
 
-        String NomeFile =lista.get(position);
+        String NomeFile = lista.get(position);
 
         TextView txtNomeFile = convertView.findViewById(R.id.txtNomeFile);
         TextView txtDimensioni = convertView.findViewById(R.id.txtDimensioni);
@@ -54,7 +54,14 @@ public class adapterListaFiles extends ArrayAdapter
         String Origine= Environment.getExternalStorageDirectory().getAbsolutePath();
         String Cartella= VariabiliStatiche.getInstance().PathApplicazioneFuori+"/Paths";
 
-        File f = new File(Origine + "/" + Cartella + "/LL_" + NomeFile + ".txt");
+        String nn = "";
+        if (NomeFile.contains(".zip")) {
+            nn = Origine + "/" + Cartella + "/" + NomeFile;
+        } else {
+            nn = Origine + "/" + Cartella + "/LL_" + NomeFile + ".txt";
+        }
+
+        File f = new File(nn);
         long dimeFileL = f.length();
         float dimeFile = dimeFileL;
         String cosa = "b.";

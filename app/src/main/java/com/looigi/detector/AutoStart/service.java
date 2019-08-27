@@ -8,7 +8,7 @@ import com.looigi.detector.MainActivity;
 
 public class service extends Service {
 	
-	public static Boolean ChiudiMaschera;
+	public static boolean ChiudiMaschera;
 	
     @Override
     public IBinder onBind(Intent intent) {

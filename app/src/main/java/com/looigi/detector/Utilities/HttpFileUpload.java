@@ -3,6 +3,7 @@ package com.looigi.detector.Utilities;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Environment;
 import android.util.Log;
 import android.widget.LinearLayout;
 
@@ -25,7 +26,7 @@ public class HttpFileUpload implements Runnable {
         private FileInputStream fileInputStream = null;
         private String NomeFile;
     	private ProgressDialog pd;
-    	private Boolean Ok;
+    	private boolean Ok;
     	private List<String> toDo;
         private String RadiceUpload = "http://looigi.no-ip.biz:12345/Detector/default.aspx";
 
@@ -71,7 +72,11 @@ public class HttpFileUpload implements Runnable {
                     	f1.delete();
                     }
 
-                    File f = new File(NomeFile);
+                    String Origine= Environment.getExternalStorageDirectory().getAbsolutePath();
+                    String Cartella=VariabiliStatiche.getInstance().PathApplicazioneFuori+"/Paths";
+                    String Destinazione = Origine + "/" + Cartella + "/";
+
+                    File f = new File(Destinazione + NomeFile);
                     f.delete();
 
                     VariabiliStatiche.getInstance().getRltUpload().setVisibility(LinearLayout.GONE);
@@ -156,7 +161,7 @@ public class HttpFileUpload implements Runnable {
 
                     int status = conn.getResponseCode();
                     BufferedInputStream in;
-                    Boolean Errore=false;
+                    boolean Errore=false;
                     if (status >= 400 ) {
                         in = new BufferedInputStream( conn.getErrorStream() );
                         Errore=true;
@@ -166,11 +171,12 @@ public class HttpFileUpload implements Runnable {
                     // retrieve the response from server
                     int ch;
 
-                    StringBuffer b =new StringBuffer();
+                    StringBuilder b =new StringBuilder();
                     while( ( ch = in.read() ) != -1 ){ b.append( (char)ch ); }
                     String s=b.toString();
 
                     if (Errore) {
+                        Ok = false;
                         DialogMessaggio.getInstance().show(VariabiliStatiche.getInstance().getContext(),
                                 "ERRORE: "+s, true,"Detector");
                     }

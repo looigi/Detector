@@ -49,7 +49,7 @@ public class PrendeCoordinateGPS implements LocationListener {
         }
     }
 
-    private void GestisceIconaGPS(Boolean Acceso) {
+    private void GestisceIconaGPS(boolean Acceso) {
         if (Acceso) {
             VariabiliStatiche.getInstance().getImgGps().setVisibility(LinearLayout.VISIBLE);
         } else {
@@ -79,7 +79,7 @@ public class PrendeCoordinateGPS implements LocationListener {
             }
 
         //		String sBody=Double.toString(lat)+"-"+Double.toString(lon);
-//			Boolean Ok=true;
+//			boolean Ok=true;
 
             //		if (MainActivity.GPSAcceso == true) {
             //			if (sBody.length()<=20) {
@@ -141,7 +141,7 @@ public class PrendeCoordinateGPS implements LocationListener {
 
    //  public void SpostaCoordinate() {
 //		String sBody=Double.toString(lat)+"-"+Double.toString(lon)+"\n";
-//		Boolean Ok=true;
+//		boolean Ok=true;
 
 //		if (MainActivity.GPSAcceso == true) {
 //			if (sBody.length()<=23) {

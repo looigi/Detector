@@ -32,7 +32,7 @@ public class GestioneImmagini {
 	private boolean rotateBitmap(String NomeFile, int angle) throws IOException {
 		File inFile = new File(NomeFile);
 
-		Boolean OkEXIF=false;
+		boolean OkEXIF=false;
 		String artista = "";
 		String model = "";
 		String lat = "";
@@ -120,7 +120,7 @@ public class GestioneImmagini {
 		String Cartella=VariabiliStatiche.getInstance().PathApplicazione;
 		String NomeImmagine = VariabiliStatiche.getInstance().getImmagini().get(VariabiliStatiche.getInstance().numMultimedia);
 
-		Boolean OkEXIF=false;
+		boolean OkEXIF=false;
 		String artista = "";
 		String model = "";
 		String lat = "";
@@ -170,12 +170,12 @@ public class GestioneImmagini {
 		u.VisualizzaMultimedia();
 	}
 
-	public void FlipImmagine(Boolean Orizzontale) {
+	public void FlipImmagine(boolean Orizzontale) {
 		String Origine= Environment.getExternalStorageDirectory().getAbsolutePath();
 		String Cartella=VariabiliStatiche.getInstance().PathApplicazione;
 		String NomeImmagine = VariabiliStatiche.getInstance().getImmagini().get(VariabiliStatiche.getInstance().numMultimedia);
 
-		Boolean OkEXIF=false;
+		boolean OkEXIF=false;
 		String artista = "";
 		String model = "";
 		String lat = "";

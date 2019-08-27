@@ -92,7 +92,7 @@ public class VariabiliStatiche {
     public boolean StoScattando;
     private String[] NomiImm;
     // public String NomeSito = "http://looigi.no-ip.biz:12345/";
-    // public Boolean Continua;
+    // public boolean Continua;
     // public String ImmDaEliminare;
     private List<String> Immagini;
     public Integer numMultimedia;
@@ -101,10 +101,10 @@ public class VariabiliStatiche {
     private ImageView audio;
     private TextView txtImm;
     private TextView txtNomeImm;
-    public Boolean MascheraImmaginiMostrata = false;
+    public boolean MascheraImmaginiMostrata = false;
     public String PathApplicazione = "/LooigiSoft/Detector/DB/";
     public String PathApplicazioneFuori = "/LooigiSoft/Detector/";
-    public Boolean StaSuonando=false;
+    public boolean StaSuonando=false;
     private MediaPlayer mp;
     private ImageView btnRuotaSin;
     private ImageView btnRuotaDes;
@@ -112,7 +112,7 @@ public class VariabiliStatiche {
     private ImageView btnFlipY;
     private VideoView vView;
     private ImageView imgGps;
-    public Boolean StaVedendo=false;
+    public boolean StaVedendo=false;
     // private double lLat =0;
     // private double lLon =0;
     // private double lAltezza=0;
@@ -124,15 +124,15 @@ public class VariabiliStatiche {
     private db_dati dbGpsPos;
     private LocationManager locationManager;
     private LocationListener locationListener;
-    private Boolean GiaEntrato=false;
+    private boolean GiaEntrato=false;
     private GoogleMap mMap=null;
     private boolean SeguePercorso=false;
     private Date DataDiVisualizzazioneMappa;
     private TextView txtDataMappa;
     private Intent lockService;
     private Intent locationService;
-    private Boolean ServizioLock=false;
-    private Boolean ServizioGPS=false;
+    private boolean ServizioLock=false;
+    private boolean ServizioGPS=false;
     private Switch sLog;
     private Switch sGPSBetter;
     private Switch sAccuracy;
@@ -337,19 +337,19 @@ public class VariabiliStatiche {
         ProgressivoDBMM = progressivoDBMM;
     }
 
-    public Boolean getServizioLock() {
+    public boolean getServizioLock() {
         return ServizioLock;
     }
 
-    public void setServizioLock(Boolean servizioLock) {
+    public void setServizioLock(boolean servizioLock) {
         ServizioLock = servizioLock;
     }
 
-    public Boolean getServizioGPS() {
+    public boolean getServizioGPS() {
         return ServizioGPS;
     }
 
-    public void setServizioGPS(Boolean servizioGPS) {
+    public void setServizioGPS(boolean servizioGPS) {
         ServizioGPS = servizioGPS;
     }
 
@@ -401,11 +401,11 @@ public class VariabiliStatiche {
         this.mMap = mMap;
     }
 
-    public Boolean getGiaEntrato() {
+    public boolean getGiaEntrato() {
         return GiaEntrato;
     }
 
-    public void setGiaEntrato(Boolean giaEntrato) {
+    public void setGiaEntrato(boolean giaEntrato) {
         GiaEntrato = giaEntrato;
     }
 
@@ -896,7 +896,7 @@ public class VariabiliStatiche {
         return color;
     }
 
-    private void DisegnaMappa(Boolean NuovaMappa, Cursor cursPercorso, Cursor cursMarkers) {
+    private void DisegnaMappa(boolean NuovaMappa, Cursor cursPercorso, Cursor cursMarkers) {
         // PolylineOptions puntiMappa = new PolylineOptions().width(7).color(Color.BLUE).geodesic(true);
         List<LatLng> currentSegment = new ArrayList<>();
         builder = new LatLngBounds.Builder();

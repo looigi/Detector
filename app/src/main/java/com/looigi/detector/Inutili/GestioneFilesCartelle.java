@@ -105,7 +105,7 @@ public class GestioneFilesCartelle {
     	List<String> dfO=new ArrayList<String>();
 		dfO=df;
 		String Appoggio="";
-		Boolean bAppoggio;
+		boolean bAppoggio;
 		
 		String Prima="";
 		String Seconda="";

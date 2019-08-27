@@ -5,9 +5,9 @@ import java.io.IOException;
 
 public class rootChecker {
 	
-	public Boolean ControllaRoot() {
+	public boolean ControllaRoot() {
 		Process p;   
-		Boolean Ritorno;
+		boolean Ritorno;
 		
 		try {   
 		   // Preform su to get root privledges  

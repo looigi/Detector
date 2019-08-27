@@ -7,7 +7,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class ImAliveThread {
-    private Boolean stopImAlive;
+    private boolean stopImAlive;
     private Timer tTmrImAlive;
     private Log l;
 

@@ -21,7 +21,7 @@ import java.net.SocketTimeoutException;
 public class GestioneWEBServiceSOAP extends ListActivity {
 	static ProgressDialog progressDialog;
 	String tOperazione;
-	Boolean Errore;
+	boolean Errore;
   	Handler handlerF;
   	Runnable rTimerF;
   	Context conx;
@@ -240,7 +240,7 @@ public class GestioneWEBServiceSOAP extends ListActivity {
 			if (!Errore) {
 				RitornoDaGestioneWS r=new RitornoDaGestioneWS();
 				
-				Boolean Ancora=true;
+				boolean Ancora=true;
 				while (Ancora) {
 					if (tOperazione.equals("InserisceUtente")) {
 						r.RitornoInserisceUtente(context, Ritorno);

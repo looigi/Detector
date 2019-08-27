@@ -41,10 +41,10 @@ public class UploadFiles {
 
     private void ApriDialog() {
         try {
-            if (conx==null) {
-                conx= VariabiliStatiche.getInstance().getContext();
-            }
-            progressDialog = new ProgressDialog(conx);
+            // if (conx==null) {
+            //     conx = VariabiliStatiche.getInstance().getContext();
+            // }
+            progressDialog = new ProgressDialog(VariabiliStatiche.getInstance().getFragmentActivityPrincipale());
             progressDialog.setMessage("Attendere prego...");
             progressDialog.setCancelable(false);
             progressDialog.setCanceledOnTouchOutside(false);
@@ -98,30 +98,54 @@ public class UploadFiles {
                 }
             }
 
-            String Destinazione = Origine + "/" + Cartella + "/UploadFile.zip";
+            boolean Ok = true;
+            String nomello = "UploadFile***.zip";
+            String Destinazione = Origine + "/" + Cartella + "/";
+            int numerello = 1;
+            String n = Integer.toString(numerello);
+            String nomello2 = nomello.replace("***", n);
+            String nomello1="";
 
-            File d = new File (Destinazione);
-            d.delete();
+            File f = new File(Destinazione + nomello2);
+            while (f.exists()) {
+                nomello1 = nomello2;
+                n = Integer.toString(numerello);
+                nomello2 = nomello.replace("***", n);
+                f=new File(Destinazione + nomello2);
+                numerello++;
+            }
+            f = null;
 
-            Boolean Ok = true;
-            ZipUnzip zu = new ZipUnzip();
+            if (toDo.size()>0) {
+                nomello = nomello2;
+                Destinazione=Destinazione + nomello2;
 
-            progressDialog.setMessage("Attendere prego\nZip files");
+                File d = new File(Destinazione);
+                d.delete();
 
-            try {
-                zu.zip(toDo, Destinazione);
-            } catch (IOException ignored) {
-                Utility u = new Utility();
-                DialogMessaggio.getInstance().show(context, "Errore nel creare lo zip:\n" + u.PrendeErroreDaException(ignored),
-                        false, "Detector");
-                Ok = false;
+                ZipUnzip zu = new ZipUnzip();
+
+                progressDialog.setMessage("Attendere prego\nZip files");
+
+                try {
+                    zu.zip(toDo, Destinazione);
+                } catch (IOException ignored) {
+                    Utility u = new Utility();
+                    DialogMessaggio.getInstance().show(context, "Errore nel creare lo zip:\n" + u.PrendeErroreDaException(ignored),
+                            false, "Detector");
+                    Ok = false;
+                }
+            } else {
+                nomello = nomello1;
+                Destinazione=Destinazione + nomello1;
             }
 
             if (Ok) {
-                File f = new File(Destinazione);
+                File ff = new File(Destinazione);
+
                 try {
-                    FileInputStream fstrm = new FileInputStream(f);
-                    HttpFileUpload hfu = new HttpFileUpload(progressDialog, "UploadFile.zip", toDo);
+                    FileInputStream fstrm = new FileInputStream(ff);
+                    HttpFileUpload hfu = new HttpFileUpload(progressDialog, nomello, toDo);
                     hfu.Send_Now(VariabiliStatiche.getInstance().getContext(), fstrm);
                 } catch (FileNotFoundException ignored) {
 

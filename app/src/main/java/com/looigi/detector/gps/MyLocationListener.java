@@ -72,7 +72,7 @@ public class MyLocationListener implements LocationListener {
         //         + cityName;
         // editLocation.setText(s);
 
-        // Boolean isGPSEnabled = VariabiliStatiche.getInstance().getLocationManager()
+        // boolean isGPSEnabled = VariabiliStatiche.getInstance().getLocationManager()
         //         .isProviderEnabled(LocationManager.GPS_PROVIDER);
         // if (isGPSEnabled) {
         //     try {
@@ -85,7 +85,7 @@ public class MyLocationListener implements LocationListener {
         //         int a=0;
         //     }
         // } else {
-        //     Boolean isNetworkEnabled = VariabiliStatiche.getInstance().getLocationManager()
+        //     boolean isNetworkEnabled = VariabiliStatiche.getInstance().getLocationManager()
         //             .isProviderEnabled(LocationManager.NETWORK_PROVIDER);
         //     if (isNetworkEnabled) {
         //         try {
@@ -98,7 +98,7 @@ public class MyLocationListener implements LocationListener {
         //             int a = 0;
         //         }
         //     } else {
-        //         Boolean isPassiveEnabled = VariabiliStatiche.getInstance().getLocationManager()
+        //         boolean isPassiveEnabled = VariabiliStatiche.getInstance().getLocationManager()
         //                 .isProviderEnabled(LocationManager.PASSIVE_PROVIDER);
         //         if (isPassiveEnabled) {
         //             try {

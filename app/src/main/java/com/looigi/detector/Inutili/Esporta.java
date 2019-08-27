@@ -19,10 +19,10 @@ public class Esporta {
 	private Handler handlerTimer;
 	private Runnable rTimer;
 	private int QualeFile=-1;
-	public static Boolean Continua;
-	public static Boolean Uploadato;
+	public static boolean Continua;
+	public static boolean Uploadato;
 
-	public Esporta(Context context, Boolean EffettuaOperazione) {
+	public Esporta(Context context, boolean EffettuaOperazione) {
 		String Origine=Environment.getExternalStorageDirectory().getAbsolutePath();
 	    String Cartella="/LooigiSoft/Spiator/DB/";
 		
