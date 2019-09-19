@@ -22,6 +22,7 @@ dependencies {
     // implementation 'com.android.support:support-v4:18.0.0'
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation files('libs/ksoap2-android-assembly-3.2.0-jar-with-dependencies.jar')
+
     implementation 'ch.acra:acra:4.9.2'
     implementation 'com.sun.mail:android-mail:1.5.5'
 

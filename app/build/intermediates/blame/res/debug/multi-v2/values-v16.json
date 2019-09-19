@@ -4,7 +4,7 @@
             "outputFile": "D:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Luigi Pecce\\.gradle\\caches\\transforms-2\\files-2.1\\5e84c4bab46c4c71bb5f5abb0e3a88c7\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Luigi Pecce\\.gradle\\caches\\transforms-2\\files-2.1\\e4a41c2346dd5a38c111db5ef8bb8159\\appcompat-v7-26.1.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Luigi Pecce\\.gradle\\caches\\transforms-2\\files-2.1\\ac09de362ad6d767c6847924cda0b0f3\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Luigi Pecce\\.gradle\\caches\\transforms-2\\files-2.1\\5971f3a89ffb6bfcd466bd26a390798b\\support-compat-26.1.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

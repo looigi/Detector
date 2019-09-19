@@ -1,7 +1,7 @@
-#Tue Aug 27 15:39:37 CEST 2019
-base.0=D\:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+#Thu Sep 19 14:10:52 CEST 2019
+base.0=D\:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=D\:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+base.1=D\:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex

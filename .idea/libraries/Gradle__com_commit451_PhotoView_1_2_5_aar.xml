@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.commit451:PhotoView:1.2.5@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9ee7742c70e59d6705d06de03569111c/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9ee7742c70e59d6705d06de03569111c/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fc67da3c6cd4c1b3a430b4e27893d1d5/PhotoView-1.2.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fc67da3c6cd4c1b3a430b4e27893d1d5/PhotoView-1.2.5/res" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.commit451/PhotoView/1.2.5/7b7c325c266335f7554ee3bc5e4c911c901a7076/PhotoView-1.2.5-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.commit451/PhotoView/1.2.5/63d6393fdd432176a5869a51f64706c6c22bc370/PhotoView-1.2.5-sources.jar!/" />
     </SOURCES>
