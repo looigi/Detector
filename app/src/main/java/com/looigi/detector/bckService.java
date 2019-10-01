@@ -90,846 +90,848 @@ public class bckService extends Service  implements OnMapReadyCallback {
         loc.setAltitude(50);
         VariabiliStatiche.getInstance().setLocGPS(loc);
 
-        Switch sLog = (Switch) v.findViewById(R.id.sLog);
-        Switch sGPSBetter = (Switch) v.findViewById(R.id.sGPSBetter);
-        Switch sAccuracy = (Switch) v.findViewById(R.id.sAccuracy);
-        EditText edtTempoGPS = (EditText) v.findViewById(R.id.edtTempoGPS);
-        EditText edtMetriGPS = (EditText) v.findViewById(R.id.edtMetriGPS);
-        EditText edtAccuracy = (EditText) v.findViewById(R.id.edtAccuracy);
-        EditText edtDimThumbs = (EditText) v.findViewById(R.id.edtDimThumbs);
-        EditText edtDimThumbsM = (EditText) v.findViewById(R.id.edtDimThumbsM);
-        ImageView imgMappa = (ImageView) v.findViewById(R.id.imgMappa);
-        ImageView imgChiudeImg = (ImageView) v.findViewById(R.id.imgChiudeImmagine);
-        View fgmMappa = (View) v.findViewById(R.id.map);
-        VariabiliStatiche.getInstance().setsLog(sLog);
-        VariabiliStatiche.getInstance().setsGPSBetter(sGPSBetter);
-        VariabiliStatiche.getInstance().setsAccuracy(sAccuracy);
-        VariabiliStatiche.getInstance().setEdtTempoGPS(edtTempoGPS);
-        VariabiliStatiche.getInstance().setEdtMetriGPS(edtMetriGPS);
-        VariabiliStatiche.getInstance().setEdtAccuracy(edtAccuracy);
-        VariabiliStatiche.getInstance().setEdtDimThumbs(edtDimThumbs);
-        VariabiliStatiche.getInstance().setEdtDimThumbsM(edtDimThumbsM);
-        VariabiliStatiche.getInstance().setImgMappa(imgMappa);
-        VariabiliStatiche.getInstance().setImgChiudeImg(imgChiudeImg);
-        Button btnSalvaAcc = (Button) v.findViewById(R.id.btnSalvaACC);
-        VariabiliStatiche.getInstance().setBtnSalvaAcc(btnSalvaAcc);
-        VariabiliStatiche.getInstance().setFgmMappa(fgmMappa);
+        if (v != null) {
+            Switch sLog = (Switch) v.findViewById(R.id.sLog);
+            Switch sGPSBetter = (Switch) v.findViewById(R.id.sGPSBetter);
+            Switch sAccuracy = (Switch) v.findViewById(R.id.sAccuracy);
+            EditText edtTempoGPS = (EditText) v.findViewById(R.id.edtTempoGPS);
+            EditText edtMetriGPS = (EditText) v.findViewById(R.id.edtMetriGPS);
+            EditText edtAccuracy = (EditText) v.findViewById(R.id.edtAccuracy);
+            EditText edtDimThumbs = (EditText) v.findViewById(R.id.edtDimThumbs);
+            EditText edtDimThumbsM = (EditText) v.findViewById(R.id.edtDimThumbsM);
+            ImageView imgMappa = (ImageView) v.findViewById(R.id.imgMappa);
+            ImageView imgChiudeImg = (ImageView) v.findViewById(R.id.imgChiudeImmagine);
+            View fgmMappa = (View) v.findViewById(R.id.map);
+            VariabiliStatiche.getInstance().setsLog(sLog);
+            VariabiliStatiche.getInstance().setsGPSBetter(sGPSBetter);
+            VariabiliStatiche.getInstance().setsAccuracy(sAccuracy);
+            VariabiliStatiche.getInstance().setEdtTempoGPS(edtTempoGPS);
+            VariabiliStatiche.getInstance().setEdtMetriGPS(edtMetriGPS);
+            VariabiliStatiche.getInstance().setEdtAccuracy(edtAccuracy);
+            VariabiliStatiche.getInstance().setEdtDimThumbs(edtDimThumbs);
+            VariabiliStatiche.getInstance().setEdtDimThumbsM(edtDimThumbsM);
+            VariabiliStatiche.getInstance().setImgMappa(imgMappa);
+            VariabiliStatiche.getInstance().setImgChiudeImg(imgChiudeImg);
+            Button btnSalvaAcc = (Button) v.findViewById(R.id.btnSalvaACC);
+            VariabiliStatiche.getInstance().setBtnSalvaAcc(btnSalvaAcc);
+            VariabiliStatiche.getInstance().setFgmMappa(fgmMappa);
 
-        VariabiliStatiche.getInstance().getFgmMappa().setVisibility(LinearLayout.VISIBLE);
-        VariabiliStatiche.getInstance().getImgMappa().setVisibility(LinearLayout.GONE);
-        VariabiliStatiche.getInstance().getImgChiudeImg().setVisibility(LinearLayout.GONE);
+            VariabiliStatiche.getInstance().getFgmMappa().setVisibility(LinearLayout.VISIBLE);
+            VariabiliStatiche.getInstance().getImgMappa().setVisibility(LinearLayout.GONE);
+            VariabiliStatiche.getInstance().getImgChiudeImg().setVisibility(LinearLayout.GONE);
 
-        VariabiliStatiche.getInstance().getImgChiudeImg().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                VariabiliStatiche.getInstance().getFgmMappa().setVisibility(LinearLayout.VISIBLE);
-                VariabiliStatiche.getInstance().getImgMappa().setVisibility(LinearLayout.GONE);
-                VariabiliStatiche.getInstance().getImgChiudeImg().setVisibility(LinearLayout.GONE);
-            }
-        });
-
-        TextView txtCoords = (TextView) v.findViewById(R.id.txtCoords);
-        VariabiliStatiche.getInstance().setTxtCoords(txtCoords);
-
-        VariabiliImpostazioni.getInstance().LeggeImpostazioni();
-
-        VariabiliStatiche.getInstance().setLockService(new Intent(getApplicationContext(), LockService.class));
-        VariabiliStatiche.getInstance().setLocationService(new Intent(getApplicationContext(), LocationService.class));
-
-        SupportMapFragment mapFragment = (SupportMapFragment) v.getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
-
-        PrendeModelloTelefono p = new PrendeModelloTelefono();
-        String modello = p.getDeviceName();
-        VariabiliStatiche.getInstance().setModelloTelefono(modello);
-
-        VariabiliStatiche.getInstance().setLista((ListView) v.findViewById(R.id.lstRisoluzioni));
-
-        VariabiliStatiche.getInstance().manager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-
-        // final GestioneDB gdb = new GestioneDB();
-        // gdb.CreaDB(context);
-        CaricaSpinnerOrientamento();
-        // LeggeValori();
-
-        SistemaSchermata();
-
-        // IMPOSTAZIONI
-        sLog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                VariabiliImpostazioni.getInstance().setFaiLog(VariabiliStatiche.getInstance().getsLog().isChecked());
-            }
-        });
-
-        sGPSBetter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                VariabiliImpostazioni.getInstance().setGPSBetter(VariabiliStatiche.getInstance().getsGPSBetter().isChecked(), false);
-            }
-        });
-
-        Button btnSalvaTGPS = (Button) v.findViewById(R.id.btnSalvaTGPS);
-        btnSalvaTGPS.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int a = Integer.parseInt(VariabiliStatiche.getInstance().getEdtTempoGPS().getText().toString());
-                VariabiliImpostazioni.getInstance().setTEMPO_GPS(a);
-            }
-        });
-
-        Button btnMetriGPS = (Button) v.findViewById(R.id.btnSalvaMGPS);
-        btnMetriGPS.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int a = Integer.parseInt(VariabiliStatiche.getInstance().getEdtMetriGPS().getText().toString());
-                VariabiliImpostazioni.getInstance().setDISTANZA_GPS(a,false);
-            }
-        });
-
-        btnSalvaAcc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int a = Integer.parseInt(VariabiliStatiche.getInstance().getEdtAccuracy().getText().toString());
-                VariabiliImpostazioni.getInstance().setAccuracyValue(a, false);
-            }
-        });
-        sAccuracy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                VariabiliImpostazioni.getInstance().setAccuracy(VariabiliStatiche.getInstance().getsAccuracy().isChecked(), false);
-                if (VariabiliStatiche.getInstance().getsAccuracy().isChecked()) {
-                    VariabiliStatiche.getInstance().getBtnSalvaAcc().setEnabled(true);
-                    VariabiliStatiche.getInstance().getEdtAccuracy().setEnabled(true);
-                } else {
-                    VariabiliStatiche.getInstance().getBtnSalvaAcc().setEnabled(false);
-                    VariabiliStatiche.getInstance().getEdtAccuracy().setEnabled(false);
+            VariabiliStatiche.getInstance().getImgChiudeImg().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    VariabiliStatiche.getInstance().getFgmMappa().setVisibility(LinearLayout.VISIBLE);
+                    VariabiliStatiche.getInstance().getImgMappa().setVisibility(LinearLayout.GONE);
+                    VariabiliStatiche.getInstance().getImgChiudeImg().setVisibility(LinearLayout.GONE);
                 }
-            }
-        });
+            });
 
-        Button btnSalvaDT = (Button) v.findViewById(R.id.btnSalvaDT);
-        btnSalvaDT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int a = Integer.parseInt(VariabiliStatiche.getInstance().getEdtDimThumbs().getText().toString());
-                VariabiliImpostazioni.getInstance().setDimensioniThumbs(a);
-            }
-        });
+            TextView txtCoords = (TextView) v.findViewById(R.id.txtCoords);
+            VariabiliStatiche.getInstance().setTxtCoords(txtCoords);
 
-        Button btnSalvaDTM = (Button) v.findViewById(R.id.btnSalvaDTM);
-        btnSalvaDTM.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int a = Integer.parseInt(VariabiliStatiche.getInstance().getEdtDimThumbsM().getText().toString());
-                VariabiliImpostazioni.getInstance().setDimensioniThumbsM(a);
-            }
-        });
-        // IMPOSTAZIONI
+            VariabiliImpostazioni.getInstance().LeggeImpostazioni();
 
+            VariabiliStatiche.getInstance().setLockService(new Intent(getApplicationContext(), LockService.class));
+            VariabiliStatiche.getInstance().setLocationService(new Intent(getApplicationContext(), LocationService.class));
 
-        ImageView imgItaliano = (ImageView) v.findViewById(R.id.imgItaliano);
-        imgItaliano.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                VariabiliImpostazioni.getInstance().setLingua("ITALIANO");
+            SupportMapFragment mapFragment = (SupportMapFragment) v.getSupportFragmentManager()
+                    .findFragmentById(R.id.map);
+            mapFragment.getMapAsync(this);
 
-                ImpostaCampiTestoPerLingua();
-            }
-        });
+            PrendeModelloTelefono p = new PrendeModelloTelefono();
+            String modello = p.getDeviceName();
+            VariabiliStatiche.getInstance().setModelloTelefono(modello);
 
-        Button cmdVideo = (Button) v.findViewById(R.id.cmdEsegueVideo);
-        cmdVideo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent Folder = new Intent(VariabiliStatiche.getInstance().getFragmentActivityPrincipale(), Video.class);
-                VariabiliStatiche.getInstance().getFragmentActivityPrincipale().startActivity(Folder);
+            VariabiliStatiche.getInstance().setLista((ListView) v.findViewById(R.id.lstRisoluzioni));
 
-                // finish();
-            }
-        });
+            VariabiliStatiche.getInstance().manager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
-        ImageView imgInglese = (ImageView) v.findViewById(R.id.imgInglese);
-        imgInglese.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                VariabiliImpostazioni.getInstance().setLingua("INGLESE");
+            // final GestioneDB gdb = new GestioneDB();
+            // gdb.CreaDB(context);
+            CaricaSpinnerOrientamento();
+            // LeggeValori();
 
-                ImpostaCampiTestoPerLingua();
-            }
-        });
+            SistemaSchermata();
 
-        // AUTOSCATTO - IMMEDIATO
-        RadioButton AS = (RadioButton) v.findViewById(R.id.optAutoScatto);
-        AS.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                RadioButton IM = (RadioButton) v.findViewById(R.id.optImmediato);
-                IM.setChecked(false);
-                EditText et = (EditText) v.findViewById(R.id.txtSecondi);
-                et.setEnabled(true);
-                Button bi = (Button) v.findViewById(R.id.cmdImposta);
-                bi.setEnabled(true);
+            // IMPOSTAZIONI
+            sLog.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    VariabiliImpostazioni.getInstance().setFaiLog(VariabiliStatiche.getInstance().getsLog().isChecked());
+                }
+            });
 
-                Impostazioni i = new Impostazioni();
-                i.ImpostaAutoScatto(context, et);
-            }
-        });
+            sGPSBetter.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    VariabiliImpostazioni.getInstance().setGPSBetter(VariabiliStatiche.getInstance().getsGPSBetter().isChecked(), false);
+                }
+            });
 
-        RadioButton IM = (RadioButton) v.findViewById(R.id.optImmediato);
-        IM.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                RadioButton AS = (RadioButton) v.findViewById(R.id.optAutoScatto);
-                AS.setChecked(false);
-                EditText et = (EditText) v.findViewById(R.id.txtSecondi);
-                et.setEnabled(false);
-                Button bi = (Button) v.findViewById(R.id.cmdImposta);
-                bi.setEnabled(false);
+            Button btnSalvaTGPS = (Button) v.findViewById(R.id.btnSalvaTGPS);
+            btnSalvaTGPS.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int a = Integer.parseInt(VariabiliStatiche.getInstance().getEdtTempoGPS().getText().toString());
+                    VariabiliImpostazioni.getInstance().setTEMPO_GPS(a);
+                }
+            });
 
-                Impostazioni i = new Impostazioni();
-                i.ImpostaImmediato(context);
-            }
-        });
+            Button btnMetriGPS = (Button) v.findViewById(R.id.btnSalvaMGPS);
+            btnMetriGPS.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int a = Integer.parseInt(VariabiliStatiche.getInstance().getEdtMetriGPS().getText().toString());
+                    VariabiliImpostazioni.getInstance().setDISTANZA_GPS(a, false);
+                }
+            });
 
-        EditText et = (EditText) v.findViewById(R.id.txtSecondi);
-        et.setText(Integer.toString(VariabiliImpostazioni.getInstance().getSecondi()));
-        Button bi = (Button) v.findViewById(R.id.cmdImposta);
-        bi.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                EditText et = (EditText) v.findViewById(R.id.txtSecondi);
-
-                Impostazioni i = new Impostazioni();
-                i.ImpostaAutoScatto(context, et);
-
-                Utility u = new Utility();
-                u.VisualizzaPOPUP("Saved", false, 0);
-            }
-        });
-
-        EditText t = (EditText) v.findViewById(R.id.txtScatti);
-        t.setText(Integer.toString(VariabiliImpostazioni.getInstance().getNumeroScatti()));
-
-        if (VariabiliImpostazioni.getInstance().getTipologiaScatto() == 1) {
-            AS.setChecked(false);
-            IM.setChecked(true);
-            et.setEnabled(false);
-            bi.setEnabled(false);
-        } else {
-            AS.setChecked(true);
-            IM.setChecked(false);
-            et.setEnabled(true);
-            bi.setEnabled(true);
-        }
-
-        // ORIGINALE - MASCHERATA
-        RadioButton or = (RadioButton) v.findViewById(R.id.optOriginale);
-        or.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                RadioButton ma = (RadioButton) v.findViewById(R.id.optMascherata);
-                ma.setChecked(false);
-
-                Impostazioni i = new Impostazioni();
-                i.ImpostaEstensioneOriginale(context);
-            }
-        });
-
-        RadioButton ma = (RadioButton) v.findViewById(R.id.optMascherata);
-        ma.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                RadioButton or = (RadioButton) v.findViewById(R.id.optOriginale);
-                or.setChecked(false);
-
-                Impostazioni i = new Impostazioni();
-                i.ImpostaEstensioneMascherata(context);
-            }
-        });
-
-        if (VariabiliImpostazioni.getInstance().getEstensione() == 1) {
-            or.setChecked(true);
-            ma.setChecked(false);
-        } else {
-            or.setChecked(false);
-            ma.setChecked(true);
-        }
-
-        // VIBRAZIONE
-        final CheckBox cb = (CheckBox) v.findViewById(R.id.chkVibrazione);
-        cb.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Impostazioni i = new Impostazioni();
-                i.ImpostaVibrazione(context, cb);
-            }
-        });
-
-        if (VariabiliImpostazioni.getInstance().getVibrazione().equals("S")) {
-            cb.setChecked(true);
-        } else {
-            cb.setChecked(false);
-        }
-
-        // ANTEPRIMA
-        final CheckBox ca = (CheckBox) v.findViewById(R.id.chkAnteprima);
-        ca.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Impostazioni i = new Impostazioni();
-                i.ImpostaAnteprima(context, ca);
-            }
-        });
-
-        if (VariabiliImpostazioni.getInstance().getAnteprima().equals("S")) {
-            ca.setChecked(true);
-        } else {
-            ca.setChecked(false);
-        }
-
-        // FRONTALE - RETRO
-        RadioButton ff = (RadioButton) v.findViewById(R.id.optFrontale);
-        ff.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                RadioButton fr = (RadioButton) v.findViewById(R.id.optRetro);
-                fr.setChecked(false);
-
-                TextView tv = (TextView) v.findViewById(R.id.txtRisoluzione);
-                Impostazioni i = new Impostazioni();
-                i.ImpostaFrontale(context, tv);
-            }
-        });
-
-        RadioButton fr = (RadioButton) v.findViewById(R.id.optRetro);
-        fr.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                RadioButton ff = (RadioButton) v.findViewById(R.id.optFrontale);
-                ff.setChecked(false);
-
-                TextView tv = (TextView) v.findViewById(R.id.txtRisoluzione);
-                Impostazioni i = new Impostazioni();
-                i.ImpostaRetro(context, tv);
-            }
-        });
-
-        TextView tv = (TextView) v.findViewById(R.id.txtRisoluzione);
-        tv.setText(VariabiliImpostazioni.getInstance().getRisoluzione());
-
-        if (VariabiliImpostazioni.getInstance().getFotocamera() == 1) {
-            ff.setChecked(true);
-            fr.setChecked(true);
-        } else {
-            ff.setChecked(false);
-            fr.setChecked(true);
-        }
-
-        Impostazioni i = new Impostazioni();
-        i.PrendeRisoluzioni(context);
-
-        ListView lvS = (ListView) v.findViewById(R.id.lstRisoluzioni);
-        lvS.setClickable(true);
-        lvS.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-                String o = (String) VariabiliStatiche.getInstance().Dimensioni.get(position);
-                TextView tv = (TextView) v.findViewById(R.id.txtRisoluzione);
-                tv.setText(o);
-
-                Impostazioni i = new Impostazioni();
-                i.ImpostaRisoluzione(context, o);
-            }
-        });
-
-        Button bs = (Button) v.findViewById(R.id.cmdImpostaScatti);
-        bs.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                EditText t = (EditText) v.findViewById(R.id.txtScatti);
-
-                Impostazioni i = new Impostazioni();
-                i.ImpostaNumScatti(context, t);
-
-                Utility u = new Utility();
-                u.VisualizzaPOPUP("Saved", false, 0);
-            }
-        });
-
-        ImpostaCampiTestoPerLingua();
-
-        final ScrollView lPr = (ScrollView) v.findViewById(R.id.scrollViewPrincipale);
-        lPr.setVisibility(LinearLayout.VISIBLE);
-
-        TextView tTotale = (TextView) v.findViewById(R.id.txtMemoriaTotale);
-        TextView tLibera = (TextView) v.findViewById(R.id.txtMemoriaLibera);
-        TextView tUsata = (TextView) v.findViewById(R.id.txtMemoriaUsata);
-        TextView tInfo = (TextView) v.findViewById(R.id.txtInfo);
-
-        tLibera.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                final Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-
-                if (datella1 == null) {
-                    Handler handlerTimer;
-                    Runnable rTimer;
-
-                    datella1 = System.currentTimeMillis();
-                    try {
-                        vibrator.vibrate(100);
-                        Thread.sleep(100);
-                    } catch (InterruptedException ignored) {
-
+            btnSalvaAcc.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int a = Integer.parseInt(VariabiliStatiche.getInstance().getEdtAccuracy().getText().toString());
+                    VariabiliImpostazioni.getInstance().setAccuracyValue(a, false);
+                }
+            });
+            sAccuracy.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    VariabiliImpostazioni.getInstance().setAccuracy(VariabiliStatiche.getInstance().getsAccuracy().isChecked(), false);
+                    if (VariabiliStatiche.getInstance().getsAccuracy().isChecked()) {
+                        VariabiliStatiche.getInstance().getBtnSalvaAcc().setEnabled(true);
+                        VariabiliStatiche.getInstance().getEdtAccuracy().setEnabled(true);
+                    } else {
+                        VariabiliStatiche.getInstance().getBtnSalvaAcc().setEnabled(false);
+                        VariabiliStatiche.getInstance().getEdtAccuracy().setEnabled(false);
                     }
+                }
+            });
 
-                    handlerTimer = new Handler();
-                    rTimer = new Runnable() {
-                        public void run() {
-                            datella1 = null;
+            Button btnSalvaDT = (Button) v.findViewById(R.id.btnSalvaDT);
+            btnSalvaDT.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int a = Integer.parseInt(VariabiliStatiche.getInstance().getEdtDimThumbs().getText().toString());
+                    VariabiliImpostazioni.getInstance().setDimensioniThumbs(a);
+                }
+            });
+
+            Button btnSalvaDTM = (Button) v.findViewById(R.id.btnSalvaDTM);
+            btnSalvaDTM.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int a = Integer.parseInt(VariabiliStatiche.getInstance().getEdtDimThumbsM().getText().toString());
+                    VariabiliImpostazioni.getInstance().setDimensioniThumbsM(a);
+                }
+            });
+            // IMPOSTAZIONI
+
+
+            ImageView imgItaliano = (ImageView) v.findViewById(R.id.imgItaliano);
+            imgItaliano.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    VariabiliImpostazioni.getInstance().setLingua("ITALIANO");
+
+                    ImpostaCampiTestoPerLingua();
+                }
+            });
+
+            Button cmdVideo = (Button) v.findViewById(R.id.cmdEsegueVideo);
+            cmdVideo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent Folder = new Intent(VariabiliStatiche.getInstance().getFragmentActivityPrincipale(), Video.class);
+                    VariabiliStatiche.getInstance().getFragmentActivityPrincipale().startActivity(Folder);
+
+                    // finish();
+                }
+            });
+
+            ImageView imgInglese = (ImageView) v.findViewById(R.id.imgInglese);
+            imgInglese.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    VariabiliImpostazioni.getInstance().setLingua("INGLESE");
+
+                    ImpostaCampiTestoPerLingua();
+                }
+            });
+
+            // AUTOSCATTO - IMMEDIATO
+            RadioButton AS = (RadioButton) v.findViewById(R.id.optAutoScatto);
+            AS.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    RadioButton IM = (RadioButton) v.findViewById(R.id.optImmediato);
+                    IM.setChecked(false);
+                    EditText et = (EditText) v.findViewById(R.id.txtSecondi);
+                    et.setEnabled(true);
+                    Button bi = (Button) v.findViewById(R.id.cmdImposta);
+                    bi.setEnabled(true);
+
+                    Impostazioni i = new Impostazioni();
+                    i.ImpostaAutoScatto(context, et);
+                }
+            });
+
+            RadioButton IM = (RadioButton) v.findViewById(R.id.optImmediato);
+            IM.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    RadioButton AS = (RadioButton) v.findViewById(R.id.optAutoScatto);
+                    AS.setChecked(false);
+                    EditText et = (EditText) v.findViewById(R.id.txtSecondi);
+                    et.setEnabled(false);
+                    Button bi = (Button) v.findViewById(R.id.cmdImposta);
+                    bi.setEnabled(false);
+
+                    Impostazioni i = new Impostazioni();
+                    i.ImpostaImmediato(context);
+                }
+            });
+
+            EditText et = (EditText) v.findViewById(R.id.txtSecondi);
+            et.setText(Integer.toString(VariabiliImpostazioni.getInstance().getSecondi()));
+            Button bi = (Button) v.findViewById(R.id.cmdImposta);
+            bi.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    EditText et = (EditText) v.findViewById(R.id.txtSecondi);
+
+                    Impostazioni i = new Impostazioni();
+                    i.ImpostaAutoScatto(context, et);
+
+                    Utility u = new Utility();
+                    u.VisualizzaPOPUP("Saved", false, 0);
+                }
+            });
+
+            EditText t = (EditText) v.findViewById(R.id.txtScatti);
+            t.setText(Integer.toString(VariabiliImpostazioni.getInstance().getNumeroScatti()));
+
+            if (VariabiliImpostazioni.getInstance().getTipologiaScatto() == 1) {
+                AS.setChecked(false);
+                IM.setChecked(true);
+                et.setEnabled(false);
+                bi.setEnabled(false);
+            } else {
+                AS.setChecked(true);
+                IM.setChecked(false);
+                et.setEnabled(true);
+                bi.setEnabled(true);
+            }
+
+            // ORIGINALE - MASCHERATA
+            RadioButton or = (RadioButton) v.findViewById(R.id.optOriginale);
+            or.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    RadioButton ma = (RadioButton) v.findViewById(R.id.optMascherata);
+                    ma.setChecked(false);
+
+                    Impostazioni i = new Impostazioni();
+                    i.ImpostaEstensioneOriginale(context);
+                }
+            });
+
+            RadioButton ma = (RadioButton) v.findViewById(R.id.optMascherata);
+            ma.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    RadioButton or = (RadioButton) v.findViewById(R.id.optOriginale);
+                    or.setChecked(false);
+
+                    Impostazioni i = new Impostazioni();
+                    i.ImpostaEstensioneMascherata(context);
+                }
+            });
+
+            if (VariabiliImpostazioni.getInstance().getEstensione() == 1) {
+                or.setChecked(true);
+                ma.setChecked(false);
+            } else {
+                or.setChecked(false);
+                ma.setChecked(true);
+            }
+
+            // VIBRAZIONE
+            final CheckBox cb = (CheckBox) v.findViewById(R.id.chkVibrazione);
+            cb.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Impostazioni i = new Impostazioni();
+                    i.ImpostaVibrazione(context, cb);
+                }
+            });
+
+            if (VariabiliImpostazioni.getInstance().getVibrazione().equals("S")) {
+                cb.setChecked(true);
+            } else {
+                cb.setChecked(false);
+            }
+
+            // ANTEPRIMA
+            final CheckBox ca = (CheckBox) v.findViewById(R.id.chkAnteprima);
+            ca.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Impostazioni i = new Impostazioni();
+                    i.ImpostaAnteprima(context, ca);
+                }
+            });
+
+            if (VariabiliImpostazioni.getInstance().getAnteprima().equals("S")) {
+                ca.setChecked(true);
+            } else {
+                ca.setChecked(false);
+            }
+
+            // FRONTALE - RETRO
+            RadioButton ff = (RadioButton) v.findViewById(R.id.optFrontale);
+            ff.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    RadioButton fr = (RadioButton) v.findViewById(R.id.optRetro);
+                    fr.setChecked(false);
+
+                    TextView tv = (TextView) v.findViewById(R.id.txtRisoluzione);
+                    Impostazioni i = new Impostazioni();
+                    i.ImpostaFrontale(context, tv);
+                }
+            });
+
+            RadioButton fr = (RadioButton) v.findViewById(R.id.optRetro);
+            fr.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    RadioButton ff = (RadioButton) v.findViewById(R.id.optFrontale);
+                    ff.setChecked(false);
+
+                    TextView tv = (TextView) v.findViewById(R.id.txtRisoluzione);
+                    Impostazioni i = new Impostazioni();
+                    i.ImpostaRetro(context, tv);
+                }
+            });
+
+            TextView tv = (TextView) v.findViewById(R.id.txtRisoluzione);
+            tv.setText(VariabiliImpostazioni.getInstance().getRisoluzione());
+
+            if (VariabiliImpostazioni.getInstance().getFotocamera() == 1) {
+                ff.setChecked(true);
+                fr.setChecked(true);
+            } else {
+                ff.setChecked(false);
+                fr.setChecked(true);
+            }
+
+            Impostazioni i = new Impostazioni();
+            i.PrendeRisoluzioni(context);
+
+            ListView lvS = (ListView) v.findViewById(R.id.lstRisoluzioni);
+            lvS.setClickable(true);
+            lvS.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+                    String o = (String) VariabiliStatiche.getInstance().Dimensioni.get(position);
+                    TextView tv = (TextView) v.findViewById(R.id.txtRisoluzione);
+                    tv.setText(o);
+
+                    Impostazioni i = new Impostazioni();
+                    i.ImpostaRisoluzione(context, o);
+                }
+            });
+
+            Button bs = (Button) v.findViewById(R.id.cmdImpostaScatti);
+            bs.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    EditText t = (EditText) v.findViewById(R.id.txtScatti);
+
+                    Impostazioni i = new Impostazioni();
+                    i.ImpostaNumScatti(context, t);
+
+                    Utility u = new Utility();
+                    u.VisualizzaPOPUP("Saved", false, 0);
+                }
+            });
+
+            ImpostaCampiTestoPerLingua();
+
+            final ScrollView lPr = (ScrollView) v.findViewById(R.id.scrollViewPrincipale);
+            lPr.setVisibility(LinearLayout.VISIBLE);
+
+            TextView tTotale = (TextView) v.findViewById(R.id.txtMemoriaTotale);
+            TextView tLibera = (TextView) v.findViewById(R.id.txtMemoriaLibera);
+            TextView tUsata = (TextView) v.findViewById(R.id.txtMemoriaUsata);
+            TextView tInfo = (TextView) v.findViewById(R.id.txtInfo);
+
+            tLibera.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    final Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+
+                    if (datella1 == null) {
+                        Handler handlerTimer;
+                        Runnable rTimer;
+
+                        datella1 = System.currentTimeMillis();
+                        try {
+                            vibrator.vibrate(100);
+                            Thread.sleep(100);
+                        } catch (InterruptedException ignored) {
+
+                        }
+
+                        handlerTimer = new Handler();
+                        rTimer = new Runnable() {
+                            public void run() {
+                                datella1 = null;
 					/* try {
 						vibrator.vibrate(300);
 						Thread.sleep(300);
 					} catch (InterruptedException ignored) {
 
 					} */
+                            }
+                        };
+                        handlerTimer.postDelayed(rTimer, 2000);
+                    } else {
+                        long diff = System.currentTimeMillis() - datella1;
+
+                        if (diff < 1950) {
+                            lPr.setVisibility(LinearLayout.GONE);
                         }
-                    };
-                    handlerTimer.postDelayed(rTimer, 2000);
-                } else {
-                    long diff = System.currentTimeMillis() - datella1;
-
-                    if (diff < 1950) {
-                        lPr.setVisibility(LinearLayout.GONE);
-                    }
-                }
-
-                return false;
-            }
-        });
-
-        Button btnTornaIndietro = (Button) v.findViewById(R.id.btnTornaIndietro);
-        btnTornaIndietro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                lPr.setVisibility(LinearLayout.VISIBLE);
-            }
-        });
-
-        TextView tTitEstensione = (TextView) v.findViewById(R.id.txtTitoloEstensione);
-        TextView txtKM = (TextView) v.findViewById(R.id.txtKM);
-        VariabiliStatiche.getInstance().setTxtKM(txtKM);
-        VariabiliStatiche.getInstance().setTxtImm((TextView) v.findViewById(R.id.txtImmagini));
-        VariabiliStatiche.getInstance().setTxtNomeImm((TextView) v.findViewById(R.id.txtNomeImm));
-        final LinearLayout lScatti = (LinearLayout) v.findViewById(R.id.layScatti);
-        final LinearLayout lTasti = (LinearLayout) v.findViewById(R.id.layTasti);
-        final LinearLayout lFrecce = (LinearLayout) v.findViewById(R.id.layFrecce);
-        lScatti.setVisibility(LinearLayout.GONE);
-        lTasti.setVisibility(LinearLayout.GONE);
-        lFrecce.setVisibility(LinearLayout.GONE);
-        VariabiliStatiche.getInstance().getTxtImm().setVisibility(LinearLayout.GONE);
-        VariabiliStatiche.getInstance().getTxtNomeImm().setVisibility(LinearLayout.GONE);
-
-        VariabiliStatiche.getInstance().setImg((ImageView) v.findViewById(R.id.imgScatto));
-        VariabiliStatiche.getInstance().setAudio((ImageView) v.findViewById(R.id.imgPlayAudio));
-        VariabiliStatiche.getInstance().setvView((VideoView) v.findViewById(R.id.videoView1));
-
-        VariabiliStatiche.getInstance().getImg().setVisibility(LinearLayout.GONE);
-        VariabiliStatiche.getInstance().getAudio().setVisibility(LinearLayout.GONE);
-        VariabiliStatiche.getInstance().getvView().setVisibility(LinearLayout.GONE);
-
-        VariabiliStatiche.getInstance().getvView().setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Utility u = new Utility();
-                if (!VariabiliStatiche.getInstance().StaVedendo) {
-                    u.PlayVideo();
-                } else {
-                    u.StopVideo();
-                }
-            }
-        });
-
-        VariabiliStatiche.getInstance().getAudio().setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Utility u = new Utility();
-                if (!VariabiliStatiche.getInstance().StaSuonando) {
-                    u.PlayAudio();
-                } else {
-                    u.StopAudio();
-                }
-            }
-        });
-
-        final Button bDecripta = (Button) v.findViewById(R.id.cmdDecript);
-        final Button bCripta = (Button) v.findViewById(R.id.cmdCript);
-
-        bCripta.setVisibility(LinearLayout.GONE);
-        bDecripta.setVisibility(LinearLayout.GONE);
-
-        bDecripta.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Utility u = new Utility();
-                u.DeCriptaFiles(VariabiliStatiche.getInstance().getContext());
-            }
-        });
-
-        bCripta.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Utility u = new Utility();
-                u.CriptaFiles(VariabiliStatiche.getInstance().getContext());
-            }
-        });
-
-        tTitEstensione.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                final Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-
-                if (datella1 == null) {
-                    Handler handlerTimer;
-                    Runnable rTimer;
-
-                    datella1 = System.currentTimeMillis();
-                    try {
-                        vibrator.vibrate(100);
-                        Thread.sleep(100);
-                    } catch (InterruptedException ignored) {
-
                     }
 
-                    handlerTimer = new Handler();
-                    rTimer = new Runnable() {
-                        public void run() {
-                            datella1 = null;
-                        }
-                    };
-                    handlerTimer.postDelayed(rTimer, 2000);
-                } else {
-                    long diff = System.currentTimeMillis() - datella1;
+                    return false;
+                }
+            });
 
-                    if (diff < 1950) {
-                        lScatti.setVisibility(LinearLayout.VISIBLE);
-                        lTasti.setVisibility(LinearLayout.VISIBLE);
-                        lFrecce.setVisibility(LinearLayout.VISIBLE);
-                        bCripta.setVisibility(LinearLayout.VISIBLE);
-                        bDecripta.setVisibility(LinearLayout.VISIBLE);
+            Button btnTornaIndietro = (Button) v.findViewById(R.id.btnTornaIndietro);
+            btnTornaIndietro.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    lPr.setVisibility(LinearLayout.VISIBLE);
+                }
+            });
 
-                        VariabiliStatiche.getInstance().getTxtImm().setVisibility(LinearLayout.VISIBLE);
-                        VariabiliStatiche.getInstance().getTxtNomeImm().setVisibility(LinearLayout.VISIBLE);
+            TextView tTitEstensione = (TextView) v.findViewById(R.id.txtTitoloEstensione);
+            TextView txtKM = (TextView) v.findViewById(R.id.txtKM);
+            VariabiliStatiche.getInstance().setTxtKM(txtKM);
+            VariabiliStatiche.getInstance().setTxtImm((TextView) v.findViewById(R.id.txtImmagini));
+            VariabiliStatiche.getInstance().setTxtNomeImm((TextView) v.findViewById(R.id.txtNomeImm));
+            final LinearLayout lScatti = (LinearLayout) v.findViewById(R.id.layScatti);
+            final LinearLayout lTasti = (LinearLayout) v.findViewById(R.id.layTasti);
+            final LinearLayout lFrecce = (LinearLayout) v.findViewById(R.id.layFrecce);
+            lScatti.setVisibility(LinearLayout.GONE);
+            lTasti.setVisibility(LinearLayout.GONE);
+            lFrecce.setVisibility(LinearLayout.GONE);
+            VariabiliStatiche.getInstance().getTxtImm().setVisibility(LinearLayout.GONE);
+            VariabiliStatiche.getInstance().getTxtNomeImm().setVisibility(LinearLayout.GONE);
 
-                        Utility uu = new Utility();
-                        uu.CaricaMultimedia();
-                        uu.VisualizzaMultimedia();
+            VariabiliStatiche.getInstance().setImg((ImageView) v.findViewById(R.id.imgScatto));
+            VariabiliStatiche.getInstance().setAudio((ImageView) v.findViewById(R.id.imgPlayAudio));
+            VariabiliStatiche.getInstance().setvView((VideoView) v.findViewById(R.id.videoView1));
 
+            VariabiliStatiche.getInstance().getImg().setVisibility(LinearLayout.GONE);
+            VariabiliStatiche.getInstance().getAudio().setVisibility(LinearLayout.GONE);
+            VariabiliStatiche.getInstance().getvView().setVisibility(LinearLayout.GONE);
+
+            VariabiliStatiche.getInstance().getvView().setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Utility u = new Utility();
+                    if (!VariabiliStatiche.getInstance().StaVedendo) {
+                        u.PlayVideo();
+                    } else {
+                        u.StopVideo();
+                    }
+                }
+            });
+
+            VariabiliStatiche.getInstance().getAudio().setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Utility u = new Utility();
+                    if (!VariabiliStatiche.getInstance().StaSuonando) {
+                        u.PlayAudio();
+                    } else {
+                        u.StopAudio();
+                    }
+                }
+            });
+
+            final Button bDecripta = (Button) v.findViewById(R.id.cmdDecript);
+            final Button bCripta = (Button) v.findViewById(R.id.cmdCript);
+
+            bCripta.setVisibility(LinearLayout.GONE);
+            bDecripta.setVisibility(LinearLayout.GONE);
+
+            bDecripta.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Utility u = new Utility();
+                    u.DeCriptaFiles(VariabiliStatiche.getInstance().getContext());
+                }
+            });
+
+            bCripta.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Utility u = new Utility();
+                    u.CriptaFiles(VariabiliStatiche.getInstance().getContext());
+                }
+            });
+
+            tTitEstensione.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    final Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+
+                    if (datella1 == null) {
                         Handler handlerTimer;
                         Runnable rTimer;
+
+                        datella1 = System.currentTimeMillis();
+                        try {
+                            vibrator.vibrate(100);
+                            Thread.sleep(100);
+                        } catch (InterruptedException ignored) {
+
+                        }
 
                         handlerTimer = new Handler();
                         rTimer = new Runnable() {
                             public void run() {
-                                VariabiliStatiche.getInstance().MascheraImmaginiMostrata = true;
+                                datella1 = null;
                             }
                         };
                         handlerTimer.postDelayed(rTimer, 2000);
+                    } else {
+                        long diff = System.currentTimeMillis() - datella1;
+
+                        if (diff < 1950) {
+                            lScatti.setVisibility(LinearLayout.VISIBLE);
+                            lTasti.setVisibility(LinearLayout.VISIBLE);
+                            lFrecce.setVisibility(LinearLayout.VISIBLE);
+                            bCripta.setVisibility(LinearLayout.VISIBLE);
+                            bDecripta.setVisibility(LinearLayout.VISIBLE);
+
+                            VariabiliStatiche.getInstance().getTxtImm().setVisibility(LinearLayout.VISIBLE);
+                            VariabiliStatiche.getInstance().getTxtNomeImm().setVisibility(LinearLayout.VISIBLE);
+
+                            Utility uu = new Utility();
+                            uu.CaricaMultimedia();
+                            uu.VisualizzaMultimedia();
+
+                            Handler handlerTimer;
+                            Runnable rTimer;
+
+                            handlerTimer = new Handler();
+                            rTimer = new Runnable() {
+                                public void run() {
+                                    VariabiliStatiche.getInstance().MascheraImmaginiMostrata = true;
+                                }
+                            };
+                            handlerTimer.postDelayed(rTimer, 2000);
+                        }
+                    }
+
+                    return false;
+                }
+            });
+
+            tTitEstensione.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (VariabiliStatiche.getInstance().MascheraImmaginiMostrata) {
+                        lScatti.setVisibility(LinearLayout.GONE);
+                        lTasti.setVisibility(LinearLayout.GONE);
+                        lFrecce.setVisibility(LinearLayout.GONE);
+
+                        VariabiliStatiche.getInstance().getTxtImm().setVisibility(LinearLayout.GONE);
+
+                        VariabiliStatiche.getInstance().MascheraImmaginiMostrata = false;
                     }
                 }
+            });
 
-                return false;
-            }
-        });
+            ImageView btnIndietro = (ImageView) v.findViewById(R.id.imgIndietro);
+            ImageView btnAvanti = (ImageView) v.findViewById(R.id.imgAvanti);
+            ImageView btnElimina = (ImageView) v.findViewById(R.id.imgElimina);
+            ImageView btnRefresh = (ImageView) v.findViewById(R.id.imgRefresh);
+            ImageView btnUpload = (ImageView) v.findViewById(R.id.imgInviaMappa);
+            ImageView btnChiudeUpload = (ImageView) v.findViewById(R.id.imgChiudeUpload);
+            ImageView btnEsegueUpload = (ImageView) v.findViewById(R.id.imgEffettuaUpload);
+            ListView lstUpload = (ListView) v.findViewById(R.id.lstUpload);
 
-        tTitEstensione.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (VariabiliStatiche.getInstance().MascheraImmaginiMostrata) {
-                    lScatti.setVisibility(LinearLayout.GONE);
-                    lTasti.setVisibility(LinearLayout.GONE);
-                    lFrecce.setVisibility(LinearLayout.GONE);
+            VariabiliStatiche.getInstance().setLstUpload(lstUpload);
+            VariabiliStatiche.getInstance().setRltUpload((LinearLayout) v.findViewById(R.id.rltUpload));
+            VariabiliStatiche.getInstance().getRltUpload().setVisibility(LinearLayout.GONE);
 
-                    VariabiliStatiche.getInstance().getTxtImm().setVisibility(LinearLayout.GONE);
+            VariabiliStatiche.getInstance().setBtnFlipX((ImageView) v.findViewById(R.id.imgFlipX));
+            VariabiliStatiche.getInstance().setBtnFlipY((ImageView) v.findViewById(R.id.imgFlipY));
+            VariabiliStatiche.getInstance().setBtnRuotaDes((ImageView) v.findViewById(R.id.imgRuotaDes));
+            VariabiliStatiche.getInstance().setBtnRuotaSin((ImageView) v.findViewById(R.id.imgRuotaSin));
 
-                    VariabiliStatiche.getInstance().MascheraImmaginiMostrata = false;
+            btnRefresh.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Utility uu = new Utility();
+                    uu.CaricaMultimedia();
+                    uu.VisualizzaMultimedia();
                 }
-            }
-        });
+            });
 
-        ImageView btnIndietro = (ImageView) v.findViewById(R.id.imgIndietro);
-        ImageView btnAvanti = (ImageView) v.findViewById(R.id.imgAvanti);
-        ImageView btnElimina = (ImageView) v.findViewById(R.id.imgElimina);
-        ImageView btnRefresh = (ImageView) v.findViewById(R.id.imgRefresh);
-        ImageView btnUpload = (ImageView) v.findViewById(R.id.imgInviaMappa);
-        ImageView btnChiudeUpload = (ImageView) v.findViewById(R.id.imgChiudeUpload);
-        ImageView btnEsegueUpload = (ImageView) v.findViewById(R.id.imgEffettuaUpload);
-        ListView lstUpload = (ListView) v.findViewById(R.id.lstUpload);
-
-        VariabiliStatiche.getInstance().setLstUpload(lstUpload);
-        VariabiliStatiche.getInstance().setRltUpload((LinearLayout) v.findViewById(R.id.rltUpload));
-        VariabiliStatiche.getInstance().getRltUpload().setVisibility(LinearLayout.GONE);
-
-        VariabiliStatiche.getInstance().setBtnFlipX((ImageView) v.findViewById(R.id.imgFlipX));
-        VariabiliStatiche.getInstance().setBtnFlipY((ImageView) v.findViewById(R.id.imgFlipY));
-        VariabiliStatiche.getInstance().setBtnRuotaDes((ImageView) v.findViewById(R.id.imgRuotaDes));
-        VariabiliStatiche.getInstance().setBtnRuotaSin((ImageView) v.findViewById(R.id.imgRuotaSin));
-
-        btnRefresh.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Utility uu = new Utility();
-                uu.CaricaMultimedia();
-                uu.VisualizzaMultimedia();
-            }
-        });
-
-        btnChiudeUpload.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                VariabiliStatiche.getInstance().getRltUpload().setVisibility(LinearLayout.GONE);
-            }
-        });
-
-        btnEsegueUpload.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                new UploadFiles(context);
-            }
-        });
-
-        btnUpload.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Utility uu = new Utility();
-                uu.InviaFilesGPS();
-            }
-        });
-
-        VariabiliStatiche.getInstance().getBtnFlipX().setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                GestioneImmagini u = new GestioneImmagini();
-                u.FlipImmagine(true);
-
-                int appo = VariabiliStatiche.getInstance().numMultimedia;
-                Utility uu = new Utility();
-                uu.CaricaMultimedia();
-                VariabiliStatiche.getInstance().numMultimedia = appo;
-                uu.VisualizzaMultimedia();
-            }
-        });
-
-        VariabiliStatiche.getInstance().getBtnFlipY().setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                GestioneImmagini u = new GestioneImmagini();
-                u.FlipImmagine(false);
-
-                int appo = VariabiliStatiche.getInstance().numMultimedia;
-                Utility uu = new Utility();
-                uu.CaricaMultimedia();
-                VariabiliStatiche.getInstance().numMultimedia = appo;
-                uu.VisualizzaMultimedia();
-            }
-        });
-
-        btnIndietro.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (VariabiliStatiche.getInstance().numMultimedia > 0) {
-                    VariabiliStatiche.getInstance().numMultimedia--;
-                } else {
-                    VariabiliStatiche.getInstance().numMultimedia = VariabiliStatiche.getInstance().totImmagini - 1;
+            btnChiudeUpload.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    VariabiliStatiche.getInstance().getRltUpload().setVisibility(LinearLayout.GONE);
                 }
+            });
 
-                Utility uu = new Utility();
-                uu.VisualizzaMultimedia();
-            }
-        });
-
-        btnAvanti.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (VariabiliStatiche.getInstance().numMultimedia < VariabiliStatiche.getInstance().totImmagini - 1) {
-                    VariabiliStatiche.getInstance().numMultimedia++;
-                } else {
-                    VariabiliStatiche.getInstance().numMultimedia = 0;
+            btnEsegueUpload.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    new UploadFiles(context);
                 }
+            });
 
-                Utility uu = new Utility();
-                uu.VisualizzaMultimedia();
-            }
-        });
-
-        VariabiliStatiche.getInstance().getBtnRuotaSin().setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                GestioneImmagini u = new GestioneImmagini();
-                u.RuotaImmagine(270);
-            }
-        });
-
-        VariabiliStatiche.getInstance().getBtnRuotaDes().setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                GestioneImmagini u = new GestioneImmagini();
-                u.RuotaImmagine(90);
-            }
-        });
-
-        btnElimina.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                String Origine = Environment.getExternalStorageDirectory().getAbsolutePath();
-                String Cartella = VariabiliStatiche.getInstance().PathApplicazione;
-                String NomeImmagine = VariabiliStatiche.getInstance().getImmagini().get(VariabiliStatiche.getInstance().numMultimedia);
-
-                try {
-                    File file = new File(Origine + Cartella + NomeImmagine);
-                    boolean deleted = file.delete();
-                } catch (Exception ignored) {
-
+            btnUpload.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Utility uu = new Utility();
+                    uu.InviaFilesGPS();
                 }
+            });
 
-                try {
-                    File file = new File(Origine + Cartella + NomeImmagine +".PV3");
-                    boolean deleted = file.delete();
-                } catch (Exception ignored) {
+            VariabiliStatiche.getInstance().getBtnFlipX().setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    GestioneImmagini u = new GestioneImmagini();
+                    u.FlipImmagine(true);
 
+                    int appo = VariabiliStatiche.getInstance().numMultimedia;
+                    Utility uu = new Utility();
+                    uu.CaricaMultimedia();
+                    VariabiliStatiche.getInstance().numMultimedia = appo;
+                    uu.VisualizzaMultimedia();
                 }
+            });
 
-                int appo = VariabiliStatiche.getInstance().numMultimedia;
-                Utility uu = new Utility();
-                uu.CaricaMultimedia();
-                appo--;
-                if (appo < 0) appo = 0;
-                VariabiliStatiche.getInstance().numMultimedia = appo;
-                uu.VisualizzaMultimedia();
-                uu.VisualizzaPOPUP("File multimediale eliminato", false, 0);
-            }
-        });
+            VariabiliStatiche.getInstance().getBtnFlipY().setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    GestioneImmagini u = new GestioneImmagini();
+                    u.FlipImmagine(false);
 
-        Date todayDate = Calendar.getInstance().getTime();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-        String oggi = formatter.format(todayDate);
-
-        TextView txtDataMappa = (TextView) v.findViewById(R.id.txtDataMappa);
-        txtDataMappa.setText(oggi);
-        VariabiliStatiche.getInstance().setTxtDataMappa(txtDataMappa);
-
-        ImageView imgRefreshMappa = (ImageView) v.findViewById(R.id.imgRefreshMappa);
-        imgRefreshMappa.setBackgroundResource(R.drawable.ruotadx);
-        imgRefreshMappa.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                VariabiliStatiche.getInstance().DisegnaPercorsoAttualeSuMappa();
-            }
-        });
-
-        ImageView imgCentraMappa = (ImageView) v.findViewById(R.id.imgCentraMappa);
-        imgCentraMappa.setBackgroundResource(R.drawable.adatta);
-        imgCentraMappa.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                VariabiliStatiche.getInstance().CentraMappa();
-            }
-        });
-
-        ImageView imgEliminaMappa = (ImageView) v.findViewById(R.id.imgEliminaMappa);
-        imgEliminaMappa.setBackgroundResource(R.drawable.elimina);
-        imgEliminaMappa.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                VariabiliStatiche.getInstance().getDbGpsPos().cancellaDatiGPSPerDataAttuale();
-                VariabiliStatiche.getInstance().getDbGpsPos().cancellaDatiMultiMediaPerDataAttuale();
-
-                VariabiliStatiche.getInstance().DisegnaPercorsoVecchioSuMappa();
-
-                Utility u = new Utility();
-                u.VisualizzaPOPUP("Dati eliminati", false,0);
-            }
-        });
-
-        ImageView imgExportMappa = (ImageView) v.findViewById(R.id.imgExportMappa);
-        imgExportMappa.setBackgroundResource(R.drawable.export);
-        imgExportMappa.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                VariabiliStatiche.getInstance().EstraiDatiGPS();
-            }
-        });
-
-        ImageView imgIndietroMappa = (ImageView) v.findViewById(R.id.imgIndietroMappa);
-        imgIndietroMappa.setBackgroundResource(R.drawable.indietro);
-        imgIndietroMappa.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                VariabiliStatiche.getInstance().DecrementaGiornoMappa();
-            }
-        });
-
-        ImageView imgAvantiMappa = (ImageView) v.findViewById(R.id.imgAvantiMappa);
-        imgAvantiMappa.setBackgroundResource(R.drawable.avanti);
-        imgAvantiMappa.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                VariabiliStatiche.getInstance().AumentaGiornoMappa();
-            }
-        });
-
-        final ImageView imgPlayMappa = (ImageView) v.findViewById(R.id.imgPlayPercorso);
-        imgPlayMappa.setBackgroundResource(R.drawable.pausa);
-        imgPlayMappa.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (VariabiliStatiche.getInstance().isSeguePercorso()) {
-                    VariabiliStatiche.getInstance().setSeguePercorso(false);
-                    imgPlayMappa.setBackgroundResource(R.drawable.pausa);
-                } else {
-                    VariabiliStatiche.getInstance().setSeguePercorso(true);
-                    imgPlayMappa.setBackgroundResource(R.drawable.play);
+                    int appo = VariabiliStatiche.getInstance().numMultimedia;
+                    Utility uu = new Utility();
+                    uu.CaricaMultimedia();
+                    VariabiliStatiche.getInstance().numMultimedia = appo;
+                    uu.VisualizzaMultimedia();
                 }
+            });
+
+            btnIndietro.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (VariabiliStatiche.getInstance().numMultimedia > 0) {
+                        VariabiliStatiche.getInstance().numMultimedia--;
+                    } else {
+                        VariabiliStatiche.getInstance().numMultimedia = VariabiliStatiche.getInstance().totImmagini - 1;
+                    }
+
+                    Utility uu = new Utility();
+                    uu.VisualizzaMultimedia();
+                }
+            });
+
+            btnAvanti.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (VariabiliStatiche.getInstance().numMultimedia < VariabiliStatiche.getInstance().totImmagini - 1) {
+                        VariabiliStatiche.getInstance().numMultimedia++;
+                    } else {
+                        VariabiliStatiche.getInstance().numMultimedia = 0;
+                    }
+
+                    Utility uu = new Utility();
+                    uu.VisualizzaMultimedia();
+                }
+            });
+
+            VariabiliStatiche.getInstance().getBtnRuotaSin().setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    GestioneImmagini u = new GestioneImmagini();
+                    u.RuotaImmagine(270);
+                }
+            });
+
+            VariabiliStatiche.getInstance().getBtnRuotaDes().setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    GestioneImmagini u = new GestioneImmagini();
+                    u.RuotaImmagine(90);
+                }
+            });
+
+            btnElimina.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    String Origine = Environment.getExternalStorageDirectory().getAbsolutePath();
+                    String Cartella = VariabiliStatiche.getInstance().PathApplicazione;
+                    String NomeImmagine = VariabiliStatiche.getInstance().getImmagini().get(VariabiliStatiche.getInstance().numMultimedia);
+
+                    try {
+                        File file = new File(Origine + Cartella + NomeImmagine);
+                        boolean deleted = file.delete();
+                    } catch (Exception ignored) {
+
+                    }
+
+                    try {
+                        File file = new File(Origine + Cartella + NomeImmagine + ".PV3");
+                        boolean deleted = file.delete();
+                    } catch (Exception ignored) {
+
+                    }
+
+                    int appo = VariabiliStatiche.getInstance().numMultimedia;
+                    Utility uu = new Utility();
+                    uu.CaricaMultimedia();
+                    appo--;
+                    if (appo < 0) appo = 0;
+                    VariabiliStatiche.getInstance().numMultimedia = appo;
+                    uu.VisualizzaMultimedia();
+                    uu.VisualizzaPOPUP("File multimediale eliminato", false, 0);
+                }
+            });
+
+            Date todayDate = Calendar.getInstance().getTime();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+            String oggi = formatter.format(todayDate);
+
+            TextView txtDataMappa = (TextView) v.findViewById(R.id.txtDataMappa);
+            txtDataMappa.setText(oggi);
+            VariabiliStatiche.getInstance().setTxtDataMappa(txtDataMappa);
+
+            ImageView imgRefreshMappa = (ImageView) v.findViewById(R.id.imgRefreshMappa);
+            imgRefreshMappa.setBackgroundResource(R.drawable.ruotadx);
+            imgRefreshMappa.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    VariabiliStatiche.getInstance().DisegnaPercorsoAttualeSuMappa();
+                }
+            });
+
+            ImageView imgCentraMappa = (ImageView) v.findViewById(R.id.imgCentraMappa);
+            imgCentraMappa.setBackgroundResource(R.drawable.adatta);
+            imgCentraMappa.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    VariabiliStatiche.getInstance().CentraMappa();
+                }
+            });
+
+            ImageView imgEliminaMappa = (ImageView) v.findViewById(R.id.imgEliminaMappa);
+            imgEliminaMappa.setBackgroundResource(R.drawable.elimina);
+            imgEliminaMappa.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    VariabiliStatiche.getInstance().getDbGpsPos().cancellaDatiGPSPerDataAttuale();
+                    VariabiliStatiche.getInstance().getDbGpsPos().cancellaDatiMultiMediaPerDataAttuale();
+
+                    VariabiliStatiche.getInstance().DisegnaPercorsoVecchioSuMappa();
+
+                    Utility u = new Utility();
+                    u.VisualizzaPOPUP("Dati eliminati", false, 0);
+                }
+            });
+
+            ImageView imgExportMappa = (ImageView) v.findViewById(R.id.imgExportMappa);
+            imgExportMappa.setBackgroundResource(R.drawable.export);
+            imgExportMappa.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    VariabiliStatiche.getInstance().EstraiDatiGPS();
+                }
+            });
+
+            ImageView imgIndietroMappa = (ImageView) v.findViewById(R.id.imgIndietroMappa);
+            imgIndietroMappa.setBackgroundResource(R.drawable.indietro);
+            imgIndietroMappa.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    VariabiliStatiche.getInstance().DecrementaGiornoMappa();
+                }
+            });
+
+            ImageView imgAvantiMappa = (ImageView) v.findViewById(R.id.imgAvantiMappa);
+            imgAvantiMappa.setBackgroundResource(R.drawable.avanti);
+            imgAvantiMappa.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    VariabiliStatiche.getInstance().AumentaGiornoMappa();
+                }
+            });
+
+            final ImageView imgPlayMappa = (ImageView) v.findViewById(R.id.imgPlayPercorso);
+            imgPlayMappa.setBackgroundResource(R.drawable.pausa);
+            imgPlayMappa.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (VariabiliStatiche.getInstance().isSeguePercorso()) {
+                        VariabiliStatiche.getInstance().setSeguePercorso(false);
+                        imgPlayMappa.setBackgroundResource(R.drawable.pausa);
+                    } else {
+                        VariabiliStatiche.getInstance().setSeguePercorso(true);
+                        imgPlayMappa.setBackgroundResource(R.drawable.play);
+                    }
+                }
+            });
+
+            TestMemory tm = new TestMemory();
+            DatiMemoria d = new DatiMemoria();
+            d = tm.LeggeValori();
+
+            tTotale.setText(Float.toString(d.getMemoriaTotale()));
+            tLibera.setText(Float.toString(d.getMemoriaLibera()));
+            tUsata.setText(Float.toString(d.getMemoriaUsata()));
+
+            tInfo.setText(getCPUDetails());
+
+            // if (!VariabiliStatiche.getInstance().getGiaEntrato()) {
+            // 	VariabiliStatiche.getInstance().setGiaEntrato(true);
+
+            // ImAliveThread.getInstance().start();
+
+            ImageView imgGPS = (ImageView) v.findViewById(R.id.imgGPS);
+            VariabiliStatiche.getInstance().setImgGps(imgGPS);
+
+            db_dati dbgps = new db_dati();
+            dbgps.CreazioneTabelle();
+            VariabiliStatiche.getInstance().setDbGpsPos(dbgps);
+            // dbgps.cancellaDatiGPS();
+            // dbgps.cancellaDatiMultiMedia();
+
+            int proGPS = dbgps.ottieniMassimoProgressivoGPSPerData(oggi);
+            VariabiliStatiche.getInstance().setProgressivoDBGPS(proGPS);
+            int proMM = dbgps.ottieniMassimoProgressivoMultimediaPerData(oggi);
+            VariabiliStatiche.getInstance().setProgressivoDBMM(proMM);
+
+            Cursor c1 = VariabiliStatiche.getInstance().getDbGpsPos().ottieniDistanzeData(oggi);
+            boolean ciSonoDistanze = false;
+            if (c1 != null && c1.moveToFirst()) {
+                do {
+                    ciSonoDistanze = true;
+                    VariabiliStatiche.getInstance().setKmPercorsi(Float.parseFloat(c1.getString(1)));
+                } while (c1.moveToNext());
             }
-        });
+            if (c1 != null) {
+                c1.close();
+            }
+            if (!ciSonoDistanze) {
+                VariabiliStatiche.getInstance().setKmPercorsi(0);
+                VariabiliStatiche.getInstance().getDbGpsPos().inserisceNuovaDistanza(oggi, "0");
+            }
+            Utility u = new Utility();
+            u.ScriveKM();
 
-        TestMemory tm = new TestMemory();
-        DatiMemoria d = new DatiMemoria();
-        d = tm.LeggeValori();
+            VariabiliStatiche.getInstance().setDataDiVisualizzazioneMappa(todayDate);
 
-        tTotale.setText(Float.toString(d.getMemoriaTotale()));
-        tLibera.setText(Float.toString(d.getMemoriaLibera()));
-        tUsata.setText(Float.toString(d.getMemoriaUsata()));
+            startForegroundService(VariabiliStatiche.getInstance().getLockService());
+            startForegroundService(VariabiliStatiche.getInstance().getLocationService());
 
-        tInfo.setText(getCPUDetails());
+            v.getWindow().setSoftInputMode(
+                    WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
-        // if (!VariabiliStatiche.getInstance().getGiaEntrato()) {
-        // 	VariabiliStatiche.getInstance().setGiaEntrato(true);
+            // if (service.ChiudiMaschera == null) {
+            // 	service.ChiudiMaschera = false;
+            // }
+            // if (service.ChiudiMaschera) {
+            // 	moveTaskToBack(true);
+            // 	service.ChiudiMaschera = false;
+            // }
 
-        // ImAliveThread.getInstance().start();
+            if (!VariabiliStatiche.getInstance().getGiaEntrato()) {
+                VariabiliStatiche.getInstance().setGiaEntrato(true);
+                v.moveTaskToBack(true);
 
-        ImageView imgGPS = (ImageView) v.findViewById(R.id.imgGPS);
-        VariabiliStatiche.getInstance().setImgGps(imgGPS);
-
-        db_dati dbgps = new db_dati();
-        dbgps.CreazioneTabelle();
-        VariabiliStatiche.getInstance().setDbGpsPos(dbgps);
-        // dbgps.cancellaDatiGPS();
-        // dbgps.cancellaDatiMultiMedia();
-
-        int proGPS = dbgps.ottieniMassimoProgressivoGPSPerData(oggi);
-        VariabiliStatiche.getInstance().setProgressivoDBGPS(proGPS);
-        int proMM = dbgps.ottieniMassimoProgressivoMultimediaPerData(oggi);
-        VariabiliStatiche.getInstance().setProgressivoDBMM(proMM);
-
-        Cursor c1 = VariabiliStatiche.getInstance().getDbGpsPos().ottieniDistanzeData(oggi);
-        boolean ciSonoDistanze=false;
-        if (c1!=null && c1.moveToFirst()) {
-            do{
-                ciSonoDistanze=true;
-                VariabiliStatiche.getInstance().setKmPercorsi(Float.parseFloat(c1.getString(1)));
-            } while (c1.moveToNext());
-        }
-        if (c1!=null) {
-            c1.close();
-        }
-        if (!ciSonoDistanze) {
-            VariabiliStatiche.getInstance().setKmPercorsi(0);
-            VariabiliStatiche.getInstance().getDbGpsPos().inserisceNuovaDistanza(oggi, "0");
-        }
-        Utility u = new Utility();
-        u.ScriveKM();
-
-        VariabiliStatiche.getInstance().setDataDiVisualizzazioneMappa(todayDate);
-
-        startForegroundService(VariabiliStatiche.getInstance().getLockService());
-        startForegroundService(VariabiliStatiche.getInstance().getLocationService());
-
-        v.getWindow().setSoftInputMode(
-                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-
-        // if (service.ChiudiMaschera == null) {
-        // 	service.ChiudiMaschera = false;
-        // }
-        // if (service.ChiudiMaschera) {
-        // 	moveTaskToBack(true);
-        // 	service.ChiudiMaschera = false;
-        // }
-
-        if (!VariabiliStatiche.getInstance().getGiaEntrato()) {
-            VariabiliStatiche.getInstance().setGiaEntrato(true);
-            v.moveTaskToBack(true);
-
-            VariabiliStatiche.getInstance().EstraiTuttiIDatiGPS();
+                VariabiliStatiche.getInstance().EstraiTuttiIDatiGPS();
+            }
         }
 
         // RefreshActivity.getInstance().RilanciaServizio(context, v);

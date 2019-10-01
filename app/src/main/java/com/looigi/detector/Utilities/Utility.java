@@ -524,8 +524,12 @@ public class Utility {
 	            }
 	        });		
 		}
-		@SuppressWarnings("unused")
-		AlertDialog dialog = builder.show();
+
+		try {
+			AlertDialog dialog = builder.show();
+		} catch (Exception ignored) {
+
+		}
 	}
 	
 	public void CreaCartelle(String Origine, String Cartella) {
