@@ -1,6 +1,7 @@
 package com.looigi.detector;
 
 import android.app.Activity;
+import android.app.Notification;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +9,7 @@ import android.database.Cursor;
 import android.location.Location;
 import android.media.AudioManager;
 import android.os.Binder;
+import android.os.Build;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
@@ -70,6 +72,16 @@ public class bckService extends Service  implements OnMapReadyCallback {
     private Runnable rAttendeRispostaCheckURL2;
     private Handler hAttendeRispostaCheckURL2;
     protected Context context;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        int NOTIFICATION_ID = (int) (System.currentTimeMillis()%10000);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForeground(NOTIFICATION_ID, new Notification.Builder(this).build());
+        }
+    }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {

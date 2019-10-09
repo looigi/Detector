@@ -7,6 +7,7 @@ import android.content.ServiceConnection;
 import android.database.Cursor;
 import android.location.Location;
 import android.media.AudioManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -43,6 +44,7 @@ import com.looigi.detector.Receivers.Video;
 import com.looigi.detector.TestMemory.DatiMemoria;
 import com.looigi.detector.TestMemory.TestMemory;
 import com.looigi.detector.Utilities.CheckURLFile;
+import com.looigi.detector.Utilities.MemoryBoss;
 import com.looigi.detector.Utilities.db_dati;
 import com.looigi.detector.Utilities.DownloadImmagine;
 import com.looigi.detector.Utilities.ExitActivity;
@@ -68,6 +70,7 @@ import java.util.Map;
 
 public class MainActivity extends FragmentActivity {
 	private boolean CiSonoPermessi;
+    private MemoryBoss mMemoryBoss;
 
 	@Override
 	protected void onStop() {
@@ -91,6 +94,11 @@ public class MainActivity extends FragmentActivity {
 
 		if (CiSonoPermessi) {
 			EsegueEntrata();
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+                mMemoryBoss = new MemoryBoss();
+                registerComponentCallbacks(mMemoryBoss);
+            }
 		}
 	}
 
