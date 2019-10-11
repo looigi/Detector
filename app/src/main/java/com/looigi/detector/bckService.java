@@ -940,7 +940,12 @@ public class bckService extends Service  implements OnMapReadyCallback {
 
             if (!VariabiliStatiche.getInstance().getGiaEntrato()) {
                 VariabiliStatiche.getInstance().setGiaEntrato(true);
-                v.moveTaskToBack(true);
+                // v.moveTaskToBack(true);
+
+                Intent setIntent = new Intent(Intent.ACTION_MAIN);
+                setIntent.addCategory(Intent.CATEGORY_HOME);
+                setIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(setIntent);
 
                 VariabiliStatiche.getInstance().EstraiTuttiIDatiGPS();
             }

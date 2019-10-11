@@ -72,9 +72,17 @@ public class MainActivity extends FragmentActivity {
 	private boolean CiSonoPermessi;
     private MemoryBoss mMemoryBoss;
 
+
 	@Override
 	protected void onStop() {
 		super.onStop();
+
+		unregisterComponentCallbacks(mMemoryBoss);
+
+		// DialogMessaggio.getInstance().show(VariabiliStaticheGlobali.getInstance().getContext(),
+		//         "Richiamata funzione onStop",
+		//         true,
+		//         VariabiliStaticheGlobali.NomeApplicazione);
 	}
 
 	// @Override
