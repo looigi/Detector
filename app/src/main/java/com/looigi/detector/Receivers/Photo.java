@@ -39,7 +39,8 @@ public class Photo extends Activity {
 		setContentView(R.layout.widget);
 
 		final Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLog());
-		l.PulisceFileDiLog();
+		// l.PulisceFileDiLog();
+		l.ScriveLog("onCreate Photo");
 
 		UsaQuestoPerScattare uq = new UsaQuestoPerScattare();
 		uq.ScattaFoto(l);

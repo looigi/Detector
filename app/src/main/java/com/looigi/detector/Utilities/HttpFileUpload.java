@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.security.cert.CertPathValidatorException;
 import java.util.List;
 
 public class HttpFileUpload implements Runnable {
@@ -96,8 +97,7 @@ public class HttpFileUpload implements Runnable {
 
                 pd.setMessage("Attendere prego\nInvio files");
 
-                try
-                {
+                try {
                     HttpURLConnection conn = (HttpURLConnection) connectURL.openConnection();
 
                     conn.setDoInput(true);
@@ -109,34 +109,41 @@ public class HttpFileUpload implements Runnable {
                     conn.setRequestProperty("User-Agent", "Android Multipart HTTP Client 1.0");
                     conn.setChunkedStreamingMode(4096);
 
-                    conn.setRequestProperty("Content-Type", "multipart/form-data;boundary="+boundary);
+                    conn.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
+                    // conn.setReadTimeout(10000);
+                    conn.setConnectTimeout(15000);
+                    conn.setDoInput(true);
 
                     DataOutputStream dos = new DataOutputStream(conn.getOutputStream());
 
                     dos.writeBytes(twoHyphens + boundary + lineEnd);
 
-                    dos.writeBytes("Content-Disposition: form-data; name=\"nomefile\""+ lineEnd);
+                    dos.writeBytes("Content-Disposition: form-data; name=\"nomefile\"" + lineEnd);
                     dos.writeBytes(lineEnd);
                     dos.writeBytes(iFileName);
                     dos.writeBytes(lineEnd);
                     dos.writeBytes(twoHyphens + boundary + lineEnd);
 
-                    String tipo="";
+                    String tipo = "";
 
                     if (iFileName.toUpperCase().contains(".MP4")) {
-                        tipo="video/mp4";
+                        tipo = "video/mp4";
                     } else {
-                        tipo="image/jpg";
+                        if (iFileName.toUpperCase().contains(".ZIP")) {
+                            tipo = "application/zip, application/octet-stream, application/x-zip-compressed, multipart/x-zip";
+                        } else {
+                            tipo = "image/jpg";
+                        }
                     }
 
-                    dos.writeBytes("Content-Disposition: form-data; name=\"uploadedfile\"; filename=\"" + iFileName +"\"" + lineEnd);
+                    dos.writeBytes("Content-Disposition: form-data; name=\"uploadedfile\"; filename=\"" + iFileName + "\"" + lineEnd);
                     dos.writeBytes("Content-Type: " + tipo + lineEnd);
                     dos.writeBytes("Content-Transfer-Encoding: binary" + lineEnd);
                     dos.writeBytes(lineEnd);
 
                     // create a buffer of maximum size
                     int bytesAvailable = fileInputStream.available();
-                        
+
                     int maxBufferSize = 1 * 1024 * 1024;
                     int bufferSize = Math.min(bytesAvailable, maxBufferSize);
                     byte[] buffer = new byte[bufferSize];
@@ -147,48 +154,50 @@ public class HttpFileUpload implements Runnable {
                     while (bytesRead > 0) {
                         dos.write(buffer, 0, bufferSize);
                         bytesAvailable = fileInputStream.available();
-                        bufferSize = Math.min(bytesAvailable,maxBufferSize);
-                        bytesRead = fileInputStream.read(buffer, 0,bufferSize);
+                        bufferSize = Math.min(bytesAvailable, maxBufferSize);
+                        bytesRead = fileInputStream.read(buffer, 0, bufferSize);
                     }
                     dos.writeBytes(lineEnd);
                     dos.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
 
                     // close streams
                     fileInputStream.close();
-                        
+
                     dos.flush();
                     dos.close();
 
                     int status = conn.getResponseCode();
                     BufferedInputStream in;
-                    boolean Errore=false;
-                    if (status >= 400 ) {
-                        in = new BufferedInputStream( conn.getErrorStream() );
-                        Errore=true;
+                    boolean Errore = false;
+                    if (status >= 400) {
+                        in = new BufferedInputStream(conn.getErrorStream());
+                        Errore = true;
                     } else {
-                        in = new BufferedInputStream( conn.getInputStream() );
+                        in = new BufferedInputStream(conn.getInputStream());
                     }
                     // retrieve the response from server
                     int ch;
 
-                    StringBuilder b =new StringBuilder();
-                    while( ( ch = in.read() ) != -1 ){ b.append( (char)ch ); }
-                    String s=b.toString();
+                    StringBuilder b = new StringBuilder();
+                    while ((ch = in.read()) != -1) {
+                        b.append((char) ch);
+                    }
+                    String s = b.toString();
 
                     if (Errore) {
                         Ok = false;
                         DialogMessaggio.getInstance().show(VariabiliStatiche.getInstance().getContext(),
-                                "ERRORE: "+s, true,"Detector");
+                                "ERRORE: " + s, true, "Detector");
                     }
 
                     conn.disconnect();
-                } catch (MalformedURLException ex) {
+                 } catch (MalformedURLException ex) {
                     pd.dismiss();
                     Ok = false;
                     DialogMessaggio.getInstance().show(VariabiliStatiche.getInstance().getContext(),
                             "ERRORE: "+ex.getMessage(), true,"Detector");
                 } catch (IOException ioe) {
-                    pd.dismiss();
+                   pd.dismiss();
                     Ok = false;
                     DialogMessaggio.getInstance().show(VariabiliStatiche.getInstance().getContext(),
                             "ERRORE: "+ioe.getMessage(), true,"Detector");

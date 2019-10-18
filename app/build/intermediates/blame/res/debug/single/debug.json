@@ -52,12 +52,12 @@
         "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
-        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
-    },
-    {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
         "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
+    },
+    {
+        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
+        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
     },
     {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_secondary_text_material_dark.xml.flat",
@@ -76,12 +76,12 @@
         "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
-        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
-        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
-    },
-    {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
+        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
     },
     {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_icona_salva.png.flat",
@@ -104,16 +104,16 @@
         "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
-        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\layout_widget_video.xml.flat",
-        "source": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\src\\main\\res\\layout\\widget_video.xml"
+        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-ldrtl-mdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-ldrtl-xxhdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-ldrtl-mdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\layout_widget_video.xml.flat",
+        "source": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\src\\main\\res\\layout\\widget_video.xml"
     },
     {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
@@ -124,12 +124,12 @@
         "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_radio_material.xml.flat",
-        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable\\abc_btn_radio_material.xml"
-    },
-    {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
         "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\3080eed180765bfc7998d6ec12ccbed2\\play-services-base-16.0.1\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_radio_material.xml.flat",
+        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
@@ -152,20 +152,20 @@
         "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-hdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
     },
     {
-        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_marker_percorso.png.flat",
-        "source": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\src\\main\\res\\drawable-hdpi\\marker_percorso.png"
-    },
-    {
-        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_custom.xml.flat",
+        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\76255774f047056d070aaccfb1365509\\support-media-compat-26.1.0\\res\\layout\\notification_template_big_media_custom.xml"
     },
     {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_custom.xml.flat",
-        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\76255774f047056d070aaccfb1365509\\support-media-compat-26.1.0\\res\\layout\\notification_template_big_media_custom.xml"
+        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_marker_percorso.png.flat",
+        "source": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\src\\main\\res\\drawable-hdpi\\marker_percorso.png"
     },
     {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_grow_fade_in_from_bottom.xml.flat",
@@ -252,12 +252,12 @@
         "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\3080eed180765bfc7998d6ec12ccbed2\\play-services-base-16.0.1\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
-        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-ldrtl-xxhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
         "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-xhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-ldrtl-xxhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -332,12 +332,12 @@
         "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\40a3342781d7a4b08caa38af177e1b14\\support-compat-26.1.0\\res\\layout\\notification_template_part_time.xml"
     },
     {
-        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
-    },
-    {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\xml_widget_settings_video.xml.flat",
         "source": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\src\\main\\res\\xml\\widget_settings_video.xml"
+    },
+    {
+        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_text_dark.xml.flat",
@@ -392,12 +392,12 @@
         "source": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
-    },
-    {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\c589bb7ec2d841c67ae68a3682166223\\appcompat-v7-26.1.0\\res\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_flip_y.png.flat",
@@ -1878,5 +1878,9 @@
     {
         "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
         "source": "C:\\Users\\looigi\\.gradle\\caches\\transforms-2\\files-2.1\\40a3342781d7a4b08caa38af177e1b14\\support-compat-26.1.0\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\res\\merged\\debug\\raw_schui.wav.flat",
+        "source": "E:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\src\\main\\res\\raw\\schui.wav"
     }
 ]

@@ -342,10 +342,16 @@ public class db_dati {
                 "vel"
         };
 
+        Date ddd = new Date(System.currentTimeMillis());
+        String oggi = android.text.format.DateFormat.format("dd/MM/yyyy", ddd).toString();
         Cursor c =null;
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+        String selection = "data < ? ";
+        String[] selectionArgs = new String[] {oggi};
+
         try {
-            c = myDB.query(DATABASE_TABELLA_GPS, tableColumns, null, null,
+            c = myDB.query(DATABASE_TABELLA_GPS, tableColumns, selection, selectionArgs,
                     "data", null, "data");
             if (c.moveToFirst()) {
                 do {

@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.location.Location;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Binder;
 import android.os.Build;
 import android.os.Environment;
@@ -77,6 +78,9 @@ public class bckService extends Service  implements OnMapReadyCallback {
     public void onCreate() {
         super.onCreate();
 
+        Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLog());
+        l.ScriveLog("onCreate Service");
+
         int NOTIFICATION_ID = (int) (System.currentTimeMillis()%10000);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             startForeground(NOTIFICATION_ID, new Notification.Builder(this).build());
@@ -88,6 +92,9 @@ public class bckService extends Service  implements OnMapReadyCallback {
         Activity act = VariabiliStatiche.getInstance().getFragmentActivityPrincipale();
         v = VariabiliStatiche.getInstance().getFragmentActivityPrincipale();
         context = this;
+
+        Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLog());
+        l.ScriveLog("onStartCommand Service");
 
         // if (v == null || VariabiliStatiche.getInstance().getContext()==null || context == null) {
         //     RefreshActivity.getInstance().RilanciaActivity();
@@ -942,10 +949,10 @@ public class bckService extends Service  implements OnMapReadyCallback {
                 VariabiliStatiche.getInstance().setGiaEntrato(true);
                 // v.moveTaskToBack(true);
 
-                Intent setIntent = new Intent(Intent.ACTION_MAIN);
+                /* Intent setIntent = new Intent(Intent.ACTION_MAIN);
                 setIntent.addCategory(Intent.CATEGORY_HOME);
                 setIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(setIntent);
+                startActivity(setIntent); */
 
                 VariabiliStatiche.getInstance().EstraiTuttiIDatiGPS();
             }
@@ -1153,7 +1160,7 @@ public class bckService extends Service  implements OnMapReadyCallback {
     }
 
     private void CaricaSpinnerOrientamento() {
-        String Cartell[]=new String[5];
+        String[] Cartell=new String[5];
         Cartell[0]=Integer.toString(VariabiliImpostazioni.getInstance().getOrientamento());
         Cartell[1]="0";
         Cartell[2]="90";
@@ -1286,9 +1293,11 @@ public class bckService extends Service  implements OnMapReadyCallback {
     public void onDestroy() {
         super.onDestroy();
 
-        // Intent dialogIntent = new Intent(this, MainActivity.class);
-        // dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        // startActivity(dialogIntent);
+        Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLog());
+        l.ScriveLog("onDestroy Service");
+
+        // MediaPlayer mp = MediaPlayer.create(VariabiliStatiche.getInstance().getContext(), R.raw.schui);
+        // mp.start();
     }
 
     @Override

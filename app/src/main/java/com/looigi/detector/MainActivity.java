@@ -7,6 +7,7 @@ import android.content.ServiceConnection;
 import android.database.Cursor;
 import android.location.Location;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -44,6 +45,7 @@ import com.looigi.detector.Receivers.Video;
 import com.looigi.detector.TestMemory.DatiMemoria;
 import com.looigi.detector.TestMemory.TestMemory;
 import com.looigi.detector.Utilities.CheckURLFile;
+import com.looigi.detector.Utilities.Log;
 import com.looigi.detector.Utilities.MemoryBoss;
 import com.looigi.detector.Utilities.db_dati;
 import com.looigi.detector.Utilities.DownloadImmagine;
@@ -72,17 +74,17 @@ public class MainActivity extends FragmentActivity {
 	private boolean CiSonoPermessi;
     private MemoryBoss mMemoryBoss;
 
-
 	@Override
 	protected void onStop() {
 		super.onStop();
 
 		unregisterComponentCallbacks(mMemoryBoss);
 
-		// DialogMessaggio.getInstance().show(VariabiliStaticheGlobali.getInstance().getContext(),
-		//         "Richiamata funzione onStop",
-		//         true,
-		//         VariabiliStaticheGlobali.NomeApplicazione);
+		Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLog());
+		l.ScriveLog("onStop");
+
+		// MediaPlayer mp = MediaPlayer.create(VariabiliStatiche.getInstance().getContext(), R.raw.schui);
+		// mp.start();
 	}
 
 	// @Override
@@ -134,10 +136,71 @@ public class MainActivity extends FragmentActivity {
 		VariabiliStatiche.getInstance().setiServizio(i);
 		VariabiliStatiche.getInstance().getFragmentActivityPrincipale().startService(
 				VariabiliStatiche.getInstance().getiServizio());
+	}
 
-		// String AutomaticReload = getIntent().getStringExtra("AUTOMATIC RELOAD");
-		// if (AutomaticReload !=null && AutomaticReload.equals("YES")) {
-		//     moveTaskToBack(true);
-		// }
+	@Override
+	public void onLowMemory() {
+		super.onLowMemory();
+
+		Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLog());
+		l.ScriveLog("onLowMemory");
+
+		// MediaPlayer mp = MediaPlayer.create(VariabiliStatiche.getInstance().getContext(), R.raw.schui);
+		// mp.start();
+	}
+
+	@Override
+	protected void onPostResume() {
+		super.onPostResume();
+
+		Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLog());
+		l.ScriveLog("onPostResume");
+
+		// MediaPlayer mp = MediaPlayer.create(VariabiliStatiche.getInstance().getContext(), R.raw.schui);
+		// mp.start();
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+
+		Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLog());
+		l.ScriveLog("onDestroy");
+
+		// MediaPlayer mp = MediaPlayer.create(VariabiliStatiche.getInstance().getContext(), R.raw.schui);
+		// mp.start();
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+
+		Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLog());
+		l.ScriveLog("onResume");
+
+		// MediaPlayer mp = MediaPlayer.create(VariabiliStatiche.getInstance().getContext(), R.raw.schui);
+		// mp.start();
+	}
+
+	@Override
+	protected void onResumeFragments() {
+		super.onResumeFragments();
+
+		Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLog());
+		l.ScriveLog("onResumeFragments");
+
+		// MediaPlayer mp = MediaPlayer.create(VariabiliStatiche.getInstance().getContext(), R.raw.schui);
+		// mp.start();
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+
+		Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLog());
+		l.ScriveLog("onPause");
+
+		// MediaPlayer mp = MediaPlayer.create(VariabiliStatiche.getInstance().getContext(), R.raw.schui);
+		// mp.start();
 	}
 }
