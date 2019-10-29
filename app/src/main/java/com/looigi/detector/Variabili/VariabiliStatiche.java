@@ -156,6 +156,8 @@ public class VariabiliStatiche {
     private List<String> filesToUpload;
     private FragmentActivity FragmentActivityPrincipale;
     private Intent iServizio;
+    private long lastTimePressed = 0;
+    private boolean CuffieInserite=false;
 
     public Context getContext() {
         return context;
@@ -179,6 +181,22 @@ public class VariabiliStatiche {
 
     public void setiServizio(Intent iServizio) {
         this.iServizio = iServizio;
+    }
+
+    public boolean isCuffieInserite() {
+        return CuffieInserite;
+    }
+
+    public void setCuffieInserite(boolean cuffieInserite) {
+        CuffieInserite = cuffieInserite;
+    }
+
+    public long getLastTimePressed() {
+        return lastTimePressed;
+    }
+
+    public void setLastTimePressed(long lastTimePressed) {
+        this.lastTimePressed = lastTimePressed;
     }
 
     public List<String> getFilesToUpload() {

@@ -3,13 +3,13 @@ package com.looigi.detector;
 import android.app.Activity;
 import android.app.Notification;
 import android.app.Service;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.database.Cursor;
 import android.location.Location;
 import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.os.Binder;
 import android.os.Build;
 import android.os.Environment;
 import android.os.Handler;
@@ -49,7 +49,6 @@ import com.looigi.detector.Utilities.db_dati;
 import com.looigi.detector.Utilities.DownloadImmagine;
 import com.looigi.detector.Utilities.GestioneImmagini;
 import com.looigi.detector.Utilities.Log;
-import com.looigi.detector.Utilities.Permessi;
 import com.looigi.detector.Utilities.PrendeModelloTelefono;
 import com.looigi.detector.Utilities.UploadFiles;
 import com.looigi.detector.Utilities.Utility;
@@ -73,6 +72,7 @@ public class bckService extends Service  implements OnMapReadyCallback {
     private Runnable rAttendeRispostaCheckURL2;
     private Handler hAttendeRispostaCheckURL2;
     protected Context context;
+    private ActionReceiver receiver;
 
     @Override
     public void onCreate() {
@@ -110,6 +110,11 @@ public class bckService extends Service  implements OnMapReadyCallback {
         VariabiliStatiche.getInstance().setLocGPS(loc);
 
         if (v != null) {
+            receiver = new ActionReceiver();
+            IntentFilter filter = new IntentFilter();
+            filter.addAction("com.looigi.detector.scattafoto");
+            registerReceiver(receiver, filter);
+
             Switch sLog = (Switch) v.findViewById(R.id.sLog);
             Switch sGPSBetter = (Switch) v.findViewById(R.id.sGPSBetter);
             Switch sAccuracy = (Switch) v.findViewById(R.id.sAccuracy);
