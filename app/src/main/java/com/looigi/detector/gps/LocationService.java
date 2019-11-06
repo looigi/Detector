@@ -227,7 +227,9 @@ public class LocationService extends Service {
 
         Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLogGPS());
         l.ScriveLog("Distruggo locationManager");
-        locationManager.removeUpdates(listener);
+        if (locationManager != null && listener != null) {
+            locationManager.removeUpdates(listener);
+        }
         VariabiliStatiche.getInstance().setServizioGPS(false);
     }
 
