@@ -134,16 +134,18 @@ public class Impostazioni {
     public void ImpostaAutoScatto(Context context, EditText et) {
         // SQLiteDatabase myDB= null;
 
-        String Secondi=et.getText().toString();
+        if (et != null) {
+            String Secondi = et.getText().toString();
 
-        // myDB = context.openOrCreateDatabase("Spiator", MODE_PRIVATE, null);
-        // myDB.execSQL("Update Modalita Set Valore=1, Secondi="+Secondi);
-        // myDB.close();
+            // myDB = context.openOrCreateDatabase("Spiator", MODE_PRIVATE, null);
+            // myDB.execSQL("Update Modalita Set Valore=1, Secondi="+Secondi);
+            // myDB.close();
 
-        if (!Secondi.isEmpty()) {
-            VariabiliImpostazioni.getInstance().setTipologiaScatto(1);
-            VariabiliImpostazioni.getInstance().setSecondi(Integer.parseInt(Secondi));
-            SalvaValori();
+            if (!Secondi.isEmpty()) {
+                VariabiliImpostazioni.getInstance().setTipologiaScatto(1);
+                VariabiliImpostazioni.getInstance().setSecondi(Integer.parseInt(Secondi));
+                SalvaValori();
+            }
         }
     }
 
