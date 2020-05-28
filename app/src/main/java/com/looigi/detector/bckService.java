@@ -1,7 +1,9 @@
 package com.looigi.detector;
 
 import android.app.Activity;
+import android.app.AlarmManager;
 import android.app.Notification;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.ComponentName;
 import android.content.Context;
@@ -95,6 +97,19 @@ public class bckService extends Service  implements OnMapReadyCallback {
 
         Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLog());
         l.ScriveLog("onStartCommand Service");
+
+        if (VariabiliStatiche.getInstance().getContext()==null) {
+            l.ScriveLog("Context vuoto, riavvio l'applicazione");
+            // VariabiliStaticheGlobali.getInstance().setContext(this);
+            Context context = this;
+            Intent mStartActivity = new Intent(context, MainActivity.class);
+            int mPendingIntentId = 123456;            PendingIntent mPendingIntent = PendingIntent.getActivity(context, mPendingIntentId,    mStartActivity, PendingIntent.FLAG_CANCEL_CURRENT);
+            AlarmManager mgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+            mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
+            System.exit(0);
+        } else {
+            VariabiliStatiche.getInstance().setContext(this);
+        }
 
         // if (v == null || VariabiliStatiche.getInstance().getContext()==null || context == null) {
         //     RefreshActivity.getInstance().RilanciaActivity();

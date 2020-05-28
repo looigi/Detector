@@ -1,5 +1,7 @@
 package com.looigi.detector;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -143,7 +145,14 @@ public class MainActivity extends FragmentActivity {
 		super.onLowMemory();
 
 		Log l=new Log(VariabiliImpostazioni.getInstance().getNomeLog());
-		l.ScriveLog("onLowMemory");
+		l.ScriveLog("onLowMemory: Riavvio l'applicazione");
+		Context context = VariabiliStatiche.getInstance().getContext();
+		Intent mStartActivity = new Intent(context, MainActivity.class);
+		int mPendingIntentId = 123456;
+		PendingIntent mPendingIntent = PendingIntent.getActivity(context, mPendingIntentId,    mStartActivity, PendingIntent.FLAG_CANCEL_CURRENT);
+		AlarmManager mgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+		mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
+		System.exit(0);
 
 		// MediaPlayer mp = MediaPlayer.create(VariabiliStatiche.getInstance().getContext(), R.raw.schui);
 		// mp.start();
