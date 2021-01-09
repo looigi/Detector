@@ -1,8 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: ch.acra:acra:4.9.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3a40ad7e0291a8fc9a8b3883834f0041/acra-4.9.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3a40ad7e0291a8fc9a8b3883834f0041/acra-4.9.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1d71dc6429cfbf4cb6eca0985f8f00c4/acra-4.9.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1d71dc6429cfbf4cb6eca0985f8f00c4/acra-4.9.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1d71dc6429cfbf4cb6eca0985f8f00c4/acra-4.9.2/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ch.acra/acra/4.9.2/63b9daba4655364c41416fff7952def16994b782/acra-4.9.2-javadoc.jar!/" />

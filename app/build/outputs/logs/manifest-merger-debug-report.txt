@@ -1,387 +1,391 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-175:12
-INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-175:12
-INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-175:12
-INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-175:12
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\b28c3dfacec283a46c3ce58afd169202\appcompat-v7-26.1.0\AndroidManifest.xml:17:1-31:12
-MERGED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:10:6-44:12
-MERGED from [com.commit451:PhotoView:1.2.5] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\855939b204218124d7461e44882a2e44\PhotoView-1.2.5\AndroidManifest.xml:2:1-12:12
-MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1b309bc4f2245813111673b86ec09c61\play-services-maps-16.0.0\AndroidManifest.xml:17:1-32:12
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3dd85d1e994bf65d956ec3b7b4e31d3a\animated-vector-drawable-26.1.0\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\ff85a5f3550238ae0cf6c2ade7768dab\support-vector-drawable-26.1.0\AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\919abf3f5c043fe43ce39056b98cdb51\play-services-base-16.0.1\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\cc96cf76523c8c718865861a59e9270b\play-services-tasks-16.0.1\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1da86a45a12dd77e49bb6d007f1c05e7\play-services-basement-16.0.1\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\551bc97023610b3a2a13198864385efa\support-v4-26.1.0\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\971a5b69b89846008f16f9726686958d\support-media-compat-26.1.0\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\8a8c7d53542ab2c848ae5b8b6026706d\support-fragment-26.1.0\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\c09b57d019897d7ffda25f0a8ed175eb\support-core-utils-26.1.0\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\5db4ccce50706864284de1c007bf07c2\support-core-ui-26.1.0\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\acedb5a439482afea3702661a6a2cc74\support-compat-26.1.0\AndroidManifest.xml:17:1-31:12
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\2651008cd98233e6b4b850667bef3705\runtime-1.0.0\AndroidManifest.xml:17:1-30:12
-INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-175:12
-INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-175:12
-INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-175:12
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-182:12
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-182:12
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-182:12
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-182:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\3c25d949127361693c3996e6817a65c8\appcompat-v7-26.1.0\AndroidManifest.xml:17:1-31:12
+MERGED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:10:6-44:12
+MERGED from [com.commit451:PhotoView:1.2.5] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\925c57266bdcc8959a713c3339d8021f\PhotoView-1.2.5\AndroidManifest.xml:2:1-12:12
+MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\4f0d1857e74e96f8aec2ed96ffd88095\play-services-maps-16.0.0\AndroidManifest.xml:17:1-32:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\dab3e2e86cfe7ae77fdffa4caf29c291\animated-vector-drawable-26.1.0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\38b5f97898a465b4238c4fad289a64e7\support-vector-drawable-26.1.0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2852bd6050fe4c33722ed5c5459d2e80\play-services-base-16.0.1\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\6370e844f77768f692c5d2e4d5304e4d\play-services-tasks-16.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\837479220f18908453c1581b70d8fcdf\play-services-basement-16.0.1\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1f92250b56a29a81e666f5d9f03e7a6f\support-v4-26.1.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\f636cfa663500506dc9f69287b25bf19\support-media-compat-26.1.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\d99c30bcf0374ba97a61c33d35e39706\support-fragment-26.1.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2376a9c5389a793b77128804925b0474\support-core-utils-26.1.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\dc7210da2ab442f22cb5b82b8fcb3b9b\support-core-ui-26.1.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\89fb32c82c17055e8c7357f2c6e60a52\support-compat-26.1.0\AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\c0fa89e2fe47ee55a9f37cece79b22a6\runtime-1.0.0\AndroidManifest.xml:17:1-30:12
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-182:12
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-182:12
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:1-182:12
 	package
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:3:5-34
-		INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
-		INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:3:5-34
+		INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:5:5-30
-		INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
-		INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:4:5-29
-		INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
-		INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:4:5-29
+		INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
 uses-feature#android.hardware.camera
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:7:5-60
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:7:5-60
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:7:19-57
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:7:19-57
 uses-feature#0x00020000
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:9:5-77
-MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1b309bc4f2245813111673b86ec09c61\play-services-maps-16.0.0\AndroidManifest.xml:26:5-28:35
-MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1b309bc4f2245813111673b86ec09c61\play-services-maps-16.0.0\AndroidManifest.xml:26:5-28:35
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:9:5-77
+MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\4f0d1857e74e96f8aec2ed96ffd88095\play-services-maps-16.0.0\AndroidManifest.xml:26:5-28:35
+MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\4f0d1857e74e96f8aec2ed96ffd88095\play-services-maps-16.0.0\AndroidManifest.xml:26:5-28:35
 	android:glEsVersion
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:9:19-51
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:9:19-51
 	android:required
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:9:52-75
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:9:52-75
 uses-feature#android.hardware.bluetooth_le
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:10:5-89
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:10:5-89
 	android:required
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:10:64-87
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:10:64-87
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:10:19-63
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:10:19-63
 uses-permission#android.permission.CAMERA
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:12:5-64
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:12:5-64
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:12:22-62
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:12:22-62
 uses-permission#android.hardware.camera.autofocus
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:13:5-73
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:13:5-73
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:13:22-70
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:13:22-70
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:14:5-80
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:14:5-80
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:14:22-78
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:14:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:15:5-79
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:15:5-79
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:15:22-77
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:15:22-77
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:16:2-68
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:16:2-68
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:16:19-65
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:16:19-65
 uses-permission#android.permission.VIBRATE
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:17:2-62
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:17:2-62
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:17:19-60
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:17:19-60
 uses-permission#android.permission.INTERNET
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:18:5-66
-MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1b309bc4f2245813111673b86ec09c61\play-services-maps-16.0.0\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1b309bc4f2245813111673b86ec09c61\play-services-maps-16.0.0\AndroidManifest.xml:24:5-67
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:18:5-66
+MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\4f0d1857e74e96f8aec2ed96ffd88095\play-services-maps-16.0.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\4f0d1857e74e96f8aec2ed96ffd88095\play-services-maps-16.0.0\AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:18:22-64
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:18:22-64
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:19:5-76
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:19:5-76
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:19:22-73
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:19:22-73
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:20:5-81
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:20:5-81
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:20:22-78
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:20:22-78
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:21:5-81
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:21:5-81
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:21:22-78
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:21:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:22:5-79
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:22:5-79
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:22:22-76
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:22:22-76
 uses-permission#android.permission.LOCATION_SERVICE
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:23:5-75
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:23:5-75
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:23:22-72
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:23:22-72
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:24:5-76
+	android:name
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:24:22-74
 application
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:27:5-173:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\b28c3dfacec283a46c3ce58afd169202\appcompat-v7-26.1.0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\b28c3dfacec283a46c3ce58afd169202\appcompat-v7-26.1.0\AndroidManifest.xml:25:5-29:19
-MERGED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:39:5-43:19
-MERGED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:39:5-43:19
-MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1b309bc4f2245813111673b86ec09c61\play-services-maps-16.0.0\AndroidManifest.xml:30:5-20
-MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1b309bc4f2245813111673b86ec09c61\play-services-maps-16.0.0\AndroidManifest.xml:30:5-20
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3dd85d1e994bf65d956ec3b7b4e31d3a\animated-vector-drawable-26.1.0\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3dd85d1e994bf65d956ec3b7b4e31d3a\animated-vector-drawable-26.1.0\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\ff85a5f3550238ae0cf6c2ade7768dab\support-vector-drawable-26.1.0\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\ff85a5f3550238ae0cf6c2ade7768dab\support-vector-drawable-26.1.0\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\919abf3f5c043fe43ce39056b98cdb51\play-services-base-16.0.1\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\919abf3f5c043fe43ce39056b98cdb51\play-services-base-16.0.1\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\cc96cf76523c8c718865861a59e9270b\play-services-tasks-16.0.1\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\cc96cf76523c8c718865861a59e9270b\play-services-tasks-16.0.1\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1da86a45a12dd77e49bb6d007f1c05e7\play-services-basement-16.0.1\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1da86a45a12dd77e49bb6d007f1c05e7\play-services-basement-16.0.1\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\551bc97023610b3a2a13198864385efa\support-v4-26.1.0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\551bc97023610b3a2a13198864385efa\support-v4-26.1.0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\971a5b69b89846008f16f9726686958d\support-media-compat-26.1.0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\971a5b69b89846008f16f9726686958d\support-media-compat-26.1.0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\8a8c7d53542ab2c848ae5b8b6026706d\support-fragment-26.1.0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\8a8c7d53542ab2c848ae5b8b6026706d\support-fragment-26.1.0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\c09b57d019897d7ffda25f0a8ed175eb\support-core-utils-26.1.0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\c09b57d019897d7ffda25f0a8ed175eb\support-core-utils-26.1.0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\5db4ccce50706864284de1c007bf07c2\support-core-ui-26.1.0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\5db4ccce50706864284de1c007bf07c2\support-core-ui-26.1.0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\acedb5a439482afea3702661a6a2cc74\support-compat-26.1.0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\acedb5a439482afea3702661a6a2cc74\support-compat-26.1.0\AndroidManifest.xml:25:5-29:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\2651008cd98233e6b4b850667bef3705\runtime-1.0.0\AndroidManifest.xml:24:5-28:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\2651008cd98233e6b4b850667bef3705\runtime-1.0.0\AndroidManifest.xml:24:5-28:19
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:28:5-180:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\3c25d949127361693c3996e6817a65c8\appcompat-v7-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\3c25d949127361693c3996e6817a65c8\appcompat-v7-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:39:5-43:19
+MERGED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:39:5-43:19
+MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\4f0d1857e74e96f8aec2ed96ffd88095\play-services-maps-16.0.0\AndroidManifest.xml:30:5-20
+MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\4f0d1857e74e96f8aec2ed96ffd88095\play-services-maps-16.0.0\AndroidManifest.xml:30:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\dab3e2e86cfe7ae77fdffa4caf29c291\animated-vector-drawable-26.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\dab3e2e86cfe7ae77fdffa4caf29c291\animated-vector-drawable-26.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\38b5f97898a465b4238c4fad289a64e7\support-vector-drawable-26.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\38b5f97898a465b4238c4fad289a64e7\support-vector-drawable-26.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2852bd6050fe4c33722ed5c5459d2e80\play-services-base-16.0.1\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2852bd6050fe4c33722ed5c5459d2e80\play-services-base-16.0.1\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\6370e844f77768f692c5d2e4d5304e4d\play-services-tasks-16.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\6370e844f77768f692c5d2e4d5304e4d\play-services-tasks-16.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\837479220f18908453c1581b70d8fcdf\play-services-basement-16.0.1\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\837479220f18908453c1581b70d8fcdf\play-services-basement-16.0.1\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1f92250b56a29a81e666f5d9f03e7a6f\support-v4-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1f92250b56a29a81e666f5d9f03e7a6f\support-v4-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\f636cfa663500506dc9f69287b25bf19\support-media-compat-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\f636cfa663500506dc9f69287b25bf19\support-media-compat-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\d99c30bcf0374ba97a61c33d35e39706\support-fragment-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\d99c30bcf0374ba97a61c33d35e39706\support-fragment-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2376a9c5389a793b77128804925b0474\support-core-utils-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2376a9c5389a793b77128804925b0474\support-core-utils-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\dc7210da2ab442f22cb5b82b8fcb3b9b\support-core-ui-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\dc7210da2ab442f22cb5b82b8fcb3b9b\support-core-ui-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\89fb32c82c17055e8c7357f2c6e60a52\support-compat-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\89fb32c82c17055e8c7357f2c6e60a52\support-compat-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\c0fa89e2fe47ee55a9f37cece79b22a6\runtime-1.0.0\AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\c0fa89e2fe47ee55a9f37cece79b22a6\runtime-1.0.0\AndroidManifest.xml:24:5-28:19
 	android:label
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:30:9-41
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:31:9-41
 	android:icon
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:29:9-45
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:30:9-45
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:28:9-34
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:29:9-34
 activity#com.looigi.detector.MainActivity
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:31:9-42:20
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:32:9-43:20
 	android:screenOrientation
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:33:13-49
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:34:13-49
 	android:label
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:36:13-45
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:37:13-45
 	android:largeHeap
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:32:13-37
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:33:13-37
 	android:installLocation
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:34:13-51
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:35:13-51
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:35:13-60
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:36:13-60
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:37:13-41:29
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:38:13-42:29
 action#android.intent.action.MAIN
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:38:17-69
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:39:17-69
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:38:25-66
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:39:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:40:17-77
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:41:17-77
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:40:27-74
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:41:27-74
 meta-data#com.google.android.geo.API_KEY
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:44:9-46:70
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:45:9-47:70
 	android:value
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:46:13-68
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:47:13-68
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:45:13-58
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:46:13-58
 activity#com.looigi.detector.Receivers.Video
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:48:9-52:21
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:49:9-53:21
 	android:label
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:51:13-45
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:52:13-45
 	android:theme
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:50:13-53
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:51:13-53
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:49:13-63
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:50:13-63
 activity#com.looigi.detector.Receivers.Audio
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:54:9-58:20
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:55:9-59:20
 	android:label
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:57:13-45
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:58:13-45
 	android:theme
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:56:13-53
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:57:13-53
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:55:13-63
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:56:13-63
 activity#com.looigi.detector.Receivers.Photo
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:60:9-64:20
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:61:9-65:20
 	android:label
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:63:13-45
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:64:13-45
 	android:theme
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:62:13-53
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:63:13-53
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:61:13-63
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:62:13-63
 activity#com.looigi.detector.Utilities.ExitActivity
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:66:9-69
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:67:9-69
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:66:19-57
-service#com.looigi.detector.bckService
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:68:9-72:19
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:67:19-57
+service#com.looigi.detector.ServizioInterno
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:75:9-79:19
 	android:label
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:71:13-45
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:78:13-45
 	android:icon
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:70:13-49
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:77:13-49
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:69:13-38
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:76:13-44
 receiver#com.looigi.detector.Receivers.ProviderPhoto
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:91:9-98:20
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:98:9-105:20
 	android:label
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:91:78-108
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:98:78-108
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:91:19-77
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:98:19-77
 intent-filter#action:name:android.appwidget.action.APPWIDGET_UPDATE
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:92:13-94:29
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:99:13-101:29
 action#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:93:17-83
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:100:17-83
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:93:25-81
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:100:25-81
 meta-data#android.appwidget.provider
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:96:13-97:59
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:103:13-104:59
 	android:resource
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:97:17-56
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:104:17-56
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:96:24-65
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:103:24-65
 receiver#com.looigi.detector.Receivers.ProviderVideo
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:100:9-108:20
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:107:9-115:20
 	android:label
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:100:78-108
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:107:78-108
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:100:19-77
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:107:19-77
 receiver#com.looigi.detector.Receivers.ProviderAudio
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:110:9-118:20
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:117:9-125:20
 	android:label
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:110:78-108
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:117:78-108
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:110:19-77
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:117:19-77
 service#com.looigi.detector.DetectPowerClick.LockService
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:139:9-140:19
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:146:9-147:19
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:139:18-81
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:146:18-81
 receiver#com.looigi.detector.AutoStart.yourActivityRunOnStartup
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:151:10-162:20
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:158:10-169:20
 	android:enabled
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:152:13-35
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:159:13-35
 	android:exported
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:153:13-36
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:160:13-36
 	android:permission
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:155:13-75
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:162:13-75
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:154:13-82
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:161:13-82
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.QUICKBOOT_POWERON+category:name:android.intent.category.DEFAULT
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:157:13-161:29
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:164:13-168:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:158:17-79
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:165:17-79
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:158:25-76
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:165:25-76
 action#android.intent.action.QUICKBOOT_POWERON
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:159:17-82
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:166:17-82
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:159:25-79
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:166:25-79
 category#android.intent.category.DEFAULT
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:160:17-76
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:167:17-76
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:160:27-73
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:167:27-73
 service#com.looigi.detector.gps.LocationService
-ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:171:9-56
+ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:178:9-56
 	android:name
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:171:18-53
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml:178:18-53
 uses-sdk
-INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
-INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\b28c3dfacec283a46c3ce58afd169202\appcompat-v7-26.1.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\b28c3dfacec283a46c3ce58afd169202\appcompat-v7-26.1.0\AndroidManifest.xml:21:5-23:78
-MERGED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:37:5-42
-MERGED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:37:5-42
-MERGED from [com.commit451:PhotoView:1.2.5] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\855939b204218124d7461e44882a2e44\PhotoView-1.2.5\AndroidManifest.xml:8:5-10:41
-MERGED from [com.commit451:PhotoView:1.2.5] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\855939b204218124d7461e44882a2e44\PhotoView-1.2.5\AndroidManifest.xml:8:5-10:41
-MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1b309bc4f2245813111673b86ec09c61\play-services-maps-16.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1b309bc4f2245813111673b86ec09c61\play-services-maps-16.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3dd85d1e994bf65d956ec3b7b4e31d3a\animated-vector-drawable-26.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3dd85d1e994bf65d956ec3b7b4e31d3a\animated-vector-drawable-26.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\ff85a5f3550238ae0cf6c2ade7768dab\support-vector-drawable-26.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\ff85a5f3550238ae0cf6c2ade7768dab\support-vector-drawable-26.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\919abf3f5c043fe43ce39056b98cdb51\play-services-base-16.0.1\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\919abf3f5c043fe43ce39056b98cdb51\play-services-base-16.0.1\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\cc96cf76523c8c718865861a59e9270b\play-services-tasks-16.0.1\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\cc96cf76523c8c718865861a59e9270b\play-services-tasks-16.0.1\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1da86a45a12dd77e49bb6d007f1c05e7\play-services-basement-16.0.1\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1da86a45a12dd77e49bb6d007f1c05e7\play-services-basement-16.0.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\551bc97023610b3a2a13198864385efa\support-v4-26.1.0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\551bc97023610b3a2a13198864385efa\support-v4-26.1.0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\971a5b69b89846008f16f9726686958d\support-media-compat-26.1.0\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\971a5b69b89846008f16f9726686958d\support-media-compat-26.1.0\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\8a8c7d53542ab2c848ae5b8b6026706d\support-fragment-26.1.0\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\8a8c7d53542ab2c848ae5b8b6026706d\support-fragment-26.1.0\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\c09b57d019897d7ffda25f0a8ed175eb\support-core-utils-26.1.0\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\c09b57d019897d7ffda25f0a8ed175eb\support-core-utils-26.1.0\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\5db4ccce50706864284de1c007bf07c2\support-core-ui-26.1.0\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\5db4ccce50706864284de1c007bf07c2\support-core-ui-26.1.0\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\acedb5a439482afea3702661a6a2cc74\support-compat-26.1.0\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\acedb5a439482afea3702661a6a2cc74\support-compat-26.1.0\AndroidManifest.xml:21:5-23:58
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\2651008cd98233e6b4b850667bef3705\runtime-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\2651008cd98233e6b4b850667bef3705\runtime-1.0.0\AndroidManifest.xml:20:5-22:41
-INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
-INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\3c25d949127361693c3996e6817a65c8\appcompat-v7-26.1.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\3c25d949127361693c3996e6817a65c8\appcompat-v7-26.1.0\AndroidManifest.xml:21:5-23:78
+MERGED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:37:5-42
+MERGED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:37:5-42
+MERGED from [com.commit451:PhotoView:1.2.5] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\925c57266bdcc8959a713c3339d8021f\PhotoView-1.2.5\AndroidManifest.xml:8:5-10:41
+MERGED from [com.commit451:PhotoView:1.2.5] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\925c57266bdcc8959a713c3339d8021f\PhotoView-1.2.5\AndroidManifest.xml:8:5-10:41
+MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\4f0d1857e74e96f8aec2ed96ffd88095\play-services-maps-16.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\4f0d1857e74e96f8aec2ed96ffd88095\play-services-maps-16.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\dab3e2e86cfe7ae77fdffa4caf29c291\animated-vector-drawable-26.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\dab3e2e86cfe7ae77fdffa4caf29c291\animated-vector-drawable-26.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\38b5f97898a465b4238c4fad289a64e7\support-vector-drawable-26.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\38b5f97898a465b4238c4fad289a64e7\support-vector-drawable-26.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2852bd6050fe4c33722ed5c5459d2e80\play-services-base-16.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2852bd6050fe4c33722ed5c5459d2e80\play-services-base-16.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\6370e844f77768f692c5d2e4d5304e4d\play-services-tasks-16.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\6370e844f77768f692c5d2e4d5304e4d\play-services-tasks-16.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\837479220f18908453c1581b70d8fcdf\play-services-basement-16.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\837479220f18908453c1581b70d8fcdf\play-services-basement-16.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1f92250b56a29a81e666f5d9f03e7a6f\support-v4-26.1.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1f92250b56a29a81e666f5d9f03e7a6f\support-v4-26.1.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\f636cfa663500506dc9f69287b25bf19\support-media-compat-26.1.0\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\f636cfa663500506dc9f69287b25bf19\support-media-compat-26.1.0\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\d99c30bcf0374ba97a61c33d35e39706\support-fragment-26.1.0\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\d99c30bcf0374ba97a61c33d35e39706\support-fragment-26.1.0\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2376a9c5389a793b77128804925b0474\support-core-utils-26.1.0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2376a9c5389a793b77128804925b0474\support-core-utils-26.1.0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\dc7210da2ab442f22cb5b82b8fcb3b9b\support-core-ui-26.1.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\dc7210da2ab442f22cb5b82b8fcb3b9b\support-core-ui-26.1.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\89fb32c82c17055e8c7357f2c6e60a52\support-compat-26.1.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\89fb32c82c17055e8c7357f2c6e60a52\support-compat-26.1.0\AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\c0fa89e2fe47ee55a9f37cece79b22a6\runtime-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\c0fa89e2fe47ee55a9f37cece79b22a6\runtime-1.0.0\AndroidManifest.xml:20:5-22:41
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\b28c3dfacec283a46c3ce58afd169202\appcompat-v7-26.1.0\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\3c25d949127361693c3996e6817a65c8\appcompat-v7-26.1.0\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
-		INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
-		ADDED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
-		INJECTED from E:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+		ADDED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Sorgenti\Android\Sviluppo\Miei\Spiatore\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\b28c3dfacec283a46c3ce58afd169202\appcompat-v7-26.1.0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3dd85d1e994bf65d956ec3b7b4e31d3a\animated-vector-drawable-26.1.0\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3dd85d1e994bf65d956ec3b7b4e31d3a\animated-vector-drawable-26.1.0\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\ff85a5f3550238ae0cf6c2ade7768dab\support-vector-drawable-26.1.0\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\ff85a5f3550238ae0cf6c2ade7768dab\support-vector-drawable-26.1.0\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\551bc97023610b3a2a13198864385efa\support-v4-26.1.0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\551bc97023610b3a2a13198864385efa\support-v4-26.1.0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\971a5b69b89846008f16f9726686958d\support-media-compat-26.1.0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\971a5b69b89846008f16f9726686958d\support-media-compat-26.1.0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\8a8c7d53542ab2c848ae5b8b6026706d\support-fragment-26.1.0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\8a8c7d53542ab2c848ae5b8b6026706d\support-fragment-26.1.0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\c09b57d019897d7ffda25f0a8ed175eb\support-core-utils-26.1.0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\c09b57d019897d7ffda25f0a8ed175eb\support-core-utils-26.1.0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\5db4ccce50706864284de1c007bf07c2\support-core-ui-26.1.0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\5db4ccce50706864284de1c007bf07c2\support-core-ui-26.1.0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\acedb5a439482afea3702661a6a2cc74\support-compat-26.1.0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\acedb5a439482afea3702661a6a2cc74\support-compat-26.1.0\AndroidManifest.xml:26:9-28:38
+ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\3c25d949127361693c3996e6817a65c8\appcompat-v7-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\dab3e2e86cfe7ae77fdffa4caf29c291\animated-vector-drawable-26.1.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\dab3e2e86cfe7ae77fdffa4caf29c291\animated-vector-drawable-26.1.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\38b5f97898a465b4238c4fad289a64e7\support-vector-drawable-26.1.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\38b5f97898a465b4238c4fad289a64e7\support-vector-drawable-26.1.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1f92250b56a29a81e666f5d9f03e7a6f\support-v4-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1f92250b56a29a81e666f5d9f03e7a6f\support-v4-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\f636cfa663500506dc9f69287b25bf19\support-media-compat-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\f636cfa663500506dc9f69287b25bf19\support-media-compat-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\d99c30bcf0374ba97a61c33d35e39706\support-fragment-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\d99c30bcf0374ba97a61c33d35e39706\support-fragment-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2376a9c5389a793b77128804925b0474\support-core-utils-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2376a9c5389a793b77128804925b0474\support-core-utils-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\dc7210da2ab442f22cb5b82b8fcb3b9b\support-core-ui-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\dc7210da2ab442f22cb5b82b8fcb3b9b\support-core-ui-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\89fb32c82c17055e8c7357f2c6e60a52\support-compat-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\89fb32c82c17055e8c7357f2c6e60a52\support-compat-26.1.0\AndroidManifest.xml:26:9-28:38
 	android:value
-		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\b28c3dfacec283a46c3ce58afd169202\appcompat-v7-26.1.0\AndroidManifest.xml:28:13-35
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\3c25d949127361693c3996e6817a65c8\appcompat-v7-26.1.0\AndroidManifest.xml:28:13-35
 	android:name
-		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\b28c3dfacec283a46c3ce58afd169202\appcompat-v7-26.1.0\AndroidManifest.xml:27:13-51
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\3c25d949127361693c3996e6817a65c8\appcompat-v7-26.1.0\AndroidManifest.xml:27:13-51
 activity#org.acra.dialog.CrashReportDialog
-ADDED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:40:9-241
+ADDED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:40:9-241
 	android:process
-		ADDED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:40:172-195
+		ADDED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:40:172-195
 	android:excludeFromRecents
-		ADDED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:40:19-52
+		ADDED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:40:19-52
 	android:launchMode
-		ADDED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:40:87-122
+		ADDED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:40:87-122
 	android:theme
-		ADDED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:40:196-239
+		ADDED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:40:196-239
 	android:finishOnTaskLaunch
-		ADDED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:40:53-86
+		ADDED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:40:53-86
 	android:name
-		ADDED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:40:123-171
+		ADDED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:40:123-171
 service#org.acra.sender.SenderService
-ADDED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:42:9-113
+ADDED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:42:9-113
 	android:process
-		ADDED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:42:88-111
+		ADDED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:42:88-111
 	android:exported
-		ADDED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:42:18-42
+		ADDED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:42:18-42
 	android:name
-		ADDED from [ch.acra:acra:4.9.2] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\3a40ad7e0291a8fc9a8b3883834f0041\acra-4.9.2\AndroidManifest.xml:42:43-87
+		ADDED from [ch.acra:acra:4.9.2] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\1d71dc6429cfbf4cb6eca0985f8f00c4\acra-4.9.2\AndroidManifest.xml:42:43-87
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1b309bc4f2245813111673b86ec09c61\play-services-maps-16.0.0\AndroidManifest.xml:23:5-79
+ADDED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\4f0d1857e74e96f8aec2ed96ffd88095\play-services-maps-16.0.0\AndroidManifest.xml:23:5-79
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1b309bc4f2245813111673b86ec09c61\play-services-maps-16.0.0\AndroidManifest.xml:23:22-76
+		ADDED from [com.google.android.gms:play-services-maps:16.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\4f0d1857e74e96f8aec2ed96ffd88095\play-services-maps-16.0.0\AndroidManifest.xml:23:22-76
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\919abf3f5c043fe43ce39056b98cdb51\play-services-base-16.0.1\AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2852bd6050fe4c33722ed5c5459d2e80\play-services-base-16.0.1\AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\919abf3f5c043fe43ce39056b98cdb51\play-services-base-16.0.1\AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2852bd6050fe4c33722ed5c5459d2e80\play-services-base-16.0.1\AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\919abf3f5c043fe43ce39056b98cdb51\play-services-base-16.0.1\AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2852bd6050fe4c33722ed5c5459d2e80\play-services-base-16.0.1\AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\919abf3f5c043fe43ce39056b98cdb51\play-services-base-16.0.1\AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\2852bd6050fe4c33722ed5c5459d2e80\play-services-base-16.0.1\AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1da86a45a12dd77e49bb6d007f1c05e7\play-services-basement-16.0.1\AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\837479220f18908453c1581b70d8fcdf\play-services-basement-16.0.1\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1da86a45a12dd77e49bb6d007f1c05e7\play-services-basement-16.0.1\AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\837479220f18908453c1581b70d8fcdf\play-services-basement-16.0.1\AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\1da86a45a12dd77e49bb6d007f1c05e7\play-services-basement-16.0.1\AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\837479220f18908453c1581b70d8fcdf\play-services-basement-16.0.1\AndroidManifest.xml:24:13-58
 meta-data#android.arch.lifecycle.VERSION
-ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\2651008cd98233e6b4b850667bef3705\runtime-1.0.0\AndroidManifest.xml:25:9-27:47
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\c0fa89e2fe47ee55a9f37cece79b22a6\runtime-1.0.0\AndroidManifest.xml:25:9-27:47
 	android:value
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\2651008cd98233e6b4b850667bef3705\runtime-1.0.0\AndroidManifest.xml:27:13-44
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\c0fa89e2fe47ee55a9f37cece79b22a6\runtime-1.0.0\AndroidManifest.xml:27:13-44
 	android:name
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\looigi\.gradle\caches\transforms-2\files-2.1\2651008cd98233e6b4b850667bef3705\runtime-1.0.0\AndroidManifest.xml:26:13-58
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Luigi Pecce\.gradle\caches\transforms-2\files-2.1\c0fa89e2fe47ee55a9f37cece79b22a6\runtime-1.0.0\AndroidManifest.xml:26:13-58

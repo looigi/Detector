@@ -29,7 +29,7 @@ public class HttpFileUpload implements Runnable {
     	private ProgressDialog pd;
     	private boolean Ok;
     	private List<String> toDo;
-        private String RadiceUpload = "http://looigi.no-ip.biz:12345/Detector/default.aspx";
+        private String RadiceUpload = "http://looigi.no-ip.biz/Detector/default.aspx";
 
         public HttpFileUpload(ProgressDialog pd, String vNomeFile, List<String> toDo){
             try{

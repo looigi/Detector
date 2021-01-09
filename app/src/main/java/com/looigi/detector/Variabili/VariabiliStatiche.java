@@ -155,7 +155,7 @@ public class VariabiliStatiche {
     private ListView lstUpload;
     private List<String> filesToUpload;
     private FragmentActivity FragmentActivityPrincipale;
-    private Intent iServizio;
+    // private Intent iServizio;
     private long lastTimePressed = 0;
     private boolean CuffieInserite=false;
 
@@ -175,6 +175,7 @@ public class VariabiliStatiche {
         FragmentActivityPrincipale = fragmentActivityPrincipale;
     }
 
+    /*
     public Intent getiServizio() {
         return iServizio;
     }
@@ -182,6 +183,7 @@ public class VariabiliStatiche {
     public void setiServizio(Intent iServizio) {
         this.iServizio = iServizio;
     }
+    */
 
     public boolean isCuffieInserite() {
         return CuffieInserite;

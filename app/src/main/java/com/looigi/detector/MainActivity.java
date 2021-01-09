@@ -134,13 +134,35 @@ public class MainActivity extends FragmentActivity {
 		VariabiliStatiche.getInstance().setContext(this);
 		VariabiliImpostazioni.getInstance().setAct(this);
 
-		Intent i= new Intent(VariabiliStatiche.getInstance().getFragmentActivityPrincipale(), bckService.class);
-		VariabiliStatiche.getInstance().setiServizio(i);
-		VariabiliStatiche.getInstance().getFragmentActivityPrincipale().startService(
-				VariabiliStatiche.getInstance().getiServizio());
+		startService();
+		// Intent i= new Intent(VariabiliStatiche.getInstance().getFragmentActivityPrincipale(), bckService.class);
+		// VariabiliStatiche.getInstance().setiServizio(i);
+		// VariabiliStatiche.getInstance().getFragmentActivityPrincipale().startService(
+		// 		VariabiliStatiche.getInstance().getiServizio());
 	}
 
-	@Override
+
+	public void startService() {
+		Intent serviceIntent = new Intent(this, ServizioInterno.class);
+		serviceIntent.putExtra("inputExtra", "Detector foreground");
+		// ContextCompat.startForegroundService(this, serviceIntent);
+		// if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+			startForegroundService(serviceIntent);
+		} else {
+
+		}
+		// } else {
+		// 	VariabiliGlobali.getInstance().getActivityPrincipale().startService(serviceIntent);
+		// }
+	}
+
+	public void stopService() {
+		Intent serviceIntent = new Intent(this, ServizioInterno.class);
+		stopService(serviceIntent);
+	}
+
+	/* @Override
 	public void onLowMemory() {
 		super.onLowMemory();
 
@@ -168,6 +190,7 @@ public class MainActivity extends FragmentActivity {
 		// MediaPlayer mp = MediaPlayer.create(VariabiliStatiche.getInstance().getContext(), R.raw.schui);
 		// mp.start();
 	}
+	*/
 
 	@Override
 	protected void onDestroy() {
@@ -180,6 +203,7 @@ public class MainActivity extends FragmentActivity {
 		// mp.start();
 	}
 
+	/*
 	@Override
 	protected void onResume() {
 		super.onResume();
@@ -212,4 +236,5 @@ public class MainActivity extends FragmentActivity {
 		// MediaPlayer mp = MediaPlayer.create(VariabiliStatiche.getInstance().getContext(), R.raw.schui);
 		// mp.start();
 	}
+	*/
 }

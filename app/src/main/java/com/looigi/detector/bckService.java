@@ -1,4 +1,4 @@
-package com.looigi.detector;
+/* package com.looigi.detector;
 
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -519,12 +519,7 @@ public class bckService extends Service  implements OnMapReadyCallback {
                         rTimer = new Runnable() {
                             public void run() {
                                 datella1 = null;
-					/* try {
-						vibrator.vibrate(300);
-						Thread.sleep(300);
-					} catch (InterruptedException ignored) {
 
-					} */
                             }
                         };
                         handlerTimer.postDelayed(rTimer, 2000);
@@ -969,11 +964,6 @@ public class bckService extends Service  implements OnMapReadyCallback {
                 VariabiliStatiche.getInstance().setGiaEntrato(true);
                 // v.moveTaskToBack(true);
 
-                /* Intent setIntent = new Intent(Intent.ACTION_MAIN);
-                setIntent.addCategory(Intent.CATEGORY_HOME);
-                setIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(setIntent); */
-
                 VariabiliStatiche.getInstance().EstraiTuttiIDatiGPS();
             }
         }
@@ -1326,3 +1316,4 @@ public class bckService extends Service  implements OnMapReadyCallback {
         return null;
     }
 }
+*/
