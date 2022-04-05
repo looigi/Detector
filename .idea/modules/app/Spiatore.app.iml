@@ -47,6 +47,7 @@
     <orderEntry type="library" name="Gradle: android.arch.core:common:1.0.0" level="project" />
     <orderEntry type="library" name="Gradle: com.sun.mail:android-mail:1.5.5" level="project" />
     <orderEntry type="library" name="Gradle: com.sun.mail:android-activation:1.5.5" level="project" />
+    <orderEntry type="library" name="Gradle: commons-net:commons-net:3.3" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7:26.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: ch.acra:acra:4.9.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:animated-vector-drawable:26.1.0@aar" level="project" />

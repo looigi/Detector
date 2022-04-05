@@ -1266,8 +1266,8 @@ public class ServizioInterno extends Service  implements OnMapReadyCallback {
                         case "Immagine":
                             String NomeFiletto1 = c[1]+"/"+c[1]+c[2]+c[3]+".jpg";
                             String NomeFiletto2 = c[1]+c[2]+c[3]+".jpg";
-                            final String link1 = "http://looigi.no-ip.biz/Detector/gDrive/Pennetta/"+NomeFiletto1+".jpg";
-                            final String link2 = "http://looigi.no-ip.biz/Detector/gDrive/Pennetta/Yeah/"+NomeFiletto2+".jpg";
+                            final String link1 = "http://looigi.ddns.net:1060/Detector/gDrive/Pennetta/"+NomeFiletto1+".jpg";
+                            final String link2 = "http://looigi.ddns.net:1060/Detector/gDrive/Pennetta/Yeah/"+NomeFiletto2+".jpg";
 
                             // final String link2 = "http://looigi.no-ip.biz:12345/gDrive/Pennetta/Yeah/201654-8854.jpg";
 

@@ -1,4 +1,4 @@
-#Sat Jan 09 14:17:37 CET 2021
+#Tue Apr 05 09:03:13 CEST 2022
 base.0=D\:\\Sorgenti\\Android\\Sviluppo\\Miei\\Spiatore\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
